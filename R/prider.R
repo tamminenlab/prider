@@ -1,3 +1,15 @@
+#' Prider
+#' 
+#' Prider implements a BLAST-based primer design algorithm for complex sequence sets.
+#' 
+#' @docType package
+#' @author Manu Tamminen <mavatam.@utu.fi>
+#' @import Rcpp 
+#' @importFrom Rcpp evalCpp
+#' @useDynLib prider
+#' @name prider
+NULL
+
 
 #' Prepares a fasta file for primer design by replacing simple names and chunking the sequences
 #' using a sliding window function
@@ -5,17 +17,41 @@
 #' @param input_fasta A string
 #' @param  primer_length A number
 #' @return A list containing three tibbles: conversion table, converted sequences and primer chunks
-#' @examples
-#' prepare_blast_data(input_fasta = "../test_align.fasta", primer_length = 20)
+#' @export
+#' @importFrom stringr str_length
+#' @importFrom stringr str_split
+#' @importFrom purrr pluck
+#' @importFrom purrr map
+#' @importFrom purrr map_dbl
+#' @importFrom purrr map2
+#' @importFrom purrr map2_lgl
+#' @importFrom igraph graph_from_data_frame
+#' @importFrom igraph components
+#' @importFrom igraph groups
+#' @importFrom tidyr separate
+#' @importFrom tidyr unnest
+#' @importFrom tidyr unite
+#' @importFrom dplyr select
+#' @importFrom dplyr rename
+#' @importFrom dplyr as_tibble
+#' @importFrom dplyr group_by
+#' @importFrom dplyr mutate
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr left_join
+#' @importFrom dplyr ungroup
+#' @importFrom dplyr summarise
+#' @importFrom dplyr arrange
+#' @importFrom dplyr pull
+#' @importFrom dplyr row_number
+#' @importFrom dplyr n
+#' @importFrom tibble tibble
+#' @importFrom magrittr %>%
 prider <- function(input_fasta,
-            min_identity = 0.95, 
-            primer_length)
+            primer_length,
+            min_identity = 0.95)
 {
     if (min_identity > 1 || min_identity < 0.6)
         stop("min_identity should be between 0.6 and 1")
-
-    tmp_output <- create_random_name()
-    on.exit(file.remove(tmp_output), add = TRUE)
 
     message("Preparing BLAST data.")
     fasta_table <-
@@ -45,12 +81,14 @@ prider <- function(input_fasta,
         purrr::pluck(1)
     
     message("Running BLAST.")
-    blast(query_table = primers,
-          db_table = database,
-          output_file = tmp_output,
-          minIdentity = min_identity,
-          maxAccepts = accepts, 
-          strand = "plus")
+    tmp_output <- 
+        blast(query_table = primers,
+              db_table = database,
+              minIdentity = min_identity,
+              maxAccepts = accepts, 
+              strand = "plus",
+              output_to_tmp_file = TRUE)
+    on.exit(file.remove(tmp_output), add = TRUE)
 
     seq_len <-
         primers$Seq %>%
@@ -71,7 +109,7 @@ prider <- function(input_fasta,
         igraph::graph_from_data_frame(directed=FALSE) %>% 
         igraph::components(.) %>%
         igraph::groups(.) %>%
-        purrr::map_df(~tibble(Id=.), .id='Primer_cluster') %>% 
+        purrr::map_df(~dplyr::tibble(Id=.), .id='Primer_cluster') %>% 
         dplyr::left_join(primers, by = "Id") %>% 
         dplyr::group_by(Primer_cluster) %>%
         dplyr::mutate(Seq = make_degenerate_sequence(Seq, sequence_length = seq_len + 1)) %>% 
@@ -202,6 +240,7 @@ is_subset_of <- function(set1, set2)
 #'
 #' @param data_list A list
 #' @param output_gephi_file A string
+#' @export
 make_gephi <- function(data_list, 
                 output_gephi_file)
 {
