@@ -36,7 +36,7 @@ prider <- function(input_fasta,
 
     primers <- 
         database %>%
-        create_sequence_chunks(window_size = primer_length) %>% 
+        chunker(window_size = primer_length) %>% 
         dplyr::as_tibble(.)
 
     accepts <-

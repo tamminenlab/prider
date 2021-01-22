@@ -5,6 +5,18 @@
 
 using namespace Rcpp;
 
+// chunker
+DataFrame chunker(DataFrame seq_table, int window_size);
+RcppExport SEXP _prider_chunker(SEXP seq_tableSEXP, SEXP window_sizeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< DataFrame >::type seq_table(seq_tableSEXP);
+    Rcpp::traits::input_parameter< int >::type window_size(window_sizeSEXP);
+    rcpp_result_gen = Rcpp::wrap(chunker(seq_table, window_size));
+    return rcpp_result_gen;
+END_RCPP
+}
 // make_degenerate_sequence
 StringVector make_degenerate_sequence(StringVector sequences, int sequence_length, double cutoff);
 RcppExport SEXP _prider_make_degenerate_sequence(SEXP sequencesSEXP, SEXP sequence_lengthSEXP, SEXP cutoffSEXP) {
@@ -32,6 +44,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_prider_chunker", (DL_FUNC) &_prider_chunker, 2},
     {"_prider_make_degenerate_sequence", (DL_FUNC) &_prider_make_degenerate_sequence, 3},
     {"_prider_process_blast_table", (DL_FUNC) &_prider_process_blast_table, 2},
     {NULL, NULL, 0}
