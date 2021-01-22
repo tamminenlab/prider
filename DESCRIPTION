@@ -1,0 +1,17 @@
+Package: prider
+Title: Primer designer for complex DNA sequence pools.
+Version: 0.1
+Date: 2021-01-21
+Author: Manu Tamminen
+Maintainer: Manu Tamminen <mavatam@utu.fi>
+Description: Prider implements a BLAST-based primer design algorithm for complex sequence sets.
+License: GPL (>= 2)
+Imports: 
+    Rcpp (>= 1.0.5),
+    igraph,
+    dplyr,
+    tidyr,
+    purrr,
+    stringr
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1

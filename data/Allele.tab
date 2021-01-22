@@ -1,0 +1,1558 @@
+allele_name	protein_accession	nucleotide_accession	gene_name	start	stop	strand	curated_gene	product_name
+ACC-1	ACD12694.1	EU650653.1	blaACC-1	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-1
+ACC-1a	AAF86699.1	AF180960.1	blaACC-1a	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-1a
+ACC-1b	AAF86694.1	AF180955.1	blaACC-1b	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-1b
+ACC-1c	AAF86698.1	AF180959.1	blaACC-1c	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-1c
+ACC-1d	AAF86700.1	AF180961.1	blaACC-1d	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-1d
+ACC-2	AAF86691.1	AF180952.1	blaACC-2	1565	2737	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-2
+ACC-4	AIT76084.1	KM087831.1	blaACC-4	1	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-4
+ACC-5	CCK86740.1	HE819401.1	blaACC-5	1	1161	+	cephalosporin-hydrolyzing class C beta-lactamase ACC-5
+ACT-1	AAC45086.2	U58495.2	blaACT-1	28	1173	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-1
+ACT-10	AEV91214.1	JN848330.1	blaACT-10	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-10
+ACT-12	AFU25650.1	JX440355.1	blaACT-12	752	1897	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-12
+ACT-13	CCK86741.1	HE819402.1	blaACT-13	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-13
+ACT-14	AFU25647.1	JX440354.1	blaACT-14	757	1902	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-14
+ACT-15	AFU25653.1	JX440356.1	blaACT-15	755	1900	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-15
+ACT-17	AHM76771.1	KF992026.1	blaACT-17	754	1899	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-17
+ACT-18	AHM76777.1	KF992028.1	blaACT-18	762	1907	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-18
+ACT-19	AHM76779.1	KF992029.1	blaACT-19	749	1894	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-19
+ACT-2	CAJ28994.1	AM076977.1	blaACT-2	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-2
+ACT-20	AHA80105.1	KF526117.1	blaACT-20	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-20
+ACT-21	AHA80106.1	KF526118.1	blaACT-21	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-21
+ACT-22	AHM76774.1	KF992027.1	blaACT-22	701	1846	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-22
+ACT-23	AGU38146.1	KF515536.1	blaACT-23	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-23
+ACT-24	AHL39336.1	KJ207207.1	blaACT-24	480	1625	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-24
+ACT-25	AHL39338.1	KJ207208.1	blaACT-25	540	1685	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-25
+ACT-27	AHL39340.1	KJ207209.1	blaACT-27	455	1600	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-27
+ACT-28	AHL39333.1	KJ207206.1	blaACT-28	752	1897	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-28
+ACT-29	AIT76085.1	KM087832.1	blaACT-29	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-29
+ACT-3	ABL67017.1	EF125013.1	blaACT-3	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-3
+ACT-30	AIT76086.1	KM087833.1	blaACT-30	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-30
+ACT-31	AIT76096.1	KM087843.1	blaACT-31	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-31
+ACT-32	AIT76088.1	KM087835.1	blaACT-32	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-32
+ACT-33	AIT76087.1	KM087834.1	blaACT-33	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-33
+ACT-34	CDP41983.1	HG975300.1	blaACT-34	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-34
+ACT-35	BAP68758.1	LC004922.1	blaACT-35	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-35
+ACT-36	AJG06170.1	KM926621.1	blaACT-36	752	1897	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-36
+ACT-37	AJG06172.1	KM926622.1	blaACT-37	239	1384	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-37
+ACT-38	AKS43590.1	KP836350.1	blaACT-38	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-38
+ACT-39	AMP42993.1	KU884289.1	blaACT-39	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-39
+ACT-4	ABZ81086.1	EU427302.2	blaACT-4	1476	2618	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-4
+ACT-5	ACJ05689.1	FJ237369.1	blaACT-5	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-5
+ACT-6	ACJ05686.1	FJ237366.1	blaACT-6	41	1186	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-6
+ACT-7	ACJ05688.1	FJ237368.1	blaACT-7	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-7
+ACT-8	CBI75448.1	FN645445.1	blaACT-8	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-8
+ACT-9	AEI70575.1	HQ693810.1	blaACT-9	1009	2151	+	cephalosporin-hydrolyzing class C beta-lactamase ACT-9
+ADC-1	CAB77444.1	AJ009979.1	blaADC-1	1	1152	+	class C extended-spectrum beta-lactamase ADC-1
+ADC-10	ABI18382.1	DQ883640.1	blaADC-10	1	1167	+	class C extended-spectrum beta-lactamase ADC-10
+ADC-11	ADG46039.1	GU591983.1	blaADC-11	1	1152	+	class C extended-spectrum beta-lactamase ADC-11
+ADC-12	CAK95249.1	AM283529.1	blaADC-12	1	1152	+	class C extended-spectrum beta-lactamase ADC-12
+ADC-13	CAK95248.2	AM283528.2	blaADC-13	1	1152	+	class C extended-spectrum beta-lactamase ADC-13
+ADC-14	CAK95247.1	AM283527.1	blaADC-14	1	1152	+	class C extended-spectrum beta-lactamase ADC-14
+ADC-15	CAK95246.1	AM283526.1	blaADC-15	1	1152	+	class C extended-spectrum beta-lactamase ADC-15
+ADC-16	CAK95245.1	AM283525.1	blaADC-16	1	1152	+	class C extended-spectrum beta-lactamase ADC-16
+ADC-17	CAK95244.1	AM283524.1	blaADC-17	1	1152	+	class C extended-spectrum beta-lactamase ADC-17
+ADC-18	ACN62075.1	FJ744164.1	blaADC-18	706	1857	+	class C extended-spectrum beta-lactamase ADC-18
+ADC-19	CAK95242.1	AM283522.1	blaADC-19	1	1152	+	class C extended-spectrum beta-lactamase ADC-19
+ADC-2	AAO43172.1	AY177427.1	blaADC-2	1142	2293	+	class C beta-lactamase ADC-2
+ADC-20	CAK95241.1	AM283521.1	blaADC-20	1	1152	+	class C extended-spectrum beta-lactamase ADC-20
+ADC-21	CAK95240.1	AM283520.1	blaADC-21	1	1152	+	class C extended-spectrum beta-lactamase ADC-21
+ADC-22	CAK95239.1	AM283519.1	blaADC-22	1	1152	+	class C extended-spectrum beta-lactamase ADC-22
+ADC-23	CAK95238.1	AM283518.1	blaADC-23	1	1152	+	class C extended-spectrum beta-lactamase ADC-23
+ADC-25	ABK34773.1	EF016355.1	blaADC-25	1	1152	+	class C beta-lactamase ADC-25
+ADC-26	ADG46043.1	GU591987.1	blaADC-26	1	1152	+	class C extended-spectrum beta-lactamase ADC-26
+ADC-3	AAO59456.1	AY178995.1	blaADC-3	1	1152	+	class C beta-lactamase ADC-3
+ADC-30	ADG46041.1	GU591985.1	blaADC-30	1	1152	+	class C extended-spectrum beta-lactamase ADC-30
+ADC-38	ACC95873.1	EU652243.1	blaADC-38	1	1152	+	class C beta-lactamase ADC-38
+ADC-39	ACC95874.1	EU652244.1	blaADC-39	1	1152	+	class C beta-lactamase ADC-39
+ADC-4	AAO59457.1	AY178996.1	blaADC-4	1	1152	+	class C beta-lactamase ADC-4
+ADC-41	ACN62070.1	FJ744160.1	blaADC-41	1	1152	+	class C extended-spectrum beta-lactamase ADC-41
+ADC-42	ACN62071.1	FJ744161.1	blaADC-42	1	1152	+	class C extended-spectrum beta-lactamase ADC-42
+ADC-43	ACN62072.1	FJ744162.1	blaADC-43	1	1152	+	class C extended-spectrum beta-lactamase ADC-43
+ADC-44	ACN62073.1	FJ744163.1	blaADC-44	1	1152	+	class C extended-spectrum beta-lactamase ADC-44
+ADC-5	CAE00827.1	AJ575184.1	blaADC-5	1	1152	+	class C beta-lactamase ADC-5
+ADC-50	ADG46038.1	GU591982.1	blaADC-50	1	1152	+	class C extended-spectrum beta-lactamase ADC-50
+ADC-51	ADG46040.1	GU591984.1	blaADC-51	1	1152	+	class C extended-spectrum beta-lactamase ADC-51
+ADC-52	ADG46042.1	GU591986.1	blaADC-52	1	1152	+	class C extended-spectrum beta-lactamase ADC-52
+ADC-53	ADG46044.1	GU591988.1	blaADC-53	1	1152	+	class C extended-spectrum beta-lactamase ADC-53
+ADC-54	ADK35761.1	HM437231.1	blaADC-54	1	1152	+	class C beta-lactamase ADC-54
+ADC-56	AEL30570.1	JF265067.1	blaADC-56	955	2106	+	cefepime-hydrolyzing class C extended-spectrum beta-lactamase ADC-56
+ADC-58	AFG25594.1	JQ319653.1	blaADC-58	1	1152	+	class C beta-lactamase ADC-58
+ADC-59	AFG25595.1	JQ319654.1	blaADC-59	1	1152	+	class C beta-lactamase ADC-59
+ADC-6	AAR13676.1	AY325306.1	blaADC-6	955	2106	+	class C beta-lactamase ADC-6
+ADC-60	AFH53180.1	JQ692087.1	blaADC-60	1	1152	+	class C beta-lactamase ADC-60
+ADC-61	AFI56570.1	JQ753702.1	blaADC-61	1	1152	+	class C beta-lactamase ADC-61
+ADC-62	AFK24475.1	JQ867374.1	blaADC-62	1	1152	+	class C beta-lactamase ADC-62
+ADC-63	AFM80040.1	JQ911781.1	blaADC-63	1	1152	+	class C beta-lactamase ADC-63
+ADC-64	AFM80041.1	JQ911782.1	blaADC-64	1	1152	+	class C beta-lactamase ADC-64
+ADC-67	AFP89364.1	JX169789.1	blaADC-67	1	1152	+	class C beta-lactamase ADC-67
+ADC-68	AGL39360.1	KC866352.1	blaADC-68	1	1152	+	carbapenem-hydrolyzing class C beta-lactamase ADC-68
+ADC-7	AAT70411.1	AY648950.1	blaADC-7	1	1152	+	class C beta-lactamase ADC-7
+ADC-73	ALA14808.1	KP881233.1	blaADC-73	1	1152	+	class C extended-spectrum beta-lactamase ADC-73
+ADC-74	ALA14809.1	KP881234.1	blaADC-74	1	1152	+	class C extended-spectrum beta-lactamase ADC-74
+ADC-75	ALA14810.1	KP881235.1	blaADC-75	1	1152	+	class C extended-spectrum beta-lactamase ADC-75
+ADC-76	ALA14811.1	KP881236.1	blaADC-76	1	1152	+	class C extended-spectrum beta-lactamase ADC-76
+ADC-77	ALA14812.1	KP881237.1	blaADC-77	54	1205	+	class C extended-spectrum beta-lactamase ADC-77
+ADC-78	ALA14813.1	KP881238.1	blaADC-78	1	1152	+	class C extended-spectrum beta-lactamase ADC-78
+ADC-79	ALA14814.1	KP881239.1	blaADC-79	1	1152	+	class C extended-spectrum beta-lactamase ADC-79
+ADC-80	ALA14815.1	KP881240.1	blaADC-80	1	1152	+	class C extended-spectrum beta-lactamase ADC-80
+ADC-81	ALA14816.1	KP881241.1	blaADC-81	1	1167	+	class C extended-spectrum beta-lactamase ADC-81
+BEL-1	AAZ04368.1	DQ089809.1	blaBEL-1	1006	1857	+	class A extended-spectrum beta-lactamase BEL-1
+BEL-2	ACV69996.1	FJ666063.1	blaBEL-2	1	852	+	class A extended-spectrum beta-lactamase BEL-2
+BEL-3	ACT09140.1	GQ202694.1	blaBEL-3	1	852	+	class A extended-spectrum beta-lactamase BEL-3
+CARB-1	AAK96394.1	AF313471.1	blaCARB-1	1422	2288	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-1
+CARB-10	ACJ61335.1	EU850412.1	blaCARB-10	2270	3166	+	RTG family carbenicillin-hydrolyzing class A extended-spectrum beta-lactamase CARB-10
+CARB-11	AAG23870.1	AY008290.1	blaCARB-11	1	867	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-11
+CARB-12	BAA02497.1	D13210.1	blaCARB-12	232	1098	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-12
+CARB-14	AFI72872.1	JQ364968.1	blaCARB-14	3333	4229	+	RTG family carbenicillin-hydrolyzing class A beta-lactamase CARB-14
+CARB-16	CCW43444.1	HF953351.1	blaCARB-16	2462	3358	-	RTG family carbenicillin-hydrolyzing class A beta-lactamase CARB-16
+CARB-17	AIL92326.1	KJ934265.1	blaCARB-17	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-17
+CARB-18	AIL92327.1	KJ934266.1	blaCARB-18	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-18
+CARB-19	AIL92328.1	KJ934267.1	blaCARB-19	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-19
+CARB-2	AAA25740.1	M69058.1	blaCARB-2	98	1012	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-2
+CARB-20	KED43530.1	JNSW01000056.1	blaCARB-20	45719	46570	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-20
+CARB-22	BAC61820.1	BA000032.2	blaCARB-22	476708	477559	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-22
+CARB-24	DAA64871.1	BK008907.1	blaCARB-24	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-24
+CARB-25	DAA64852.1	BK008888.1	blaCARB-25	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-25
+CARB-26	DAA64861.1	BK008897.1	blaCARB-26	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-26
+CARB-27	DAA64860.1	BK008896.1	blaCARB-27	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-27
+CARB-28	DAA64870.1	BK008906.1	blaCARB-28	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-28
+CARB-29	DAA64869.1	BK008905.1	blaCARB-29	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-29
+CARB-3	AAB19430.2	S46063.1	blaCARB-3	122	1036	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-3
+CARB-30	DAA64857.1	BK008893.1	blaCARB-30	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-30
+CARB-31	DAA64859.1	BK008895.1	blaCARB-31	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-31
+CARB-32	DAA64856.1	BK008892.1	blaCARB-32	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-32
+CARB-33	DAA64867.1	BK008903.1	blaCARB-33	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-33
+CARB-34	DAA64865.1	BK008901.1	blaCARB-34	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-34
+CARB-35	DAA64864.1	BK008900.1	blaCARB-35	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-35
+CARB-36	DAA64866.1	BK008902.1	blaCARB-36	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-36
+CARB-38	DAA64862.1	BK008898.1	blaCARB-38	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-38
+CARB-4	AAC09012.1	U14749.1	blaCARB-4	691	1557	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-4
+CARB-40	DAA64853.1	BK008889.1	blaCARB-40	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-40
+CARB-41	DAA64854.1	BK008890.1	blaCARB-41	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-41
+CARB-42	DAA64858.1	BK008894.1	blaCARB-42	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-42
+CARB-43	DAA64855.1	BK008891.1	blaCARB-43	1	852	+	carbenicillin-hydrolyzing class A beta-lactamase CARB-43
+CARB-44	KHF12803.1	JTGS01000066.1	blaCARB-44	360720	361571	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-44
+CARB-45	KHF09587.1	JTGR01000061.1	blaCARB-45	357012	357863	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-45
+CARB-46	KED80204.1	JNTF01000030.1	blaCARB-46	10599	11450	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-46
+CARB-47	WP_031841337.1	AVPX01000003.1	blaCARB-47	539751	540602	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-47
+CARB-48	WP_025577435.1	KK081925.1	blaCARB-48	10240	11091	-	carbenicillin-hydrolyzing class A beta-lactamase CARB-48
+CARB-5	AAF61417.1	AF135373.1	blaCARB-5	12	908	+	RTG family carbenicillin-hydrolyzing class A beta-lactamase CARB-5
+CARB-6	AAD19217.1	AF030945.1	blaCARB-6	96	962	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-6
+CARB-7	AAM74565.1	AF409092.1	blaCARB-7	888	1754	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-7
+CARB-8	AAO59455.1	AY178993.1	blaCARB-8	575	1471	+	RTG family carbenicillin-hydrolyzing class A beta-lactamase CARB-8
+CARB-9	AAP22374.1	AY248038.1	blaCARB-9	2073	2939	+	PSE family carbenicillin-hydrolyzing class A beta-lactamase CARB-9
+CFE-1	BAC76072.1	AB107899.1	blaCFE-1	1008	2153	+	CMY-2 family cephalosporin-hydrolyzing class C beta-lactamase CFE-1
+CMY-1	CAA63264.1	X92508.1	blaCMY-1	333	1481	+	class C beta-lactamase CMY-1
+CMY-10	AAK31368.1	AF357597.1	blaCMY-10	251	1399	+	CMY-1/MOX family class C beta-lactamase CMY-10
+CMY-100	AHA80101.1	KF526113.1	blaCMY-100	1	1146	+	class C beta-lactamase CMY-100
+CMY-101	AHA80102.1	KF526114.1	blaCMY-101	1	1146	+	class C beta-lactamase CMY-101
+CMY-102	AHA80103.1	KF526115.1	blaCMY-102	1	1146	+	class C beta-lactamase CMY-102
+CMY-103	AHA80104.1	KF526116.1	blaCMY-103	1	1146	+	class C beta-lactamase CMY-103
+CMY-104	AGR82311.1	KF150216.1	blaCMY-104	1	1146	+	class C beta-lactamase CMY-104
+CMY-105	AHL39330.1	KJ207205.1	blaCMY-105	1040	2185	+	class C beta-lactamase CMY-105
+CMY-106	AJH76980.1	KM983294.1	blaCMY-106	1051	2196	+	class C beta-lactamase CMY-106
+CMY-107	ALE33733.1	KR061886.1	blaCMY-107	852	1997	+	class C beta-lactamase CMY-107
+CMY-108	AGZ20169.1	KF564648.1	blaCMY-108	1	1146	+	class C beta-lactamase CMY-108
+CMY-109	CAG34070.1	AJ746169.1	blaCMY-109	1	1146	+	class C beta-lactamase CMY-109
+CMY-11	AAK31370.1	AF357599.1	blaCMY-11	254	1402	+	CMY-1/MOX family class C beta-lactamase CMY-11
+CMY-110	BAO05497.1	AB872957.1	blaCMY-110	1	1146	+	class C beta-lactamase CMY-110
+CMY-111	AHW47897.1	KJ155695.1	blaCMY-111	1	1146	+	class C beta-lactamase CMY-111
+CMY-112	AIT76090.1	KM087837.1	blaCMY-112	1	1146	+	class C beta-lactamase CMY-112
+CMY-113	AIT76089.1	KM087836.1	blaCMY-113	1	1146	+	class C beta-lactamase CMY-113
+CMY-114	AIT76099.1	KM087846.1	blaCMY-114	1	1146	+	class C beta-lactamase CMY-114
+CMY-115	AIT76092.1	KM087839.1	blaCMY-115	1	1146	+	class C beta-lactamase CMY-115
+CMY-116	AIT76093.1	KM087840.1	blaCMY-116	1	1146	+	class C beta-lactamase CMY-116
+CMY-117	AIT76097.1	KM087844.1	blaCMY-117	1	1146	+	class C beta-lactamase CMY-117
+CMY-118	AIT76091.1	KM087838.1	blaCMY-118	1	1146	+	class C beta-lactamase CMY-118
+CMY-119	AIT76098.1	KM087845.1	blaCMY-119	1	1146	+	class C beta-lactamase CMY-119
+CMY-12	CAA76382.1	Y16785.1	blaCMY-12	1	1143	+	class C beta-lactamase CMY-12
+CMY-121	AIZ48988.1	KM507172.1	blaCMY-121	1	1143	+	class C beta-lactamase CMY-121
+CMY-122	AKO62859.1	KM985460.1	blaCMY-122	1	1146	+	class C beta-lactamase CMY-122
+CMY-124	AKO62861.1	KM985462.1	blaCMY-124	1	1146	+	class C beta-lactamase CMY-124
+CMY-125	AKO62862.1	KM985463.1	blaCMY-125	1	1146	+	class C beta-lactamase CMY-125
+CMY-127	AKO62864.1	KM985465.1	blaCMY-127	1	1146	+	class C beta-lactamase CMY-127
+CMY-128	AKO62865.1	KM985466.1	blaCMY-128	1	1146	+	class C beta-lactamase CMY-128
+CMY-129	AKO62866.1	KM985467.1	blaCMY-129	1	1146	+	class C beta-lactamase CMY-129
+CMY-13	AAQ16660.2	AY339625.2	blaCMY-13	3641	4786	-	class C beta-lactamase CMY-13
+CMY-130	AKI06385.1	KP207589.1	blaCMY-130	1	1146	+	class C beta-lactamase CMY-130
+CMY-131	AKG51729.1	KP281294.1	blaCMY-131	1	1146	+	class C beta-lactamase CMY-131
+CMY-132	AKZ20822.1	KP862820.1	blaCMY-132	1	1146	+	class C beta-lactamase CMY-132
+CMY-133	AKZ20821.1	KP862819.1	blaCMY-133	1	1146	+	class C beta-lactamase CMY-133
+CMY-134	AKA60779.1	KP860987.1	blaCMY-134	11	1156	+	class C beta-lactamase CMY-134
+CMY-135	AKP17985.1	KP981366.1	blaCMY-135	1	1146	+	class C beta-lactamase CMY-135
+CMY-138	ALM96710.1	KT997883.1	blaCMY-138	1	1146	+	class C beta-lactamase CMY-138
+CMY-139	AMK49571.1	KU641016.1	blaCMY-139	1	1146	+	class C beta-lactamase CMY-139
+CMY-14	CAD88479.1	AJ555825.2	blaCMY-14	1	1146	+	class C beta-lactamase CMY-14
+CMY-15	CAD88477.1	AJ555823.2	blaCMY-15	1	1146	+	class C beta-lactamase CMY-15
+CMY-16	CAH03679.1	AJ781421.1	blaCMY-16	1	1146	+	class C beta-lactamase CMY-16
+CMY-17	AAS13399.1	AY513266.1	blaCMY-17	165	1310	+	class C beta-lactamase CMY-17
+CMY-18	AAU95778.1	AY743434.1	blaCMY-18	47	1198	+	class C beta-lactamase CMY-18
+CMY-19	BAE48233.1	AB194410.1	blaCMY-19	1	1149	+	CMY-1/MOX family class C beta-lactamase CMY-19
+CMY-2	CAA62957.1	X91840.1	blaCMY-2	1924	3069	+	class C beta-lactamase CMY-2
+CMY-20	AAX58682.2	AY960293.2	blaCMY-20	1	1143	+	class C beta-lactamase CMY-20
+CMY-21	AAZ66866.1	DQ139328.1	blaCMY-21	161	1306	+	class C beta-lactamase CMY-21
+CMY-22	ABB72431.1	DQ256079.1	blaCMY-22	1	1146	+	class C beta-lactamase CMY-22
+CMY-23	ABF06441.1	DQ463751.1	blaCMY-23	76	1221	+	class C beta-lactamase CMY-23
+CMY-24	ABN69070.1	EF415650.1	blaCMY-24	1	1146	+	class C beta-lactamase CMY-24
+CMY-25	ACA30420.1	EU515249.1	blaCMY-25	1	1146	+	class C beta-lactamase CMY-25
+CMY-26	BAF56185.1	AB300358.1	blaCMY-26	1	1146	+	class C beta-lactamase CMY-26
+CMY-27	ACA30421.1	EU515250.1	blaCMY-27	1	1146	+	class C beta-lactamase CMY-27
+CMY-28	ABQ51091.1	EF561644.1	blaCMY-28	1	1146	+	class C beta-lactamase CMY-28
+CMY-29	ABS12248.1	EF685371.2	blaCMY-29	1	1143	+	class C beta-lactamase CMY-29
+CMY-30	ABS12249.1	EF685372.2	blaCMY-30	1	1143	+	class C extended-spectrum beta-lactamase CMY-30
+CMY-31	ABR18736.1	EF622224.1	blaCMY-31	1	1146	+	class C beta-lactamase CMY-31
+CMY-32	ACA97846.1	EU496815.1	blaCMY-32	1	1146	+	class C beta-lactamase CMY-32
+CMY-33	ACA97847.1	EU496816.1	blaCMY-33	1	1140	+	class C beta-lactamase CMY-33
+CMY-34	ABN51006.1	EF394370.1	blaCMY-34	1	1146	+	class C beta-lactamase CMY-34
+CMY-35	ABN51007.1	EF394371.1	blaCMY-35	1	1146	+	class C beta-lactamase CMY-35
+CMY-36	ABY58049.1	EU331426.1	blaCMY-36	2375	3520	+	class C beta-lactamase CMY-36
+CMY-37	BAF36388.1	AB280919.1	blaCMY-37	1	1146	+	class C extended-spectrum beta-lactamase CMY-37
+CMY-38	CAP60699.1	AM931008.1	blaCMY-38	1	1146	+	class C beta-lactamase CMY-38
+CMY-39	BAF95726.1	AB372224.1	blaCMY-39	1	1146	+	class C beta-lactamase CMY-39
+CMY-4	CAA75402.1	Y15130.1	blaCMY-4	1	1143	+	class C beta-lactamase CMY-4
+CMY-40	ACA30422.1	EU515251.1	blaCMY-40	1	1146	+	class C beta-lactamase CMY-40
+CMY-41	BAG14343.1	AB429270.1	blaCMY-41	15	1160	+	class C beta-lactamase CMY-41
+CMY-42	ADM21467.1	HM146927.1	blaCMY-42	1	1146	+	class C extended-spectrum beta-lactamase CMY-42
+CMY-43	ACJ05361.1	FJ360626.1	blaCMY-43	1	1146	+	class C beta-lactamase CMY-43
+CMY-44	ACJ65711.1	FJ437066.1	blaCMY-44	1	1134	+	class C beta-lactamase CMY-44
+CMY-45	CBB16411.1	FN546177.1	blaCMY-45	1	1146	+	class C beta-lactamase CMY-45
+CMY-46	CBH19182.1	FN556186.1	blaCMY-46	1	1146	+	class C beta-lactamase CMY-46
+CMY-47	ADH82410.1	HM046998.2	blaCMY-47	1040	2185	+	class C beta-lactamase CMY-47
+CMY-48	ADP02979.1	HM569226.2	blaCMY-48	1040	2185	+	class C beta-lactamase CMY-48
+CMY-49	ACV32310.1	GQ402541.1	blaCMY-49	1	1146	+	class C beta-lactamase CMY-49
+CMY-5	CAB50867.1	Y17716.1	blaCMY-5	2374	3519	+	class C beta-lactamase CMY-5
+CMY-50	CBI75447.1	FN645444.1	blaCMY-50	1	1146	+	class C beta-lactamase CMY-50
+CMY-51	AFK73431.1	JQ733571.1	blaCMY-51	1028	2173	+	class C beta-lactamase CMY-51
+CMY-53	ADQ38362.1	HQ336940.1	blaCMY-53	1	1146	+	class C beta-lactamase CMY-53
+CMY-54	ADK55604.1	HM544039.1	blaCMY-54	1	1152	+	class C beta-lactamase CMY-54
+CMY-55	ADK55605.1	HM544040.1	blaCMY-55	1	1146	+	class C beta-lactamase CMY-55
+CMY-56	ADT91162.1	HQ322613.1	blaCMY-56	1	1146	+	class C beta-lactamase CMY-56
+CMY-57	ADP37961.1	HQ285243.1	blaCMY-57	1	1146	+	class C beta-lactamase CMY-57
+CMY-58	ADY19254.1	HQ185697.1	blaCMY-58	1268	2413	+	class C beta-lactamase CMY-58
+CMY-6	CAB36902.1	AJ011293.1	blaCMY-6	1	1146	+	class C beta-lactamase CMY-6
+CMY-60	AEM97672.1	JF460794.1	blaCMY-60	1	1146	+	class C beta-lactamase CMY-60
+CMY-61	AEM97673.1	JF460795.1	blaCMY-61	1	1143	+	class C beta-lactamase CMY-61
+CMY-62	AEM97674.1	JF460796.1	blaCMY-62	1	1146	+	class C beta-lactamase CMY-62
+CMY-63	AET07387.1	HQ650104.1	blaCMY-63	64	1209	+	class C beta-lactamase CMY-63
+CMY-64	ADW84690.1	HQ832678.1	blaCMY-64	1	1146	+	class C beta-lactamase CMY-64
+CMY-65	AEI52842.1	JF780936.1	blaCMY-65	64	1209	+	class C beta-lactamase CMY-65
+CMY-66	AEZ49849.1	JN714478.1	blaCMY-66	1035	2180	+	class C beta-lactamase CMY-66
+CMY-67	AFK08541.1	JQ711185.1	blaCMY-67	1028	2173	+	class C beta-lactamase CMY-67
+CMY-68	AEZ49855.1	JN714480.1	blaCMY-68	1040	2185	+	class C beta-lactamase CMY-68
+CMY-69	AGE45504.1	JX049132.1	blaCMY-69	1	1146	+	class C beta-lactamase CMY-69
+CMY-7	CAB36900.1	AJ011291.1	blaCMY-7	1	1146	+	class C beta-lactamase CMY-7
+CMY-70	AFU25635.1	JX440350.1	blaCMY-70	1027	2172	+	class C beta-lactamase CMY-70
+CMY-71	AFK08538.1	JQ711184.1	blaCMY-71	1027	2172	+	class C beta-lactamase CMY-71
+CMY-72	AFU25641.1	JX440352.1	blaCMY-72	1028	2173	+	class C beta-lactamase CMY-72
+CMY-73	ACU00152.1	GQ351345.1	blaCMY-73	1	1146	+	class C beta-lactamase CMY-73
+CMY-74	AFU25632.1	JX440349.1	blaCMY-74	1027	2172	+	class C beta-lactamase CMY-74
+CMY-75	AFK73434.1	JQ733572.1	blaCMY-75	1028	2173	+	class C beta-lactamase CMY-75
+CMY-76	AFK73437.1	JQ733573.1	blaCMY-76	1028	2173	+	class C beta-lactamase CMY-76
+CMY-77	AFU25644.1	JX440353.1	blaCMY-77	1027	2172	+	class C beta-lactamase CMY-77
+CMY-78	AFK73443.1	JQ733575.1	blaCMY-78	1028	2173	+	class C beta-lactamase CMY-78
+CMY-79	AFK73446.1	JQ733576.1	blaCMY-79	1028	2173	+	class C beta-lactamase CMY-79
+CMY-8	AAD50818.2	AF167990.3	blaCMY-8	613	1761	+	CMY-1/MOX family class C extended-spectrum beta-lactamase CMY-8
+CMY-80	AFK73449.1	JQ733577.1	blaCMY-80	1027	2172	+	class C beta-lactamase CMY-80
+CMY-81	AFK73452.1	JQ733578.1	blaCMY-81	1008	2153	+	class C beta-lactamase CMY-81
+CMY-82	AHL39324.1	KJ207203.1	blaCMY-82	6	1151	+	class C beta-lactamase CMY-82
+CMY-83	AFU25638.1	JX440351.1	blaCMY-83	1027	2172	+	class C beta-lactamase CMY-83
+CMY-84	AFK73455.1	JQ733579.1	blaCMY-84	1028	2173	+	class C beta-lactamase CMY-84
+CMY-85	AHL39322.1	KJ207202.1	blaCMY-85	549	1694	+	class C beta-lactamase CMY-85
+CMY-86	AHL39327.1	KJ207204.1	blaCMY-86	580	1725	+	class C beta-lactamase CMY-86
+CMY-87	BAL63057.1	AB699171.1	blaCMY-87	1	1143	+	class C beta-lactamase CMY-87
+CMY-89	CCK86742.1	HE819403.1	blaCMY-89	1	1146	+	class C beta-lactamase CMY-89
+CMY-8b	AAZ03413.1	DQ094251.1	blaCMY-8b	1	1149	+	CMY-1/MOX family class C beta-lactamase CMY-8b
+CMY-9	BAB72158.1	AB061794.1	blaCMY-9	6018	7166	+	CMY-1/MOX family class C extended-spectrum beta-lactamase CMY-9
+CMY-90	CCK86743.1	HE819404.1	blaCMY-90	1	1146	+	class C beta-lactamase CMY-90
+CMY-93	AHM76768.1	KF992025.1	blaCMY-93	1027	2172	+	class C beta-lactamase CMY-93
+CMY-94	AGC54798.1	JX514368.1	blaCMY-94	272	1417	+	class C beta-lactamase CMY-94
+CMY-95	AGC54799.1	JX514369.1	blaCMY-95	297	1442	+	class C beta-lactamase CMY-95
+CMY-96	AFZ85212.1	KC007362.1	blaCMY-96	1	1146	+	class C beta-lactamase CMY-96
+CMY-97	AFZ85213.1	KC007363.1	blaCMY-97	1	1146	+	class C beta-lactamase CMY-97
+CMY-99	AGU59995.1	KF305673.1	blaCMY-99	18	1163	+	class C beta-lactamase CMY-99
+CTX-M-1	CAA63262.1	X92506.1	blaCTX-M-1	63	938	+	class A extended-spectrum beta-lactamase CTX-M-1
+CTX-M-10	AAF65843.1	AF255298.1	blaCTX-M-10	1	873	+	class A extended-spectrum beta-lactamase CTX-M-10
+CTX-M-100	CBW46935.1	FR682582.1	blaCTX-M-100	1	876	+	class A extended-spectrum beta-lactamase CTX-M-100
+CTX-M-101	ADY02545.1	HQ398214.1	blaCTX-M-101	250	1125	+	class A extended-spectrum beta-lactamase CTX-M-101
+CTX-M-102	ADY02546.1	HQ398215.1	blaCTX-M-102	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-102
+CTX-M-103	CDG50843.1	HG423149.1	blaCTX-M-103	40	915	+	class A extended-spectrum beta-lactamase CTX-M-103
+CTX-M-104	ADY02555.1	HQ833652.1	blaCTX-M-104	236	1111	+	class A extended-spectrum beta-lactamase CTX-M-104
+CTX-M-105	ADY02554.1	HQ833651.1	blaCTX-M-105	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-105
+CTX-M-110	AEM44648.1	JF274242.1	blaCTX-M-110	1	877	+	class A extended-spectrum beta-lactamase CTX-M-110
+CTX-M-111	AEM44649.1	JF274243.1	blaCTX-M-111	1	876	+	class A extended-spectrum beta-lactamase CTX-M-111
+CTX-M-112	AEM44652.1	JF274246.1	blaCTX-M-112	1	876	+	class A extended-spectrum beta-lactamase CTX-M-112
+CTX-M-113	AEM44653.1	JF274247.1	blaCTX-M-113	1	876	+	class A extended-spectrum beta-lactamase CTX-M-113
+CTX-M-114	ACU00153.1	GQ351346.1	blaCTX-M-114	1	876	+	class A extended-spectrum beta-lactamase CTX-M-114
+CTX-M-115	AIL54055.1	KJ911020.1	blaCTX-M-115	112	987	+	class A extended-spectrum beta-lactamase CTX-M-115
+CTX-M-116	AEI70324.1	JF966749.1	blaCTX-M-116	158	1033	+	class A extended-spectrum beta-lactamase CTX-M-116
+CTX-M-117	AET99223.1	JN227085.1	blaCTX-M-117	352	1227	+	class A extended-spectrum beta-lactamase CTX-M-117
+CTX-M-12	AAG34108.1	AF305837.1	blaCTX-M-12	1	876	+	class A extended-spectrum beta-lactamase CTX-M-12
+CTX-M-121	AFA51699.1	JN790862.1	blaCTX-M-121	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-121
+CTX-M-122	AFA51700.1	JN790863.1	blaCTX-M-122	233	1108	+	class A extended-spectrum beta-lactamase CTX-M-122
+CTX-M-123	AFA51701.1	JN790864.1	blaCTX-M-123	239	1114	+	class A extended-spectrum beta-lactamase CTX-M-123
+CTX-M-124	AFH88134.1	JQ429324.1	blaCTX-M-124	1	876	+	class A extended-spectrum beta-lactamase CTX-M-124
+CTX-M-125	AFO69261.1	JQ724542.1	blaCTX-M-125	175	1050	+	class A extended-spectrum beta-lactamase CTX-M-125
+CTX-M-126	BAL72196.1	AB703103.1	blaCTX-M-126	1	876	+	class A extended-spectrum beta-lactamase CTX-M-126
+CTX-M-129	AFJ59956.1	JX017364.1	blaCTX-M-129	239	1114	+	class A extended-spectrum beta-lactamase CTX-M-129
+CTX-M-13	AAF72531.1	AF252623.2	blaCTX-M-13	1	876	+	class A extended-spectrum beta-lactamase CTX-M-13
+CTX-M-130	AFJ59957.1	JX017365.1	blaCTX-M-130	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-130
+CTX-M-131	AEW46676.3	JN969893.3	blaCTX-M-131	2531	3406	+	class A extended-spectrum beta-lactamase CTX-M-131
+CTX-M-132	AFQ94051.1	JX313020.1	blaCTX-M-132	1	876	+	class A extended-spectrum beta-lactamase CTX-M-132
+CTX-M-134	AFX60298.1	JX896165.1	blaCTX-M-134	1	876	+	class A extended-spectrum beta-lactamase CTX-M-134
+CTX-M-136	AGG08693.1	KC351754.1	blaCTX-M-136	158	1033	+	class A extended-spectrum beta-lactamase CTX-M-136
+CTX-M-137	BAO37256.1	AB900900.1	blaCTX-M-137	1	876	+	class A extended-spectrum beta-lactamase CTX-M-137
+CTX-M-139	AFY98865.1	KC107824.1	blaCTX-M-139	1	876	+	class A extended-spectrum beta-lactamase CTX-M-139
+CTX-M-14	AAF72530.1	AF252622.2	blaCTX-M-14	1741	2616	+	class A extended-spectrum beta-lactamase CTX-M-14
+CTX-M-141	AGN11769.1	KC964871.1	blaCTX-M-141	1	876	+	class A extended-spectrum beta-lactamase CTX-M-141
+CTX-M-142	AGW25368.1	KF240809.1	blaCTX-M-142	1	876	+	class A extended-spectrum beta-lactamase CTX-M-142
+CTX-M-144	AHX39588.1	KJ020573.1	blaCTX-M-144	275	1150	+	class A extended-spectrum beta-lactamase CTX-M-144
+CTX-M-147	AHA80961.1	KF513180.1	blaCTX-M-147	1	876	+	class A extended-spectrum beta-lactamase CTX-M-147
+CTX-M-148	AHX39589.1	KJ020574.1	blaCTX-M-148	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-148
+CTX-M-15	AAL02127.1	AY044436.1	blaCTX-M-15	1436	2311	+	class A extended-spectrum beta-lactamase CTX-M-15
+CTX-M-150	AHF20911.1	KF769131.1	blaCTX-M-150	1	876	+	class A extended-spectrum beta-lactamase CTX-M-150
+CTX-M-151	BAP34782.1	AB916359.1	blaCTX-M-151	794	1708	+	class A extended-spectrum beta-lactamase CTX-M-151
+CTX-M-152	AHY20039.1	KJ461948.1	blaCTX-M-152	4	876	+	class A extended-spectrum beta-lactamase CTX-M-152
+CTX-M-155	AIS67611.1	KM211508.1	blaCTX-M-155	1	876	+	class A extended-spectrum beta-lactamase CTX-M-155
+CTX-M-156	AIS67612.1	KM211509.1	blaCTX-M-156	1	876	+	class A extended-spectrum beta-lactamase CTX-M-156
+CTX-M-157	AIS67613.1	KM211510.1	blaCTX-M-157	1	876	+	class A extended-spectrum beta-lactamase CTX-M-157
+CTX-M-158	AIT97310.1	KM211691.1	blaCTX-M-158	1	876	+	class A extended-spectrum beta-lactamase CTX-M-158
+CTX-M-159	BAP18874.1	AB976602.1	blaCTX-M-159	136	1011	+	class A extended-spectrum beta-lactamase CTX-M-159
+CTX-M-16	AAK32961.1	AY029068.1	blaCTX-M-16	1	876	+	class A extended-spectrum beta-lactamase CTX-M-16
+CTX-M-160	AJO16046.1	KP050493.1	blaCTX-M-160	1	876	+	class A extended-spectrum beta-lactamase CTX-M-160
+CTX-M-161	AJU57235.1	KP128034.1	blaCTX-M-161	1	876	+	class A extended-spectrum beta-lactamase CTX-M-161
+CTX-M-162	AKO63213.1	KP681697.1	blaCTX-M-162	1	876	+	class A extended-spectrum beta-lactamase CTX-M-162
+CTX-M-163	AKO63214.1	KP681698.1	blaCTX-M-163	1	876	+	class A extended-spectrum beta-lactamase CTX-M-163
+CTX-M-164	AKR53959.1	KP727571.1	blaCTX-M-164	1	876	+	class A extended-spectrum beta-lactamase CTX-M-164
+CTX-M-165	AKR53960.1	KP727572.1	blaCTX-M-165	1	876	+	class A extended-spectrum beta-lactamase CTX-M-165
+CTX-M-166	CFW94147.1	LN830266.1	blaCTX-M-166	1	876	+	class A extended-spectrum beta-lactamase CTX-M-166
+CTX-M-167	ALJ77593.1	KR537428.1	blaCTX-M-167	1	876	+	class A extended-spectrum beta-lactamase CTX-M-167
+CTX-M-168	ALJ94049.1	KR537429.1	blaCTX-M-168	1	876	+	class A extended-spectrum beta-lactamase CTX-M-168
+CTX-M-169	ALL29307.1	KR779864.1	blaCTX-M-169	153	1028	+	class A extended-spectrum beta-lactamase CTX-M-169
+CTX-M-17	AAK71471.1	AY033516.1	blaCTX-M-17	2836	3711	+	class A extended-spectrum beta-lactamase CTX-M-17
+CTX-M-170	ALK03059.1	KR822223.1	blaCTX-M-170	1	876	+	class A extended-spectrum beta-lactamase CTX-M-170
+CTX-M-172	AKS25179.1	KT251041.1	blaCTX-M-172	1	876	+	class A extended-spectrum beta-lactamase CTX-M-172
+CTX-M-173	ALM96711.1	KT997884.1	blaCTX-M-173	1	876	+	class A extended-spectrum beta-lactamase CTX-M-173
+CTX-M-174	ALM96713.1	KT997886.1	blaCTX-M-174	1	876	+	class A extended-spectrum beta-lactamase CTX-M-174
+CTX-M-175	ALM96714.1	KT997887.1	blaCTX-M-175	1	876	+	class A extended-spectrum beta-lactamase CTX-M-175
+CTX-M-176	ALM96715.1	KT997888.1	blaCTX-M-176	1	876	+	class A extended-spectrum beta-lactamase CTX-M-176
+CTX-M-177	ALM96716.1	KT997889.1	blaCTX-M-177	1	876	+	class A extended-spectrum beta-lactamase CTX-M-177
+CTX-M-179	AMJ17432.1	KU705393.1	blaCTX-M-179	1	876	+	class A extended-spectrum beta-lactamase CTX-M-179
+CTX-M-180	AMY95406.1	KX056899.1	blaCTX-M-180	1	876	+	class A beta-lactamase CTX-M-180
+CTX-M-181	AMY95407.1	KX056900.1	blaCTX-M-181	1	876	+	class A beta-lactamase CTX-M-181
+CTX-M-182	AMY95408.1	KX056901.1	blaCTX-M-182	1	876	+	class A beta-lactamase CTX-M-182
+CTX-M-19	AAK55534.1	AF325134.1	blaCTX-M-19	1	876	+	class A extended-spectrum beta-lactamase CTX-M-19
+CTX-M-2	CAA63263.1	X92507.1	blaCTX-M-2	6	881	+	class A extended-spectrum beta-lactamase CTX-M-2
+CTX-M-20	CAC95175.1	AJ416344.1	blaCTX-M-20	304	1179	+	class A extended-spectrum beta-lactamase CTX-M-20
+CTX-M-21	CAD08929.1	AJ416346.1	blaCTX-M-21	557	1432	+	class A extended-spectrum beta-lactamase CTX-M-21
+CTX-M-22	AAL86924.1	AY080894.1	blaCTX-M-22	4	879	+	class A extended-spectrum beta-lactamase CTX-M-22
+CTX-M-23	AAL99990.1	AF488377.1	blaCTX-M-23	63	938	+	class A extended-spectrum beta-lactamase CTX-M-23
+CTX-M-24	AAN38836.1	AY143430.1	blaCTX-M-24	1	876	+	class A extended-spectrum beta-lactamase CTX-M-24
+CTX-M-25	AAM70498.1	AF518567.2	blaCTX-M-25	2321	3196	+	class A extended-spectrum beta-lactamase CTX-M-25
+CTX-M-26	AAN75444.1	AY157676.1	blaCTX-M-26	1	876	+	class A extended-spectrum beta-lactamase CTX-M-26
+CTX-M-27	AAO61597.1	AY156923.1	blaCTX-M-27	1	876	+	class A extended-spectrum beta-lactamase CTX-M-27
+CTX-M-28	CAD70280.1	AJ549244.1	blaCTX-M-28	1	876	+	class A extended-spectrum beta-lactamase CTX-M-28
+CTX-M-29	AAP22736.1	AY267213.1	blaCTX-M-29	1	876	+	class A extended-spectrum beta-lactamase CTX-M-29
+CTX-M-3	BAD34467.1	AB185834.1	blaCTX-M-3	1	876	+	class A extended-spectrum beta-lactamase CTX-M-3
+CTX-M-30	AAP43508.1	AY292654.1	blaCTX-M-30	1	876	+	class A extended-spectrum beta-lactamase CTX-M-30
+CTX-M-31	CAD99181.1	AJ567481.1	blaCTX-M-31	1	876	+	class A extended-spectrum beta-lactamase CTX-M-31
+CTX-M-32	CAD89606.1	AJ557142.1	blaCTX-M-32	1	876	+	class A extended-spectrum beta-lactamase CTX-M-32
+CTX-M-33	AAO88912.1	AY238472.1	blaCTX-M-33	13	888	-	class A extended-spectrum beta-lactamase CTX-M-33
+CTX-M-34	AAR99493.1	AY515297.1	blaCTX-M-34	1	876	+	class A extended-spectrum beta-lactamase CTX-M-34
+CTX-M-35	BAD83773.1	AB176532.1	blaCTX-M-35	1	876	+	class A extended-spectrum beta-lactamase CTX-M-35
+CTX-M-36	BAD16611.1	AB177384.1	blaCTX-M-36	1	876	+	class A extended-spectrum beta-lactamase CTX-M-36
+CTX-M-37	AAT70415.1	AY649755.2	blaCTX-M-37	1641	2516	+	class A extended-spectrum beta-lactamase CTX-M-37
+CTX-M-38	AAV70602.1	AY822595.1	blaCTX-M-38	23	898	+	class A extended-spectrum beta-lactamase CTX-M-38
+CTX-M-39	AAX54694.1	AY954516.1	blaCTX-M-39	1	876	+	class A extended-spectrum beta-lactamase CTX-M-39
+CTX-M-4	CAA74573.1	Y14156.1	blaCTX-M-4	1	876	+	class A extended-spectrum beta-lactamase CTX-M-4
+CTX-M-40	AAV28215.2	AY750914.2	blaCTX-M-40	207	1079	+	class A extended-spectrum beta-lactamase CTX-M-40
+CTX-M-41	AAY43008.1	DQ023162.1	blaCTX-M-41	1	876	+	class A extended-spectrum beta-lactamase CTX-M-41
+CTX-M-42	AAY84742.1	DQ061159.1	blaCTX-M-42	347	1222	+	class A extended-spectrum beta-lactamase CTX-M-42
+CTX-M-43	AAZ14955.1	DQ102702.1	blaCTX-M-43	1	876	+	class A extended-spectrum beta-lactamase CTX-M-43
+CTX-M-44	BAA07082.1	D37830.1	blaCTX-M-44	91	966	+	class A extended-spectrum beta-lactamase CTX-M-44
+CTX-M-46	AAV97956.1	AY847147.1	blaCTX-M-46	82	957	+	class A extended-spectrum beta-lactamase CTX-M-46
+CTX-M-47	AAV97952.1	AY847143.1	blaCTX-M-47	83	958	+	class A extended-spectrum beta-lactamase CTX-M-47
+CTX-M-48	AAV97953.1	AY847144.1	blaCTX-M-48	82	957	+	class A extended-spectrum beta-lactamase CTX-M-48
+CTX-M-49	AAV97954.1	AY847145.1	blaCTX-M-49	82	957	+	class A extended-spectrum beta-lactamase CTX-M-49
+CTX-M-5	AAC32890.1	U95364.1	blaCTX-M-5	6	881	+	class A extended-spectrum beta-lactamase CTX-M-5
+CTX-M-50	AAV97955.1	AY847146.1	blaCTX-M-50	83	958	+	class A extended-spectrum beta-lactamase CTX-M-50
+CTX-M-51	ABA62022.1	DQ211987.1	blaCTX-M-51	1	876	+	class A extended-spectrum beta-lactamase CTX-M-51
+CTX-M-52	ABB17185.1	DQ223685.1	blaCTX-M-52	1	876	+	class A extended-spectrum beta-lactamase CTX-M-52
+CTX-M-53	ABB72225.1	DQ268764.2	blaCTX-M-53	5892	6767	+	class A extended-spectrum beta-lactamase CTX-M-53
+CTX-M-54	ABC18328.3	DQ303459.3	blaCTX-M-54	2175	3050	+	class A extended-spectrum beta-lactamase CTX-M-54
+CTX-M-55	ABI34705.1	DQ885477.1	blaCTX-M-55	1	876	+	class A extended-spectrum beta-lactamase CTX-M-55
+CTX-M-56	ABN48311.1	EF374097.1	blaCTX-M-56	1	876	+	class A extended-spectrum beta-lactamase CTX-M-56
+CTX-M-58	ABM97538.1	EF210159.1	blaCTX-M-58	1	876	+	class A extended-spectrum beta-lactamase CTX-M-58
+CTX-M-59	ABD73290.1	DQ408762.1	blaCTX-M-59	1	876	+	class A extended-spectrum beta-lactamase CTX-M-59
+CTX-M-6	CAA06311.1	AJ005044.1	blaCTX-M-6	1	876	+	class A extended-spectrum beta-lactamase CTX-M-6
+CTX-M-60	CAL80726.1	AM411407.1	blaCTX-M-60	1	876	+	class A extended-spectrum beta-lactamase CTX-M-60
+CTX-M-61	ABN09669.1	EF219142.1	blaCTX-M-61	11	886	+	class A extended-spectrum beta-lactamase CTX-M-61
+CTX-M-62	ABP04245.1	EF219134.3	blaCTX-M-62	2126	3001	+	class A extended-spectrum beta-lactamase CTX-M-62
+CTX-M-63	BAD90119.1	AB205197.1	blaCTX-M-63	4	876	+	class A extended-spectrum beta-lactamase CTX-M-63
+CTX-M-64	BAF63422.1	AB284167.2	blaCTX-M-64	226	1101	+	class A extended-spectrum beta-lactamase CTX-M-64
+CTX-M-65	ABN69105.1	EF418608.1	blaCTX-M-65	10	885	+	class A extended-spectrum beta-lactamase CTX-M-65
+CTX-M-66	ABQ45409.1	EF576988.1	blaCTX-M-66	240	1115	+	class A extended-spectrum beta-lactamase CTX-M-66
+CTX-M-67	ABS90365.1	EF581888.1	blaCTX-M-67	1	876	+	class A extended-spectrum beta-lactamase CTX-M-67
+CTX-M-68	ABV81082.1	EU177100.1	blaCTX-M-68	5	880	+	class A extended-spectrum beta-lactamase CTX-M-68
+CTX-M-69	ABY91281.1	EU402393.1	blaCTX-M-69	1	876	+	class A extended-spectrum beta-lactamase CTX-M-69
+CTX-M-7	CAA06312.1	AJ005045.1	blaCTX-M-7	1	876	+	class A extended-spectrum beta-lactamase CTX-M-7
+CTX-M-70	ADA62555.1	GU125704.1	blaCTX-M-70	1	876	+	class A extended-spectrum beta-lactamase CTX-M-70
+CTX-M-71	ACV92002.1	FJ815436.1	blaCTX-M-71	196	1071	+	class A extended-spectrum beta-lactamase CTX-M-71
+CTX-M-72	AAV97957.1	AY847148.1	blaCTX-M-72	9	884	+	class A extended-spectrum beta-lactamase CTX-M-72
+CTX-M-73	ABC69156.1	DQ343292.1	blaCTX-M-73	118	993	+	class A extended-spectrum beta-lactamase CTX-M-73
+CTX-M-74	ACS32293.1	GQ149243.1	blaCTX-M-74	1	873	+	class A extended-spectrum beta-lactamase CTX-M-74
+CTX-M-75	ACS32294.1	GQ149244.1	blaCTX-M-75	1	873	+	class A extended-spectrum beta-lactamase CTX-M-75
+CTX-M-76	CAQ42486.1	AM982520.1	blaCTX-M-76	5549	6424	+	class A extended-spectrum beta-lactamase CTX-M-76
+CTX-M-77	CAQ42480.1	AM982521.1	blaCTX-M-77	1912	2787	+	class A extended-spectrum beta-lactamase CTX-M-77
+CTX-M-78	CAQ42481.2	AM982522.2	blaCTX-M-78	1	876	+	class A extended-spectrum beta-lactamase CTX-M-78
+CTX-M-79	ABO09821.1	EF426798.1	blaCTX-M-79	1	876	+	class A extended-spectrum beta-lactamase CTX-M-79
+CTX-M-8	AAF04388.1	AF189721.1	blaCTX-M-8	274	1149	+	class A extended-spectrum beta-lactamase CTX-M-8
+CTX-M-80	ABW86620.2	EU202673.2	blaCTX-M-80	1	876	+	class A extended-spectrum beta-lactamase CTX-M-80
+CTX-M-81	ABV57756.3	EU136031.3	blaCTX-M-81	1	876	+	class A extended-spectrum beta-lactamase CTX-M-81
+CTX-M-82	ABB59946.1	DQ256091.1	blaCTX-M-82	99	974	+	class A extended-spectrum beta-lactamase CTX-M-82
+CTX-M-83	ACI29345.1	FJ214366.1	blaCTX-M-83	1	876	+	class A extended-spectrum beta-lactamase CTX-M-83
+CTX-M-84	ACI29346.1	FJ214367.1	blaCTX-M-84	1	876	+	class A extended-spectrum beta-lactamase CTX-M-84
+CTX-M-85	ACI29347.1	FJ214368.1	blaCTX-M-85	1	876	+	class A extended-spectrum beta-lactamase CTX-M-85
+CTX-M-86	ACI29348.1	FJ214369.1	blaCTX-M-86	1	876	+	class A extended-spectrum beta-lactamase CTX-M-86
+CTX-M-87	ACB41777.1	EU545409.1	blaCTX-M-87	81	956	+	class A extended-spectrum beta-lactamase CTX-M-87
+CTX-M-88	ACP18863.1	FJ873739.1	blaCTX-M-88	1	875	+	class A extended-spectrum beta-lactamase CTX-M-88
+CTX-M-89	ACR56321.1	FJ971899.1	blaCTX-M-89	31	906	+	class A extended-spectrum beta-lactamase CTX-M-89
+CTX-M-9	AAF05311.2	AF174129.3	blaCTX-M-9	6336	7211	+	class A extended-spectrum beta-lactamase CTX-M-9
+CTX-M-90	ACQ99521.1	FJ907381.1	blaCTX-M-90	1	876	+	class A extended-spectrum beta-lactamase CTX-M-90
+CTX-M-91	ACX34099.1	GQ870432.1	blaCTX-M-91	31	906	+	class A extended-spectrum beta-lactamase CTX-M-91
+CTX-M-92	ACY74743.1	GU127598.1	blaCTX-M-92	1	876	+	class A extended-spectrum beta-lactamase CTX-M-92
+CTX-M-93	ADN26580.1	HQ166709.1	blaCTX-M-93	1	876	+	class A extended-spectrum beta-lactamase CTX-M-93
+CTX-M-94	ADK11041.1	HM167760.1	blaCTX-M-94	1	876	+	class A extended-spectrum beta-lactamase CTX-M-94
+CTX-M-95	CBL80615.1	FN813245.1	blaCTX-M-95	1912	2787	+	class A extended-spectrum beta-lactamase CTX-M-95
+CTX-M-96	CAG28417.1	AJ704396.1	blaCTX-M-96	1	876	+	class A extended-spectrum beta-lactamase CTX-M-96
+CTX-M-97	ADM08178.1	HM776707.1	blaCTX-M-97	1	876	+	class A extended-spectrum beta-lactamase CTX-M-97
+CTX-M-98	ADO17948.1	HM755448.1	blaCTX-M-98	245	1120	+	class A extended-spectrum beta-lactamase CTX-M-98
+CTX-M-99	ADL27532.1	HM803271.1	blaCTX-M-99	1	876	+	class A extended-spectrum beta-lactamase CTX-M-99
+DHA-1	CAA76196.1	Y16410.1	blaDHA-1	987	2126	+	class C beta-lactamase DHA-1
+DHA-10	AJO16043.1	KP050490.1	blaDHA-10	1	1140	+	class C beta-lactamase DHA-10
+DHA-12	CDL68900.1	HG798963.1	blaDHA-12	1	1140	+	class C beta-lactamase DHA-12
+DHA-13	AIT76108.1	KM087855.1	blaDHA-13	1	1140	+	class C beta-lactamase DHA-13
+DHA-14	AIT76107.1	KM087854.1	blaDHA-14	1	1140	+	class C beta-lactamase DHA-14
+DHA-15	AIT76106.1	KM087853.1	blaDHA-15	1	1140	+	class C beta-lactamase DHA-15
+DHA-16	AIT76105.1	KM087852.1	blaDHA-16	1	1140	+	class C beta-lactamase DHA-16
+DHA-17	AIT76103.1	KM087850.1	blaDHA-17	1	1140	+	class C beta-lactamase DHA-17
+DHA-18	AIT76094.1	KM087841.1	blaDHA-18	1	1140	+	class C beta-lactamase DHA-18
+DHA-19	AIT76102.1	KM087849.1	blaDHA-19	1	1140	+	class C beta-lactamase DHA-19
+DHA-2	AAG36927.1	AF259520.1	blaDHA-2	1513	2652	+	class C beta-lactamase DHA-2
+DHA-20	AIT76101.1	KM087848.1	blaDHA-20	1	1140	+	class C beta-lactamase DHA-20
+DHA-21	AIT76100.1	KM087847.1	blaDHA-21	1	1140	+	class C beta-lactamase DHA-21
+DHA-22	AIT76109.1	KM087856.1	blaDHA-22	1	1140	+	class C beta-lactamase DHA-22
+DHA-23	AMY61251.1	KX068223.1	blaDHA-23	1	1140	+	class C beta-lactamase DHA-23
+DHA-24	AMM39807.1	KU759569.1	blaDHA-24	1	1140	+	class C beta-lactamase DHA-24
+DHA-3	AAR87489.1	AY494945.1	blaDHA-3	1310	2449	+	class C beta-lactamase DHA-3
+DHA-4	KGZ25601.1	JTBT01000001.1	blaDHA-4	265316	266455	-	class C beta-lactamase DHA-4
+DHA-5	AEL22919.1	JF273491.1	blaDHA-5	746	1885	+	class C beta-lactamase DHA-5
+DHA-6	ADT91161.1	HQ322612.1	blaDHA-6	1	1140	+	class C beta-lactamase DHA-6
+DHA-7	ADQ00385.1	HQ456945.1	blaDHA-7	1	1140	+	class C beta-lactamase DHA-7
+DHA-9	AHL39320.1	KJ207201.1	blaDHA-9	952	2091	+	class C beta-lactamase DHA-9
+FOX-1	CAA54602.1	X77455.1	blaFOX-1	701	1849	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-1
+FOX-10	AGE45503.1	JX049131.1	blaFOX-10	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-10
+FOX-12	CDP41984.1	HG975301.1	blaFOX-12	1	1140	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-12
+FOX-13	AMN16527.1	KU641008.1	blaFOX-13	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-13
+FOX-2	CAA71325.1	Y10282.1	blaFOX-2	19	1167	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-2
+FOX-3	CAA71947.1	Y11068.1	blaFOX-3	17	1165	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-3
+FOX-4	CAB89086.1	AJ277535.1	blaFOX-4	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-4
+FOX-5	AAG12974.1	AY007369.1	blaFOX-5	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-5
+FOX-7	CAG28256.1	AJ703795.1	blaFOX-7	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-7
+FOX-8	ADK73994.1	HM565917.1	blaFOX-8	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-8
+FOX-9	AEK78851.1	JF896803.1	blaFOX-9	1	1149	+	cephalosporin-hydrolyzing class C beta-lactamase FOX-9
+GES-1	AAF27723.1	AF156486.1	blaGES-1	1332	2195	+	class A extended-spectrum beta-lactamase GES-1
+GES-10	ACS73598.1	FJ820124.1	blaGES-10	1124	1987	+	class A beta-lactamase GES-10
+GES-11	ACS44714.1	FJ854362.1	blaGES-11	702	1565	+	class A extended-spectrum beta-lactamase GES-11
+GES-12	CBG22732.1	FN554543.1	blaGES-12	1	864	+	class A beta-lactamase GES-12
+GES-13	ACZ54536.1	GU169702.1	blaGES-13	609	1472	+	class A beta-lactamase GES-13
+GES-14	ADC91899.1	GU207844.1	blaGES-14	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-14
+GES-15	ACZ98826.1	GU208678.1	blaGES-15	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-15
+GES-16	ADJ94120.1	HM173356.1	blaGES-16	512	1375	+	carbapenem-hydrolyzing class A beta-lactamase GES-16
+GES-17	ADZ48685.1	HQ874631.1	blaGES-17	1	864	+	class A beta-lactamase GES-17
+GES-18	AEX59144.1	JQ028729.1	blaGES-18	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-18
+GES-19	AEZ05107.1	JN596280.1	blaGES-19	1919	2782	+	class A beta-lactamase GES-19
+GES-2	AAK58421.1	AF326355.1	blaGES-2	1	864	+	class A extended-spectrum beta-lactamase GES-2
+GES-20	AEZ05108.1	JN596280.1	blaGES-20	2848	3711	+	carbapenem-hydrolyzing class A beta-lactamase GES-20
+GES-21	AFK80745.1	JQ772478.1	blaGES-21	141	1004	+	carbapenem-hydrolyzing class A beta-lactamase GES-21
+GES-22	AFU25739.1	JX023441.1	blaGES-22	38	901	+	class A beta-lactamase GES-22
+GES-23	AGT20529.1	KF179354.1	blaGES-23	1	861	+	class A extended-spectrum beta-lactamase GES-23
+GES-24	BAP75641.1	AB901141.1	blaGES-24	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-24
+GES-25	ALE31310.1	KT732289.1	blaGES-25	1	864	+	class A beta-lactamase GES-25
+GES-26	AJP67510.1	KP096411.1	blaGES-26	1	864	+	class A beta-lactamase GES-26
+GES-27	ALN67755.1	KT151556.1	blaGES-27	1	864	+	class A beta-lactamase GES-27
+GES-28	ALC74967.1	KT626944.1	blaGES-28	1	864	+	class A beta-lactamase GES-28
+GES-29	ALM96712.1	KT997885.1	blaGES-29	1	864	+	class A beta-lactamase GES-29
+GES-3	BAD06399.1	AB113580.1	blaGES-3	1330	2193	+	class A extended-spectrum beta-lactamase GES-3
+GES-30	BAU51851.1	LC126615.1	blaGES-30	1	864	+	class A beta-lactamase GES-30
+GES-31	AMY16492.1	KX034181.1	blaGES-31	1	864	+	class A beta-lactamase GES-31
+GES-4	BAD08689.1	AB116260.1	blaGES-4	1330	2193	+	carbapenem-hydrolyzing class A beta-lactamase GES-4
+GES-5	AAR97270.1	AY494717.1	blaGES-5	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-5
+GES-6	AAR97271.1	AY494718.1	blaGES-6	1	864	+	carbapenem-hydrolyzing class A beta-lactamase GES-6
+GES-7	AAF28763.2	AF208529.2	blaGES-7	1	864	+	class A beta-lactamase GES-7
+GES-8	AAK18183.1	AF329699.1	blaGES-8	373	1236	+	class A extended-spectrum beta-lactamase GES-8
+GES-9	AAY43207.1	AY920928.1	blaGES-9	2690	3553	+	class A beta-lactamase GES-9
+GIM-1	CAF05908.1	AJ620678.1	blaGIM-1	1041	1793	+	subclass B1 metallo-beta-lactamase GIM-1
+GIM-2	AIY26289.1	KM659858.1	blaGIM-2	402	1154	+	subclass B1 metallo-beta-lactamase GIM-2
+IMI-1	AAA93461.1	U50278.1	blaIMI-1	1264	2142	+	carbapenem-hydrolyzing class A beta-lactamase IMI-1
+IMI-2	ABA00479.1	DQ173429.1	blaIMI-2	1	879	+	carbapenem-hydrolyzing class A beta-lactamase IMI-2
+IMI-3	ACX71212.1	GU015024.1	blaIMI-3	1	879	+	carbapenem-hydrolyzing class A beta-lactamase IMI-3
+IMI-4	AHE78014.1	KF958750.1	blaIMI-4	1	879	+	carbapenem-hydrolyzing class A beta-lactamase IMI-4
+IMI-6	ALD82364.1	KT225520.1	blaIMI-6	32876	33754	+	carbapenem-hydrolyzing class A beta-lactamase IMI-6
+IMI-7	AIS19858.1	KM103296.1	blaIMI-7	1	879	+	carbapenem-hydrolyzing class A beta-lactamase IMI-7
+IMI-8	AIY69088.1	KP081315.1	blaIMI-8	1	879	+	carbapenem-hydrolyzing class A beta-lactamase IMI-8
+IMI-9	KSX64667.1	LNHM01000007.1	blaIMI-9	67177	68055	-	carbapenem-hydrolyzing class A beta-lactamase IMI-9
+IMP-1	AAB30289.1	S71932.1	blaIMP-1	448	1188	+	subclass B1 metallo-beta-lactamase IMP-1
+IMP-10	BAB72069.1	AB074433.1	blaIMP-10	17	757	+	subclass B1 metallo-beta-lactamase IMP-10
+IMP-11	BAB72072.1	AB074436.1	blaIMP-11	17	754	+	subclass B1 metallo-beta-lactamase IMP-11
+IMP-12	CAD12765.1	AJ420864.1	blaIMP-12	156	896	+	subclass B1 metallo-beta-lactamase IMP-12
+IMP-13	CAD80251.1	AJ550807.1	blaIMP-13	2243	2983	+	subclass B1 metallo-beta-lactamase IMP-13
+IMP-14	AAT49068.1	AY553332.1	blaIMP-14	114	854	+	subclass B1 metallo-beta-lactamase IMP-14
+IMP-15	AAT49070.1	AY553333.1	blaIMP-15	114	854	+	subclass B1 metallo-beta-lactamase IMP-15
+IMP-16	CAE48334.1	AJ584652.2	blaIMP-16	1044	1784	+	subclass B1 metallo-beta-lactamase IMP-16
+IMP-17	CAD55935.1	AJ512502.1	blaIMP-17	138	878	+	subclass B1 metallo-beta-lactamase IMP-17
+IMP-18	AAV49162.2	AY780674.2	blaIMP-18	1	741	+	subclass B1 metallo-beta-lactamase IMP-18
+IMP-19	ABM67078.1	EF118171.1	blaIMP-19	3182	3922	+	subclass B1 metallo-beta-lactamase IMP-19
+IMP-2	CAB94707.1	AJ243491.1	blaIMP-2	539	1279	+	subclass B1 metallo-beta-lactamase IMP-2
+IMP-20	BAD81061.1	AB196988.1	blaIMP-20	1	741	+	subclass B1 metallo-beta-lactamase IMP-20
+IMP-21	BAD89802.1	AB204557.1	blaIMP-21	1	738	+	subclass B1 metallo-beta-lactamase IMP-21
+IMP-22	ABC88434.1	DQ361087.2	blaIMP-22	357	1097	+	subclass B1 metallo-beta-lactamase IMP-22
+IMP-23	ABD85195.1	DQ417222.1	blaIMP-23	1	741	+	subclass B1 metallo-beta-lactamase IMP-23
+IMP-24	ABM68358.1	EF192154.1	blaIMP-24	1	741	+	subclass B1 metallo-beta-lactamase IMP-24
+IMP-25	ACB41775.1	EU541448.1	blaIMP-25	1	741	+	subclass B1 metallo-beta-lactamase IMP-25
+IMP-26	ACY01749.1	GU045307.1	blaIMP-26	101	841	+	subclass B1 metallo-beta-lactamase IMP-26
+IMP-27	AEH41427.1	JF894248.1	blaIMP-27	1	741	+	subclass B1 metallo-beta-lactamase IMP-27
+IMP-28	AFG73659.1	JQ407409.1	blaIMP-28	1169	1909	+	subclass B1 metallo-beta-lactamase IMP-28
+IMP-29	ADT63777.1	HQ438058.1	blaIMP-29	1	741	+	subclass B1 metallo-beta-lactamase IMP-29
+IMP-3	BAA77393.1	AB010417.1	blaIMP-3	1	741	+	subclass B1 metallo-beta-lactamase IMP-3
+IMP-30	ABF70513.1	DQ522237.1	blaIMP-30	1076	1816	+	subclass B1 metallo-beta-lactamase IMP-30
+IMP-31	AGS82587.1	KF148593.1	blaIMP-31	1	738	+	subclass B1 metallo-beta-lactamase IMP-31
+IMP-32	AFR33816.1	JQ002629.1	blaIMP-32	114	854	+	subclass B1 metallo-beta-lactamase IMP-32
+IMP-33	AEU17778.1	JN848782.2	blaIMP-33	1828	2568	+	subclass B1 metallo-beta-lactamase IMP-33
+IMP-34	BAM37538.1	AB700341.1	blaIMP-34	1	741	+	subclass B1 metallo-beta-lactamase IMP-34
+IMP-35	AFO59566.1	JF816544.1	blaIMP-35	1	741	+	subclass B1 metallo-beta-lactamase IMP-35
+IMP-37	AFP97028.1	JX131372.1	blaIMP-37	97	843	+	subclass B1 metallo-beta-lactamase IMP-37
+IMP-38	AEN75249.1	HQ875573.1	blaIMP-38	1	741	+	subclass B1 metallo-beta-lactamase IMP-38
+IMP-4	AAK13078.1	AF244145.1	blaIMP-4	1	741	+	subclass B1 metallo-beta-lactamase IMP-4
+IMP-40	BAM62794.1	AB753457.1	blaIMP-40	1	741	+	subclass B1 metallo-beta-lactamase IMP-40
+IMP-41	BAM62795.1	AB753458.1	blaIMP-41	1	738	+	subclass B1 metallo-beta-lactamase IMP-41
+IMP-42	BAM62793.1	AB753456.1	blaIMP-42	1	741	+	subclass B1 metallo-beta-lactamase IMP-42
+IMP-43	BAM98935.1	AB777500.1	blaIMP-43	2035	2775	+	subclass B1 metallo-beta-lactamase IMP-43
+IMP-44	BAM98942.1	AB777501.1	blaIMP-44	1399	2136	+	subclass B1 metallo-beta-lactamase IMP-44
+IMP-45	AIA58910.1	KJ510410.1	blaIMP-45	5741	6478	+	subclass B1 metallo-beta-lactamase IMP-45
+IMP-48	AIT76110.1	KM087857.1	blaIMP-48	1	741	+	subclass B1 metallo-beta-lactamase IMP-48
+IMP-49	AKO63210.1	KP681694.1	blaIMP-49	1	741	+	subclass B1 metallo-beta-lactamase IMP-49
+IMP-5	AAK27847.1	AF290912.1	blaIMP-5	1	741	+	subclass B1 metallo-beta-lactamase IMP-5
+IMP-51	BAQ56016.1	LC031883.1	blaIMP-51	5072	5812	+	subclass B1 metallo-beta-lactamase IMP-51
+IMP-52	BAR80870.1	LC055762.1	blaIMP-52	566	1306	+	subclass B1 metallo-beta-lactamase IMP-52
+IMP-53	ADI49230.1	HM106457.1	blaIMP-53	643	1380	+	subclass B1 metallo-beta-lactamase IMP-53
+IMP-54	ALN95135.1	KU052795.1	blaIMP-54	1	741	+	subclass B1 metallo-beta-lactamase IMP-54
+IMP-55	ALT07696.1	KU299753.1	blaIMP-55	1	741	+	subclass B1 metallo-beta-lactamase IMP-55
+IMP-56	ALU87096.1	KU351745.1	blaIMP-56	1	741	+	subclass B1 metallo-beta-lactamase IMP-56
+IMP-58	AMJ16609.1	KU647281.1	blaIMP-58	1	741	+	subclass B1 metallo-beta-lactamase IMP-58
+IMP-6	BAB15941.1	AB040994.1	blaIMP-6	1	741	+	subclass B1 metallo-beta-lactamase IMP-6
+IMP-7	AAK12087.1	AF318077.1	blaIMP-7	1148	1888	+	subclass B1 metallo-beta-lactamase IMP-7
+IMP-8	AJO16039.1	KP050486.1	blaIMP-8	1	741	+	subclass B1 metallo-beta-lactamase IMP-8
+IMP-9	AGL46523.1	KC543497.1	blaIMP-9	457140	457877	-	subclass B1 metallo-beta-lactamase IMP-9
+IND-1	AAD20273.1	AF099139.1	blaIND-1	506	1225	+	subclass B1 metallo-beta-lactamase IND-1
+IND-10	ADA13241.1	GU206353.1	blaIND-10	19	738	+	subclass B1 metallo-beta-lactamase IND-10
+IND-11	ADK25050.1	HM245379.1	blaIND-11	57	788	+	subclass B1 metallo-beta-lactamase IND-11
+IND-12	ADK25051.1	HM245380.1	blaIND-12	28	759	+	subclass B1 metallo-beta-lactamase IND-12
+IND-14	ADK38716.1	HM367709.1	blaIND-14	8	727	+	subclass B1 metallo-beta-lactamase IND-14
+IND-15	BAJ14288.1	AB563173.1	blaIND-15	33	764	+	subclass B1 metallo-beta-lactamase IND-15
+IND-2	AAG29757.1	AF219127.1	blaIND-2	1	732	+	subclass B1 metallo-beta-lactamase IND-2
+IND-2a	ADK25052.1	HM245381.1	blaIND-2a	57	788	+	subclass B1 metallo-beta-lactamase IND-2a
+IND-3	AAG29761.2	AF219131.2	blaIND-3	1	720	+	subclass B1 metallo-beta-lactamase IND-3
+IND-4	AAG29765.2	AF219135.2	blaIND-4	1	729	+	subclass B1 metallo-beta-lactamase IND-4
+IND-5	AAS78754.1	AY504627.1	blaIND-5	1	720	+	subclass B1 metallo-beta-lactamase IND-5
+IND-6	CAJ32373.2	AM087455.2	blaIND-6	292	1011	+	subclass B1 metallo-beta-lactamase IND-6
+IND-7	BAJ05825.1	AB529520.1	blaIND-7	1	720	+	subclass B1 metallo-beta-lactamase IND-7
+IND-8	ACZ65152.1	GU186044.1	blaIND-8	40	759	+	subclass B1 metallo-beta-lactamase IND-8
+IND-9	ACZ65153.1	GU186045.1	blaIND-9	35	754	+	subclass B1 metallo-beta-lactamase IND-9
+KHM-1	BAF91108.1	AB364006.1	blaKHM-1	62	787	+	subclass B1 metallo-beta-lactamase KHM-1
+KLUC-1	AAK08976.1	AY026417.1	blaKLUC-1	2428	3303	+	class A extended-spectrum beta-lactamase KLUC-1
+KLUC-2	ABM73648.1	EF057432.1	blaKLUC-2	1636	2511	+	class A extended-spectrum beta-lactamase KLUC-2
+KPC-10	ACS35345.1	GQ140348.1	blaKPC-10	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-10
+KPC-11	ADH95186.1	HM066995.1	blaKPC-11	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-11
+KPC-12	ADZ75467.1	HQ641421.1	blaKPC-12	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-12
+KPC-13	AEA73284.1	HQ342889.1	blaKPC-13	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-13
+KPC-14	AFV48348.1	JX524191.1	blaKPC-14	396	1271	+	carbapenem-hydrolyzing class A beta-lactamase KPC-14
+KPC-15	AGF70638.1	KC433553.1	blaKPC-15	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-15
+KPC-16	AGJ01153.1	KC465199.1	blaKPC-16	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-16
+KPC-17	AGJ01154.1	KC465200.1	blaKPC-17	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-17
+KPC-18	AKO63215.1	KP681699.1	blaKPC-18	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-18
+KPC-19	AIH07017.1	KJ775801.1	blaKPC-19	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-19
+KPC-2	AAK70220.1	AY034847.1	blaKPC-2	6	887	+	carbapenem-hydrolyzing class A beta-lactamase KPC-2
+KPC-21	CEF57509.1	LN609376.1	blaKPC-21	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-21
+KPC-22	AIX87991.1	KM379100.1	blaKPC-22	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-22
+KPC-24	AKQ06274.1	KR052099.1	blaKPC-24	5212	6093	+	carbapenem-hydrolyzing class A beta-lactamase KPC-24
+KPC-3	AAL05630.1	AF395881.1	blaKPC-3	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-3
+KPC-4	ACA34343.1	EU447304.1	blaKPC-4	15	896	+	carbapenem-hydrolyzing class A beta-lactamase KPC-4
+KPC-5	ABY91240.1	EU400222.2	blaKPC-5	2160	3041	+	carbapenem-hydrolyzing class A beta-lactamase KPC-5
+KPC-6	ACB71165.1	EU555534.1	blaKPC-6	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-6
+KPC-7	ACE62798.1	EU729727.1	blaKPC-7	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-7
+KPC-8	ACI95258.1	FJ234412.1	blaKPC-8	1	882	+	carbapenem-hydrolyzing class A beta-lactamase KPC-8
+LAT-1	CAA55007.1	X78117.1	blaLAT-1	142	1287	+	CMY-2 family cephalosporin-hydrolyzing class C beta-lactamase LAT-1
+LAT-3	AAB80855.1	U77414.1	blaLAT-3	1	1143	+	CMY-2 family cephalosporin-hydrolyzing class C beta-lactamase LAT-3
+LCR-1	CAA40146.1	X56809.1	blaLCR-1	112	894	+	oxacillin-hydrolyzing class D beta-lactamase LCR-1
+MIR-1	AAD22636.1	M37839.2	blaMIR-1	928	2073	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-1
+MIR-10	AIT76111.1	KM087858.1	blaMIR-10	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-10
+MIR-11	AIT76112.1	KM087859.1	blaMIR-11	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-11
+MIR-12	AIT76116.1	KM087863.1	blaMIR-12	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-12
+MIR-13	AIT76115.1	KM087862.1	blaMIR-13	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-13
+MIR-14	AIT76117.1	KM087864.1	blaMIR-14	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-14
+MIR-15	AIT76104.1	KM087851.1	blaMIR-15	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-15
+MIR-16	AIT76114.1	KM087861.1	blaMIR-16	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-16
+MIR-17	CEA29752.1	LN515535.1	blaMIR-17	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-17
+MIR-18	CEF57506.1	LN609373.1	blaMIR-18	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-18
+MIR-2	AAO42602.1	AY227752.1	blaMIR-2	89	1234	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-2
+MIR-3	AAU95779.1	AY743435.1	blaMIR-3	14	1159	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-3
+MIR-4	ABN69112.2	EF417572.2	blaMIR-4	30	1175	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-4
+MIR-5	ACJ05687.1	FJ237367.1	blaMIR-5	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-5
+MIR-6	AFJ79785.1	JQ664733.1	blaMIR-6	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-6
+MIR-7	AHL39317.1	KJ207200.1	blaMIR-7	547	1692	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-7
+MIR-9	AIT76113.1	KM087860.1	blaMIR-9	1	1146	+	cephalosporin-hydrolyzing class C beta-lactamase MIR-9
+MOX-1	BAA02563.2	D13304.2	blaMOX-1	233	1381	+	CMY-1/MOX family class C beta-lactamase MOX-1
+MOX-10	CEF57507.1	LN609374.1	blaMOX-10	1	1149	+	CMY-1/MOX family class C beta-lactamase MOX-10
+MOX-11	CEF57508.1	LN609375.1	blaMOX-11	1	1149	+	CMY-1/MOX family class C beta-lactamase MOX-11
+MOX-12	KGY70007.1	JTBG01000004.1	blaMOX-12	410599	411750	+	CMY-1/MOX family class C beta-lactamase MOX-12
+MOX-2	CAB82578.1	AJ276453.1	blaMOX-2	4620	5768	+	CMY-1/MOX family class C beta-lactamase MOX-2
+MOX-3	ACA30419.1	EU515248.1	blaMOX-3	1	1149	+	CMY-1/MOX family class C beta-lactamase MOX-3
+MOX-4	ACI89425.1	FJ262599.1	blaMOX-4	1	1149	+	CMY-1/MOX family class C beta-lactamase MOX-4
+MOX-5	ACS44783.1	GQ152600.1	blaMOX-5	1	1152	+	CMY-1/MOX family class C beta-lactamase MOX-5
+MOX-6	ACS44784.1	GQ152601.1	blaMOX-6	1	1152	+	CMY-1/MOX family class C beta-lactamase MOX-6
+MOX-7	ACS44785.1	GQ152602.1	blaMOX-7	1	1152	+	CMY-1/MOX family class C beta-lactamase MOX-7
+MOX-8	AGH56079.1	JX173956.1	blaMOX-8	1	1152	+	CMY-1/MOX family class C beta-lactamase MOX-8
+MOX-9	AIG22447.1	KJ746495.1	blaMOX-9	1421	2572	+	CMY-1/MOX family class C beta-lactamase MOX-9
+NDM-1	CAZ39946.1	FN396876.1	blaNDM-1	2407	3219	-	subclass B1 metallo-beta-lactamase NDM-1
+NDM-10	AGT37351.1	KF361506.1	blaNDM-10	1	813	+	subclass B1 metallo-beta-lactamase NDM-10
+NDM-11	AJE61443.1	KP265939.1	blaNDM-11	1	813	+	subclass B1 metallo-beta-lactamase NDM-11
+NDM-12	BAO79439.1	AB926431.1	blaNDM-12	511	1323	+	subclass B1 metallo-beta-lactamase NDM-12
+NDM-13	BAQ02518.1	LC012596.1	blaNDM-13	3586	4398	+	subclass B1 metallo-beta-lactamase NDM-13
+NDM-14	AJP18054.1	KM210086.1	blaNDM-14	9068	9880	+	subclass B1 metallo-beta-lactamase NDM-14
+NDM-15	AKF43458.1	KP735848.1	blaNDM-15	1	813	+	subclass B1 metallo-beta-lactamase NDM-15
+NDM-16	AKZ20823.1	KP862821.1	blaNDM-16	1	813	+	subclass B1 metallo-beta-lactamase NDM-16
+NDM-2	AEA41876.1	JF703135.1	blaNDM-2	1	813	+	subclass B1 metallo-beta-lactamase NDM-2
+NDM-3	AFK80349.1	JQ734687.1	blaNDM-3	1	813	+	subclass B1 metallo-beta-lactamase NDM-3
+NDM-4	AFB82585.1	JQ348841.1	blaNDM-4	1	813	+	subclass B1 metallo-beta-lactamase NDM-4
+NDM-5	AEN03071.1	JN104597.1	blaNDM-5	115	927	+	subclass B1 metallo-beta-lactamase NDM-5
+NDM-6	AEX08599.1	JN967644.1	blaNDM-6	1	813	+	subclass B1 metallo-beta-lactamase NDM-6
+NDM-7	AFQ31613.1	JX262694.1	blaNDM-7	1	813	+	subclass B1 metallo-beta-lactamase NDM-7
+NDM-8	BAM84089.1	AB744718.1	blaNDM-8	1	813	+	subclass B1 metallo-beta-lactamase NDM-8
+NDM-9	AGU91756.1	KC999080.2	blaNDM-9	380	1192	+	subclass B1 metallo-beta-lactamase NDM-9
+NMC-A	CAA79967.1	Z21956.1	blaNMC-A	1221	2099	+	IMI family carbapenem-hydrolyzing class A beta-lactamase NMC-A
+NPS-1	AAK14791.1	AY027589.1	blaNPS-1	46	828	+	oxacillin-hydrolyzing class D beta-lactamase NPS-1
+OXA-1	AAA91586.2	J02967.2	blaOXA-1	1359	2189	+	oxacillin-hydrolyzing class D beta-lactamase OXA-1
+OXA-10	AAB60534.1	U37105.2	blaOXA-10	1307	2107	+	oxacillin-hydrolyzing class D beta-lactamase OXA-10
+OXA-100	CAJ77817.2	AM231720.2	blaOXA-100	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-100
+OXA-101	CAL85435.1	AM412777.1	blaOXA-101	118	918	+	class D beta-lactamase OXA-101
+OXA-103	ENV88740.1	APQF01000011.1	blaOXA-103	291558	292379	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-103
+OXA-104	ABQ52429.1	EF581285.1	blaOXA-104	1	822	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-104
+OXA-106	ABV31686.1	EF650032.1	blaOXA-106	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-106
+OXA-107	ABV31687.1	EF650033.1	blaOXA-107	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-107
+OXA-108	ABV31688.1	EF650034.1	blaOXA-108	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-108
+OXA-109	ABV31689.1	EF650035.1	blaOXA-109	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-109
+OXA-11	CAA80304.1	Z22590.1	blaOXA-11	155	955	+	class D extended-spectrum beta-lactamase OXA-11
+OXA-110	ABV31690.1	EF650036.1	blaOXA-110	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-110
+OXA-111	ABV31691.1	EF650037.1	blaOXA-111	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-111
+OXA-112	ABV31692.1	EF650038.1	blaOXA-112	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-112
+OXA-113	ABW70410.1	EF653400.1	blaOXA-113	435	1259	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-113
+OXA-114a	ABX38721.1	EU188842.1	blaOXA-114a	1	828	+	oxacillin-hydrolyzing class D beta-lactamase OXA-114a
+OXA-114b	ADI23933.1	HM056040.1	blaOXA-114b	1	828	+	class D beta-lactamase OXA-114b
+OXA-114c	ADI23934.1	HM056041.1	blaOXA-114c	1	828	+	class D beta-lactamase OXA-114c
+OXA-114d	ADI25068.1	HM104633.1	blaOXA-114d	1	828	+	class D beta-lactamase OXA-114d
+OXA-114e	ADI25069.1	HM104634.1	blaOXA-114e	1	828	+	class D beta-lactamase OXA-114e
+OXA-114f	ADO14462.1	HM368375.1	blaOXA-114f	1	828	+	class D beta-lactamase OXA-114f
+OXA-114g	ADO14463.1	HM368376.1	blaOXA-114g	1	828	+	class D beta-lactamase OXA-114g
+OXA-115	ABS71123.1	EU029998.1	blaOXA-115	576	1400	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-115
+OXA-117	ACV49885.1	GQ423625.1	blaOXA-117	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-117
+OXA-118	AAK55330.1	AF371964.1	blaOXA-118	119	919	+	oxacillin-hydrolyzing class D beta-lactamase OXA-118
+OXA-119	AAN41427.1	AY139598.1	blaOXA-119	1487	2287	+	oxacillin-hydrolyzing class D beta-lactamase OXA-119
+OXA-12	AAA83417.1	U10251.1	blaOXA-12	181	975	+	oxacillin-hydrolyzing class D beta-lactamase OXA-12
+OXA-120	CCJ32595.1	HE963768.1	blaOXA-120	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-120
+OXA-121	ABX45060.1	EU255290.1	blaOXA-121	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-121
+OXA-122	ABX45061.1	EU255291.1	blaOXA-122	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-122
+OXA-123	ABX45062.1	EU255292.1	blaOXA-123	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-123
+OXA-124	ABX45063.1	EU255293.1	blaOXA-124	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-124
+OXA-125	ABX45064.1	EU255294.1	blaOXA-125	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-125
+OXA-126	ABX45065.1	EU255295.1	blaOXA-126	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-126
+OXA-127	ABX45066.1	EU255296.1	blaOXA-127	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-127
+OXA-128	ABY77907.1	EU375515.1	blaOXA-128	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-128
+OXA-129	CAP69660.1	AM932669.1	blaOXA-129	699	1502	+	class D beta-lactamase OXA-129
+OXA-13	AAC46344.1	U59183.1	blaOXA-13	940	1740	+	oxacillin-hydrolyzing class D beta-lactamase OXA-13
+OXA-130	ACD84988.1	EU547445.1	blaOXA-130	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-130
+OXA-131	ACD84989.1	EU547446.1	blaOXA-131	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-131
+OXA-132	ACD84990.1	EU547447.1	blaOXA-132	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-132
+OXA-133	ACE63186.1	EU571228.1	blaOXA-133	823	1644	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-133
+OXA-134	ADM47435.1	HQ122933.1	blaOXA-134	1	822	+	carbapenem-hydrolyzing class D beta-lactamase OXA-134
+OXA-136	ABW76134.1	EU086830.1	blaOXA-136	89	898	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-136
+OXA-137	ABW76138.1	EU086834.1	blaOXA-137	89	898	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-137
+OXA-138	ACD45467.1	EU670845.2	blaOXA-138	1595	2419	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-138
+OXA-139	CAQ51348.1	AM991978.1	blaOXA-139	1	828	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-139
+OXA-141	ABQ15112.1	EF552405.1	blaOXA-141	13	840	+	OXA-2 family class D extended-spectrum beta-lactamase OXA-141
+OXA-142	ABY79006.1	EU358785.1	blaOXA-142	721	1521	+	oxacillin-hydrolyzing class D extended-spectrum beta-lactamase OXA-142
+OXA-143	ACX70402.1	GQ861437.1	blaOXA-143	2914	3741	+	carbapenem-hydrolyzing class D beta-lactamase OXA-143
+OXA-144	ACY56711.1	FJ872530.1	blaOXA-144	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-144
+OXA-145	ACN85419.1	FJ790516.1	blaOXA-145	1288	2085	+	class D extended-spectrum beta-lactamase OXA-145
+OXA-146	ACI28281.1	FJ194494.1	blaOXA-146	172	996	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-146
+OXA-147	ACO72579.1	FJ848783.1	blaOXA-147	1271	2071	+	class D extended-spectrum beta-lactamase OXA-147
+OXA-148	ACX31140.1	GQ853679.1	blaOXA-148	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-148
+OXA-149	ACX31141.1	GQ853680.1	blaOXA-149	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-149
+OXA-15	AAB05874.1	U63835.1	blaOXA-15	128	955	+	OXA-2 family class D extended-spectrum beta-lactamase OXA-15
+OXA-150	ACX31142.1	GQ853681.1	blaOXA-150	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-150
+OXA-151	ALA99185.1	KP771979.1	blaOXA-151	21	878	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-151
+OXA-152	ALA99186.1	KP771980.1	blaOXA-152	4	861	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-152
+OXA-153	ALA99187.1	KP771981.1	blaOXA-153	1039	1908	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-153
+OXA-154	ALA99188.1	KP771982.1	blaOXA-154	695	1573	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-154
+OXA-155	ALA99189.1	KP771983.1	blaOXA-155	170	1048	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-155
+OXA-156	ALA99190.1	KP771984.1	blaOXA-156	633	1484	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-156
+OXA-157	ALA99191.1	KP771985.1	blaOXA-157	173	1030	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-157
+OXA-158	ALA99192.1	KP771986.1	blaOXA-158	1029	1880	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-158
+OXA-159	ALA99193.1	KP771987.1	blaOXA-159	120	971	+	OXA-62 family carbapenem-hydrolyzing class D beta-lactamase OXA-159
+OXA-160	ADB28891.1	GU199038.2	blaOXA-160	1196	2023	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-160
+OXA-161	ACT09125.1	GQ202693.1	blaOXA-161	1172	1999	+	OXA-2 family class D extended-spectrum beta-lactamase OXA-161
+OXA-162	ADG27454.1	HM015773.1	blaOXA-162	2127	2924	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-162
+OXA-163	ADY06444.1	HQ700343.1	blaOXA-163	1	786	+	OXA-48 family class D extended-spectrum beta-lactamase OXA-163
+OXA-164	ADK34116.1	GU831575.1	blaOXA-164	1	843	+	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-164
+OXA-165	ADK35869.1	HM488986.1	blaOXA-165	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-165
+OXA-166	ADK35870.1	HM488987.1	blaOXA-166	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-166
+OXA-167	ADK35871.1	HM488988.1	blaOXA-167	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-167
+OXA-168	ADK35872.1	HM488989.1	blaOXA-168	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-168
+OXA-169	ADK35873.1	HM488990.1	blaOXA-169	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-169
+OXA-17	ABI63579.1	DQ902344.1	blaOXA-17	2717	3517	+	oxacillin-hydrolyzing class D extended-spectrum beta-lactamase OXA-17
+OXA-170	ADK35874.1	HM488991.1	blaOXA-170	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-170
+OXA-171	ADK35875.1	HM488992.1	blaOXA-171	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-171
+OXA-172	ADI58616.1	HM113558.1	blaOXA-172	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-172
+OXA-173	ADI58617.1	HM113559.1	blaOXA-173	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-173
+OXA-174	ADI58618.1	HM113560.1	blaOXA-174	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-174
+OXA-175	ADI58619.1	HM113561.1	blaOXA-175	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-175
+OXA-176	ADI58620.1	HM113562.1	blaOXA-176	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-176
+OXA-177	ADI58621.1	HM113563.1	blaOXA-177	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-177
+OXA-178	ADI58622.1	HM113564.1	blaOXA-178	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-178
+OXA-179	ADM26744.1	HM570035.1	blaOXA-179	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-179
+OXA-18	AAB58555.1	U85514.1	blaOXA-18	150	977	+	class D extended-spectrum beta-lactamase OXA-18
+OXA-180	ADM26745.1	HM570036.1	blaOXA-180	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-180
+OXA-181	AEP16366.1	JN205800.1	blaOXA-181	4141	4938	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-181
+OXA-182	ADK92148.1	HM640278.2	blaOXA-182	1	828	+	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase OXA-182
+OXA-183	ADV41666.1	HQ111474.1	blaOXA-183	1057	1857	+	class D beta-lactamase OXA-183
+OXA-184	AFO09968.1	JQ396378.1	blaOXA-184	1	747	+	class D beta-lactamase OXA-184
+OXA-185	AFO09969.1	JQ396379.1	blaOXA-185	1	747	+	OXA-184 class D beta-lactamase OXA-185
+OXA-19	AAD02245.1	AF043381.1	blaOXA-19	944	1744	+	class D extended-spectrum beta-lactamase OXA-19
+OXA-192	ADZ54048.1	JF273470.1	blaOXA-192	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-192
+OXA-193	CAL34450.1	AL111168.1	blaOXA-193	273321	274094	+	OXA-61 family class D beta-lactamase OXA-193
+OXA-194	AEB98920.1	HQ425492.1	blaOXA-194	1	822	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-194
+OXA-195	AEB98921.1	HQ425493.1	blaOXA-195	1	822	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-195
+OXA-196	AEB98922.1	HQ425494.1	blaOXA-196	1	822	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-196
+OXA-197	AEB98923.1	HQ425495.1	blaOXA-197	1	822	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-197
+OXA-198	ADT70779.1	HQ634775.2	blaOXA-198	3013	3801	+	class D beta-lactamase OXA-198
+OXA-199	AFC95894.1	JN704570.1	blaOXA-199	4039	4836	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-199
+OXA-2	CAA30246.1	X07260.1	blaOXA-2	701	1528	+	oxacillin-hydrolyzing class D beta-lactamase OXA-2
+OXA-20	AAC23554.1	AF024602.1	blaOXA-20	1238	2038	+	oxacillin-hydrolyzing class D beta-lactamase OXA-20
+OXA-200	ADX07745.1	HQ734811.1	blaOXA-200	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-200
+OXA-201	ADX07746.1	HQ734812.1	blaOXA-201	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-201
+OXA-202	ADX07747.1	HQ734813.1	blaOXA-202	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-202
+OXA-203	ADX07748.1	HQ998857.1	blaOXA-203	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-203
+OXA-204	AFU91598.1	JQ809466.1	blaOXA-204	5375	6172	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-204
+OXA-205	AEO92079.1	JF800667.1	blaOXA-205	658	1458	+	class D beta-lactamase OXA-205
+OXA-206	BAL15076.1	AB634250.1	blaOXA-206	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-206
+OXA-207	AFK28473.1	JQ838185.1	blaOXA-207	1	828	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-207
+OXA-208	CCA94644.1	FR853176.1	blaOXA-208	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-208
+OXA-209	AEM66528.1	JF268688.1	blaOXA-209	5408	6232	-	class D beta-lactamase OXA-209
+OXA-21	CAA71699.2	Y10693.2	blaOXA-21	1	828	+	OXA-2 family oxacillin-hydrolyzing class D beta-lactamase OXA-21
+OXA-210	AEE61368.1	JF795487.1	blaOXA-210	1	828	+	OXA-2 family class D beta-lactamase OXA-210
+OXA-211	AEV91550.1	JN861779.1	blaOXA-211	1	825	+	carbapenem-hydrolyzing class D beta-lactamase OXA-211
+OXA-212	AEV91551.1	JN861780.1	blaOXA-212	1	825	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-212
+OXA-213	AEV91552.1	JN861781.1	blaOXA-213	1	822	+	carbapenem-hydrolyzing class D beta-lactamase OXA-213
+OXA-214	AEV91553.1	JN861782.1	blaOXA-214	1	828	+	carbapenem-hydrolyzing class D beta-lactamase OXA-214
+OXA-215	AEV91554.1	JN861783.1	blaOXA-215	1	828	+	OXA-214 family carbapenem-hydrolyzing class D beta-lactamase OXA-215
+OXA-216	CCA94649.1	FR865168.1	blaOXA-216	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-216
+OXA-217	AEO44980.1	JN603240.1	blaOXA-217	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-217
+OXA-219	AEL17179.1	JN215211.1	blaOXA-219	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-219
+OXA-22	AAD12233.1	AF064820.3	blaOXA-22	952	1776	+	oxacillin-hydrolyzing class D beta-lactamase OXA-22
+OXA-223	AEL88491.1	JN248564.1	blaOXA-223	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-223
+OXA-224	AEQ73521.1	JN596991.2	blaOXA-224	2281	3111	+	class D beta-lactamase OXA-224
+OXA-225	AEP43731.1	JN638887.1	blaOXA-225	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-225
+OXA-226	ACM67635.1	FJ617207.1	blaOXA-226	1	828	+	OXA-2 family class D extended-spectrum beta-lactamase OXA-226
+OXA-228	AFM55001.1	JQ422053.1	blaOXA-228	100	930	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-228
+OXA-229	AFM55000.1	JQ422052.1	blaOXA-229	1100	1930	+	carbapenem-hydrolyzing class D beta-lactamase OXA-229
+OXA-23	CAB69042.1	AJ132105.1	blaOXA-23	972	1793	+	carbapenem-hydrolyzing class D beta-lactamase OXA-23
+OXA-230	AFM55002.1	JQ422054.1	blaOXA-230	101	931	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-230
+OXA-231	AFG29918.1	JQ326200.2	blaOXA-231	194	1021	+	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase OXA-231
+OXA-232	AGD91915.1	JX423831.1	blaOXA-232	2677	3474	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-232
+OXA-233	AID67109.1	KJ657570.1	blaOXA-233	1	801	+	carbapenem-hydrolyzing class D beta-lactamase OXA-233
+OXA-234	WP_038350216.1	JSCO01000073.1	blaOXA-234	232348	233172	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-234
+OXA-235	AFH36330.1	JQ820240.2	blaOXA-235	591	1421	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-235
+OXA-236	AFH36332.1	JQ820242.1	blaOXA-236	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-236
+OXA-237	AFH36331.1	JQ820241.1	blaOXA-237	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-237
+OXA-239	AFN65709.1	JQ837239.1	blaOXA-239	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-239
+OXA-24	AAM34291.1	AF509241.1	blaOXA-24	1	828	+	carbapenem-hydrolyzing class D beta-lactamase OXA-24
+OXA-240	AFN20670.1	JX089628.1	blaOXA-240	1	801	+	class D beta-lactamase OXA-240
+OXA-241	AFO55201.1	JX025021.1	blaOXA-241	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-241
+OXA-242	AFO55202.1	JX025022.1	blaOXA-242	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-242
+OXA-243	AFQ90085.1	JX206446.1	blaOXA-243	1	828	+	class D beta-lactamase OXA-243
+OXA-244	AGC60012.1	JX438000.1	blaOXA-244	1	798	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-244
+OXA-245	AGC60013.1	JX438001.1	blaOXA-245	1	798	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-245
+OXA-246	AHC31001.1	KF711993.1	blaOXA-246	1	801	+	OXA-10 family class D beta-lactamase OXA-246
+OXA-247	AGC70814.1	JX893517.1	blaOXA-247	1	786	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-247
+OXA-248	CCJ32596.1	HE963769.1	blaOXA-248	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-248
+OXA-249	CCJ32597.1	HE963770.1	blaOXA-249	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-249
+OXA-25	AAG35607.1	AF201826.1	blaOXA-25	22	849	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-25
+OXA-250	CCJ32598.1	HE963771.1	blaOXA-250	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-250
+OXA-251	AER57903.1	JN118546.1	blaOXA-251	1762	2562	+	class D beta-lactamase OXA-251
+OXA-252	WP_037428895.1	JTLE01000094.1	blaOXA-252	842113	842910	+	OXA-48 family class D beta-lactamase OXA-252
+OXA-253	AGK07368.1	KC479324.2	blaOXA-253	576	1403	+	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase OXA-253
+OXA-254	BAN10684.1	AB781687.1	blaOXA-254	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-254
+OXA-255	AGK07369.1	KC479325.2	blaOXA-255	669	1496	+	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase OXA-255
+OXA-256	CCE94500.1	HE616889.1	blaOXA-256	1827	2627	+	class D beta-lactamase OXA-256
+OXA-257	AGK07370.1	KC567681.1	blaOXA-257	1211	2041	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-257
+OXA-258	CCE73593.2	HE614014.2	blaOXA-258	1	825	+	class D beta-lactamase OXA-258
+OXA-259	ENW61294.1	APRC01000020.1	blaOXA-259	298695	299519	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-259
+OXA-26	AAG35608.1	AF201827.1	blaOXA-26	22	849	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-26
+OXA-260	ENU54757.1	APOR01000009.1	blaOXA-260	341737	342561	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-260
+OXA-261	ENW35072.1	APQV01000009.1	blaOXA-261	266253	267077	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-261
+OXA-262	ENW50687.1	APRA01000005.1	blaOXA-262	465154	465978	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-262
+OXA-263	ENW43915.1	APQY01000006.1	blaOXA-263	416599	417423	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-263
+OXA-264	ENW20318.1	APQQ01000012.1	blaOXA-264	286901	287728	-	OXA-214 family carbapenem-hydrolyzing class D beta-lactamase OXA-264
+OXA-265	ENW22086.1	APQR01000003.1	blaOXA-265	1886	2713	-	OXA-214 family carbapenem-hydrolyzing class D beta-lactamase OXA-265
+OXA-266	ENV38192.1	APPO01000008.1	blaOXA-266	267573	268400	-	class D beta-lactamase OXA-266
+OXA-267	ENV93423.1	APQH01000006.1	blaOXA-267	1454174	1454995	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-267
+OXA-268	ENU09033.1	APOE01000008.1	blaOXA-268	972089	972910	-	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-268
+OXA-269	EOQ63861.1	APQJ01000007.1	blaOXA-269	349334	350155	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-269
+OXA-27	AAG35609.2	AF201828.2	blaOXA-27	116	937	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-27
+OXA-270	EOQ69512.1	APQM01000006.1	blaOXA-270	256343	257164	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-270
+OXA-271	EOQ72432.1	APQO01000006.1	blaOXA-271	134981	135802	-	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-271
+OXA-272	ENW16915.1	APQP01000003.1	blaOXA-272	306252	307073	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-272
+OXA-273	ENW12288.1	APQN01000012.1	blaOXA-273	1170133	1170954	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-273
+OXA-274	ENU56528.1	APOS01000038.1	blaOXA-274	15524	16369	+	class D beta-lactamase OXA-274
+OXA-275	ENV18923.1	APPJ01000001.1	blaOXA-275	17228	18073	+	class D beta-lactamase OXA-275
+OXA-276	ENV13583.1	APPI01000013.1	blaOXA-276	54644	55474	-	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-276
+OXA-277	ENV45890.1	APPQ01000011.1	blaOXA-277	9161	9991	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-277
+OXA-278	AGI65307.1	KC771279.1	blaOXA-278	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-278
+OXA-279	ENU35234.1	APOM01000058.1	blaOXA-279	54863	55702	-	class D beta-lactamase OXA-279
+OXA-28	AAF72942.1	AF231133.1	blaOXA-28	1346	2146	+	class D extended-spectrum beta-lactamase OXA-28
+OXA-280	ENV74419.1	APPZ01000001.1	blaOXA-280	7526	8353	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-280
+OXA-281	ENU38533.1	APON01000041.1	blaOXA-281	10444	11268	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-281
+OXA-282	ENU64030.1	APOT01000024.1	blaOXA-282	8560	9390	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-282
+OXA-283	ENU15301.1	APOG01000008.1	blaOXA-283	114900	115730	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-283
+OXA-284	ENX16434.1	APRU01000004.1	blaOXA-284	72685	73515	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-284
+OXA-285	ENX26326.1	APRY01000059.1	blaOXA-285	64997	65827	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-285
+OXA-286	ENU21708.1	APOI01000030.1	blaOXA-286	189486	190328	+	OXA-286 family class D beta-lactamase OXA-286
+OXA-287	WP_032865068.1	KB849440.1	blaOXA-287	253516	254352	+	OXA-286 family class D beta-lactamase OXA-287
+OXA-288	ENX60508.1	APRN01000033.1	blaOXA-288	307090	307932	-	OXA-286 family class D beta-lactamase OXA-288
+OXA-29	CAC35728.1	AJ400619.1	blaOXA-29	34	834	+	oxacillin-hydrolyzing class D beta-lactamase OXA-29
+OXA-291	ENW94121.1	APRL01000010.1	blaOXA-291	279444	280280	-	OXA-286 family class D beta-lactamase OXA-291
+OXA-292	ENX53612.1	APRO01000007.1	blaOXA-292	299939	300775	-	OXA-286 family class D beta-lactamase OXA-292
+OXA-293	WP_032877719.1	KB849998.1	blaOXA-293	607677	608513	-	OXA-286 family class D beta-lactamase OXA-293
+OXA-294	ENU93232.1	APPC01000015.1	blaOXA-294	269862	270698	-	class D beta-lactamase OXA-294
+OXA-295	ENX19403.1	APRW01000016.1	blaOXA-295	273959	274795	-	class D beta-lactamase OXA-295
+OXA-296	ENU21024.1	APOH01000009.1	blaOXA-296	220589	221443	-	class D beta-lactamase OXA-296
+OXA-297	ENX09209.1	APRR01000006.1	blaOXA-297	288119	288976	-	class D beta-lactamase OXA-297
+OXA-298	ENX40034.1	APSA01000003.1	blaOXA-298	159906	160763	+	class D beta-lactamase OXA-298
+OXA-299	ENV82218.1	APQD01000016.1	blaOXA-299	31096	31929	+	class D beta-lactamase OXA-299
+OXA-3	AAC41449.1	L07945.1	blaOXA-3	61	888	+	oxacillin-hydrolyzing class D beta-lactamase OXA-3
+OXA-300	ENV20093.1	APPK01000054.1	blaOXA-300	255916	256746	-	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-300
+OXA-301	ENV90372.1	APQG01000050.1	blaOXA-301	21328	22158	-	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-301
+OXA-302	ENX18112.1	APRT01000004.1	blaOXA-302	76528	77370	+	OXA-286 family class D beta-lactamase OXA-302
+OXA-303	ENX56371.1	APSD01000035.1	blaOXA-303	194493	195335	+	OXA-286 family class D beta-lactamase OXA-303
+OXA-304	ENX45276.1	APSC01000007.1	blaOXA-304	142139	142960	-	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-304
+OXA-305	ENV02983.1	APPF01000021.1	blaOXA-305	348833	349654	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-305
+OXA-306	ENX38336.1	APSB01000022.1	blaOXA-306	299956	300792	-	OXA-286 family class D beta-lactamase OXA-306
+OXA-307	WP_032879257.1	KB850195.1	blaOXA-307	1381526	1382362	+	OXA-286 family class D beta-lactamase OXA-307
+OXA-308	ENV32314.1	APPN01000080.1	blaOXA-308	348499	349338	-	class D beta-lactamase OXA-308
+OXA-309	CCW28916.1	HF947514.1	blaOXA-309	1	825	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-309
+OXA-31	AAK52604.1	AF294653.1	blaOXA-31	754	1584	+	class D extended-spectrum beta-lactamase OXA-31
+OXA-312	AGU69250.1	KF057029.1	blaOXA-312	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-312
+OXA-313	AGU69251.1	KF057030.1	blaOXA-313	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-313
+OXA-314	AGU69252.1	KF057031.1	blaOXA-314	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-314
+OXA-315	AGU69253.1	KF057032.1	blaOXA-315	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-315
+OXA-316	AGU69254.1	KF057033.1	blaOXA-316	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-316
+OXA-317	AGU69255.1	KF057034.1	blaOXA-317	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-317
+OXA-32	AAK58418.1	AF315351.1	blaOXA-32	673	1500	+	OXA-2 family class D extended-spectrum beta-lactamase OXA-32
+OXA-320	AGR55864.1	KF151169.1	blaOXA-320	1	831	+	class D beta-lactamase OXA-320
+OXA-322	AGW16404.1	KF203096.1	blaOXA-322	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-322
+OXA-323	AGW16405.1	KF203097.1	blaOXA-323	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-323
+OXA-324	AGW16406.1	KF203098.1	blaOXA-324	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-324
+OXA-325	AGW16407.1	KF203099.1	blaOXA-325	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-325
+OXA-326	AGW16408.1	KF203100.1	blaOXA-326	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-326
+OXA-327	AGW16409.1	KF203101.1	blaOXA-327	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-327
+OXA-328	AGW16410.1	KF203102.1	blaOXA-328	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-328
+OXA-329	AGW16411.1	KF203103.1	blaOXA-329	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-329
+OXA-330	AGW16412.1	KF203104.1	blaOXA-330	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-330
+OXA-331	AGW16413.1	KF203105.1	blaOXA-331	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-331
+OXA-332	AGW16414.1	KF203106.1	blaOXA-332	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-332
+OXA-333	AGW16415.1	KF203107.1	blaOXA-333	1	825	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-333
+OXA-334	AGW16416.1	KF203108.1	blaOXA-334	1	825	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-334
+OXA-335	AGW16417.1	KF203109.1	blaOXA-335	1	822	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-335
+OXA-336	AHN07452.1	KF048907.1	blaOXA-336	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-336
+OXA-337	EXR49497.1	JFXH01000005.1	blaOXA-337	162006	162830	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-337
+OXA-338	AHN07454.1	KF048909.1	blaOXA-338	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-338
+OXA-339	AHN07456.1	KF048911.1	blaOXA-339	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-339
+OXA-340	AHN07457.1	KF048912.1	blaOXA-340	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-340
+OXA-341	AHN07458.1	KF048913.1	blaOXA-341	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-341
+OXA-342	AHN07460.1	KF048915.1	blaOXA-342	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-342
+OXA-343	AHN07461.1	KF048916.1	blaOXA-343	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-343
+OXA-344	AHN07462.1	KF048917.1	blaOXA-344	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-344
+OXA-345	AHN07463.1	KF048918.1	blaOXA-345	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-345
+OXA-346	AHN07464.1	KF048919.1	blaOXA-346	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-346
+OXA-347	AET35493.1	JN086160.1	blaOXA-347	1583	2407	-	class D beta-lactamase OXA-347
+OXA-348	AGW83446.1	KF297577.1	blaOXA-348	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-348
+OXA-349	AGW83447.1	KF297578.1	blaOXA-349	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-349
+OXA-35	AAK49460.1	AF315786.1	blaOXA-35	1314	2114	+	oxacillin-hydrolyzing class D extended-spectrum beta-lactamase OXA-35
+OXA-350	AGW83448.1	KF297579.1	blaOXA-350	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-350
+OXA-351	AGW83449.1	KF297580.1	blaOXA-351	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-351
+OXA-352	AGW83450.1	KF297581.1	blaOXA-352	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-352
+OXA-353	AGW83451.1	KF297582.1	blaOXA-353	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-353
+OXA-354	AGW83452.1	KF297583.1	blaOXA-354	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-354
+OXA-355	AGW83453.1	KF297584.1	blaOXA-355	1	831	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-355
+OXA-356	AGW83454.1	KF297585.1	blaOXA-356	1	831	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-356
+OXA-357	AGZ83153.1	KF421160.1	blaOXA-357	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-357
+OXA-358	AGZ83154.1	KF421161.1	blaOXA-358	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-358
+OXA-359	AGZ83155.1	KF421162.1	blaOXA-359	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-359
+OXA-360	AGZ83156.1	KF421163.1	blaOXA-360	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-360
+OXA-361	AHA11124.1	KF460531.1	blaOXA-361	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-361
+OXA-362	AHA11125.1	KF460532.1	blaOXA-362	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-362
+OXA-363	AHA11126.1	KF460533.1	blaOXA-363	1	831	+	OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-363
+OXA-364	AFR53898.2	JX306689.2	blaOXA-364	1	828	+	class D beta-lactamase OXA-364
+OXA-365	AHI63011.1	KF885217.1	blaOXA-365	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-365
+OXA-366	AJO16038.1	KP050485.1	blaOXA-366	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-366
+OXA-37	AAG33665.1	AY007784.1	blaOXA-37	1123	1923	+	oxacillin-hydrolyzing class D beta-lactamase OXA-37
+OXA-370	AHF71363.1	KF900153.1	blaOXA-370	1	798	+	OXA-48 family class D beta-lactamase OXA-370
+OXA-371	BAO09635.1	AB871653.1	blaOXA-371	11871	12695	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-371
+OXA-372	AIG22448.1	KJ746496.1	blaOXA-372	1	774	+	carbapenem-hydrolyzing class D beta-lactamase OXA-372
+OXA-373	CDM87362.1	HG931732.1	blaOXA-373	1	825	+	OXA-211 family carbapenem-hydrolyzing class D beta-lactamase OXA-373
+OXA-374	AHL30274.1	KF986255.1	blaOXA-374	17	841	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-374
+OXA-375	AHL30275.1	KF986256.1	blaOXA-375	41	865	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-375
+OXA-376	AHL30276.1	KF986257.1	blaOXA-376	21	845	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-376
+OXA-377	AHL30277.1	KF986258.1	blaOXA-377	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-377
+OXA-378	AHL30278.1	KF986259.1	blaOXA-378	17	841	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-378
+OXA-379	AHL30279.1	KF986260.1	blaOXA-379	21	845	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-379
+OXA-380	AHL30280.1	KF986261.1	blaOXA-380	45	869	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-380
+OXA-381	AHL30285.1	KJ135344.1	blaOXA-381	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-381
+OXA-382	AHL30286.1	KJ135345.1	blaOXA-382	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-382
+OXA-383	AHL30281.1	KF986262.1	blaOXA-383	28	852	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-383
+OXA-384	AHL30282.1	KF986263.1	blaOXA-384	91	915	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-384
+OXA-385	AHL30272.1	KF986253.1	blaOXA-385	16	840	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-385
+OXA-386	AHL30273.1	KF986254.1	blaOXA-386	35	859	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-386
+OXA-387	AHK51384.1	KJ173478.1	blaOXA-387	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-387
+OXA-388	AHL30284.1	KJ135343.1	blaOXA-388	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-388
+OXA-389	AHL30287.1	KJ135346.1	blaOXA-389	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-389
+OXA-390	AHL30283.1	KJ135342.1	blaOXA-390	49	873	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-390
+OXA-391	AHN53381.1	KJ427797.1	blaOXA-391	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-391
+OXA-392	AAO84013.1	AY220520.1	blaOXA-392	1659	2489	+	OXA-1 family class D beta-lactamase OXA-392
+OXA-395	AAQ76280.1	AY306133.1	blaOXA-395	1	789	+	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-395
+OXA-396	AAQ76282.1	AY306135.1	blaOXA-396	1	789	+	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-396
+OXA-397	AIT76118.1	KM087865.1	blaOXA-397	1	843	+	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-397
+OXA-398	AIT76095.1	KM087842.1	blaOXA-398	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-398
+OXA-4	AAR12140.1	AY162283.2	blaOXA-4	1092	1922	+	oxacillin-hydrolyzing class D beta-lactamase OXA-4
+OXA-400	AIS39036.1	KJ780078.1	blaOXA-400	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-400
+OXA-401	AIS39034.1	KJ780076.1	blaOXA-401	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-401
+OXA-402	AIS39035.1	KJ780077.1	blaOXA-402	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-402
+OXA-403	AIM47095.1	KJ920337.1	blaOXA-403	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-403
+OXA-404	AIM47096.1	KJ920338.1	blaOXA-404	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-404
+OXA-405	AJA30430.1	KM589641.1	blaOXA-405	1	786	+	OXA-48 family class D extended-spectrum beta-lactamase OXA-405
+OXA-406	AJD07402.1	KJ584915.1	blaOXA-406	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-406
+OXA-407	KQF55411.1	LLHS01000343.1	blaOXA-407	996	1820	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-407
+OXA-408	AJD07404.1	KJ584917.1	blaOXA-408	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-408
+OXA-409	AJD07405.1	KJ584918.1	blaOXA-409	1	828	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-409
+OXA-411	AJD07406.1	KJ584920.1	blaOXA-411	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-411
+OXA-412	AJD07407.1	KJ584921.1	blaOXA-412	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-412
+OXA-413	AJD07408.1	KJ584922.1	blaOXA-413	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-413
+OXA-414	AJD07401.1	KJ584914.1	blaOXA-414	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-414
+OXA-415	AIG94927.1	KJ865754.1	blaOXA-415	1	828	+	OXA-2 family class D beta-lactamase OXA-415
+OXA-416	AKH90740.1	KP264119.1	blaOXA-416	1	798	+	OXA-48 family class D beta-lactamase OXA-416
+OXA-417	AIU44173.1	KM220587.1	blaOXA-417	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-417
+OXA-418	AIN56719.1	KJ997966.1	blaOXA-418	1	831	+	OXA-229 family carbapenem-hydrolyzing class D beta-lactamase OXA-418
+OXA-42	CAD32564.1	AJ488302.1	blaOXA-42	1	810	+	oxacillin-hydrolyzing class D beta-lactamase OXA-42
+OXA-420	BAP28835.1	AB983359.1	blaOXA-420	2426	3268	+	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-420
+OXA-421	AIZ00987.1	KM401566.1	blaOXA-421	1212	2033	-	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-421
+OXA-422	AIY30331.1	KM433671.1	blaOXA-422	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-422
+OXA-423	AIY30332.1	KM433672.1	blaOXA-423	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-423
+OXA-424	AJA32742.1	KM588352.1	blaOXA-424	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-424
+OXA-425	AJA32743.1	KM588353.1	blaOXA-425	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-425
+OXA-426	AJA32744.1	KM588354.1	blaOXA-426	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-426
+OXA-429	AJG01375.1	KM979376.1	blaOXA-429	21	845	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-429
+OXA-43	CAD32565.1	AJ488303.1	blaOXA-43	1	810	+	oxacillin-hydrolyzing class D beta-lactamase OXA-43
+OXA-430	AJG01376.1	KM979377.1	blaOXA-430	14	838	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-430
+OXA-431	AJG01377.1	KM979378.1	blaOXA-431	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-431
+OXA-432	AJG01378.1	KM979379.1	blaOXA-432	15	839	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-432
+OXA-433	AJG01379.1	KM979380.1	blaOXA-433	26	850	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-433
+OXA-435	AJT57878.1	KP144324.1	blaOXA-435	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-435
+OXA-436	ALN39165.1	KT959108.1	blaOXA-436	2554	3351	+	OXA-48 family class D beta-lactamase OXA-436
+OXA-437	AKL59536.1	KP410856.1	blaOXA-437	1	828	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-437
+OXA-438	AKL59521.1	KP410734.1	blaOXA-438	1	792	+	OXA-48 family class D beta-lactamase OXA-438
+OXA-439	AKR53961.1	KP727573.1	blaOXA-439	1	786	+	OXA-48 family class D beta-lactamase OXA-439
+OXA-440	AKR53962.1	KP727574.1	blaOXA-440	1	822	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-440
+OXA-441	KCY13953.1	JMOD01000112.1	blaOXA-441	6767	7591	-	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-441
+OXA-442	AKU37610.1	KP844571.1	blaOXA-442	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-442
+OXA-443	BAQ55593.2	LC030178.2	blaOXA-443	1	828	+	class D beta-lactamase OXA-443
+OXA-444	BAQ55594.1	LC030179.1	blaOXA-444	1	816	+	OXA-60 family carbapenem-hydrolyzing class D beta-lactamase OXA-444
+OXA-446	AKI29907.1	KR061495.1	blaOXA-446	1	750	+	OXA-184 family class D beta-lactamase OXA-446
+OXA-447	AKI29908.1	KR061496.1	blaOXA-447	1	774	+	OXA-184 family class D beta-lactamase OXA-447
+OXA-448	AKI29909.1	KR061497.1	blaOXA-448	1	747	+	OXA-184 family class D beta-lactamase OXA-448
+OXA-449	AKI29910.1	KR061498.1	blaOXA-449	1	750	+	OXA-184 family class D beta-lactamase OXA-449
+OXA-45	CAD58780.1	AJ519683.1	blaOXA-45	282	1076	+	oxacillin-hydrolyzing class D extended-spectrum beta-lactamase OXA-45
+OXA-450	AKI29914.1	KR061502.1	blaOXA-450	1	774	+	OXA-61 family class D beta-lactamase OXA-450
+OXA-451	AKI29916.1	KR061504.1	blaOXA-451	1	774	+	OXA-61 family class D beta-lactamase OXA-451
+OXA-452	AKI29917.1	KR061505.1	blaOXA-452	1	774	+	OXA-61 family class D beta-lactamase OXA-452
+OXA-453	AKI29919.1	KR061507.1	blaOXA-453	1	774	+	OXA-61 family class D beta-lactamase OXA-453
+OXA-454	BAR45714.1	LC037981.1	blaOXA-454	1	801	+	OXA-10 family class D beta-lactamase OXA-454
+OXA-455	ALC76097.1	KP903885.1	blaOXA-455	1	828	+	oxacillin-hydrolyzing class D beta-lactamase OXA-455
+OXA-457	ALC76099.1	KP903887.1	blaOXA-457	1	828	+	class D beta-lactamase OXA-457
+OXA-458	ALC76100.1	KP903888.1	blaOXA-458	1	828	+	class D beta-lactamase OXA-458
+OXA-459	ALC76101.1	KP903889.1	blaOXA-459	1	828	+	class D beta-lactamase OXA-459
+OXA-46	AAN63499.1	AF317511.1	blaOXA-46	2371	3171	+	oxacillin-hydrolyzing class D beta-lactamase OXA-46
+OXA-460	AKI29920.1	KR061508.1	blaOXA-460	1	762	+	OXA-61 family class D beta-lactamase OXA-460
+OXA-461	AKI29921.1	KR061509.1	blaOXA-461	1	762	+	OXA-61 family class D beta-lactamase OXA-461
+OXA-464	KLE13731.1	JAIX01000028.1	blaOXA-464	4546	5307	+	class D beta-lactamase OXA-464
+OXA-465	AKI29912.1	KR061500.1	blaOXA-465	1	747	+	class D beta-lactamase OXA-465
+OXA-466	AKI29913.1	KR061501.1	blaOXA-466	1	747	+	OXA-184 family class D beta-lactamase OXA-466
+OXA-47	AAP69225.1	AY237830.1	blaOXA-47	1	831	+	oxacillin-hydrolyzing class D beta-lactamase OXA-47
+OXA-470	ALC79285.1	KR182163.1	blaOXA-470	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-470
+OXA-471	ABW76137.1	EU086833.1	blaOXA-471	89	898	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-471
+OXA-472	ALC79287.1	KR182165.1	blaOXA-472	1	807	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-472
+OXA-473	ALC79288.1	KR182166.1	blaOXA-473	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-473
+OXA-474	ALC79289.1	KR182167.1	blaOXA-474	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-474
+OXA-475	ALC79290.1	KR182168.1	blaOXA-475	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-475
+OXA-476	ALC79291.1	KR182169.1	blaOXA-476	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-476
+OXA-477	ALC79292.1	KR182170.1	blaOXA-477	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-477
+OXA-478	ALC79293.1	KR182171.1	blaOXA-478	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-478
+OXA-479	ALC79294.1	KR182172.1	blaOXA-479	1	810	+	OXA-63 family oxacillin-hydrolyzing class D beta-lactamase OXA-479
+OXA-48	AAP70012.1	AY236073.2	blaOXA-48	2188	2985	+	carbapenem-hydrolyzing class D beta-lactamase OXA-48
+OXA-480	ALL53530.1	KR872296.1	blaOXA-480	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-480
+OXA-482	AKF41839.1	KP264124.1	blaOXA-482	77	898	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-482
+OXA-483	AKF41840.1	KP264125.1	blaOXA-483	84	905	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-483
+OXA-484	ALI16502.1	KR401105.1	blaOXA-484	1	798	+	OXA-48 family class D beta-lactamase OXA-484
+OXA-485	KSG40284.1	LLNM01000004.1	blaOXA-485	97678	98466	-	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-485
+OXA-486	KJJ14577.1	KQ001593.1	blaOXA-486	122431	123219	-	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-486
+OXA-488	AAQ76279.1	AY306132.1	blaOXA-488	1	789	+	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-488
+OXA-489	EIA89747.1	AINK01000040.1	blaOXA-489	4360	5133	+	OXA-61 family class D beta-lactamase OXA-489
+OXA-49	AAP40270.1	AY288523.1	blaOXA-49	1	825	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-49
+OXA-491	KLE07522.1	JAIV01000087.1	blaOXA-491	17692	18453	-	class D beta-lactamase OXA-491
+OXA-493	AJC94664.1	CP007774.1	blaOXA-493	1337387	1338133	+	class D beta-lactamase OXA-493
+OXA-494	KSC07307.1	LLLB01000006.1	blaOXA-494	63434	64222	-	OXA-50 family oxacillin-hydrolyzing class D beta-lactamase OXA-494
+OXA-497	KRW26153.1	LKJZ01000136.1	blaOXA-497	24786	25610	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-497
+OXA-499	ALM96709.1	KT964029.1	blaOXA-499	1	825	+	OXA-143 family carbapenem-hydrolyzing class D beta-lactamase OXA-499
+OXA-5	CAA41211.1	X58272.1	blaOXA-5	80	883	+	oxacillin-hydrolyzing class D beta-lactamase OXA-5
+OXA-50	AAQ76277.1	AY306130.1	blaOXA-50	1	789	+	oxacillin-hydrolyzing class D beta-lactamase OXA-50
+OXA-500	ALP13523.1	KU167108.1	blaOXA-500	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-500
+OXA-501	ALP13525.1	KU167110.1	blaOXA-501	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-501
+OXA-502	ALP13526.1	KU167111.1	blaOXA-502	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-502
+OXA-503	ALP13524.1	KU167109.1	blaOXA-503	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-503
+OXA-504	ALG65432.1	KT355710.1	blaOXA-504	1	795	+	class D beta-lactamase OXA-504
+OXA-505	ALZ40809.1	KU531433.1	blaOXA-505	1	798	+	OXA-48 family class D beta-lactamase OXA-505
+OXA-506	AMB17205.1	KU571454.1	blaOXA-506	1	822	+	OXA-213 family carbapenem-hydrolyzing class D beta-lactamase OXA-506
+OXA-507	AMB17204.1	KU551305.1	blaOXA-507	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-507
+OXA-508	AMB57506.1	KU596972.1	blaOXA-508	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-508
+OXA-509	AMJ17435.1	KU692025.1	blaOXA-509	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-509
+OXA-51	CAC83905.2	AJ309734.2	blaOXA-51	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-51
+OXA-512	AMK37641.1	KU726870.1	blaOXA-512	1	843	+	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-512
+OXA-513	ALX18471.1	KU323972.1	blaOXA-513	1	828	+	oxacillin-hydrolyzing class D beta-lactamase OXA-513
+OXA-516	AMO28427.1	KU871391.1	blaOXA-516	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-516
+OXA-518	AMR98919.1	KU739134.1	blaOXA-518	1	747	+	OXA-493 family class D beta-lactamase OXA-518
+OXA-53	AAP43641.1	AY289608.1	blaOXA-53	617	1444	+	class D extended-spectrum beta-lactamase OXA-53
+OXA-54	AAR89917.1	AY500137.1	blaOXA-54	1	798	+	OXA-48 family carbapenem-hydrolyzing class D beta-lactamase OXA-54
+OXA-55	AAR03105.1	AY343493.1	blaOXA-55	77	946	+	carbapenem-hydrolyzing class D beta-lactamase OXA-55
+OXA-56	AAR32651.1	AY445080.1	blaOXA-56	1	801	+	oxacillin-hydrolyzing class D beta-lactamase OXA-56
+OXA-57	CAF74882.1	AJ631966.1	blaOXA-57	1	810	+	oxacillin-hydrolyzing class D beta-lactamase OXA-57
+OXA-58	AAW57529.1	AY665723.1	blaOXA-58	3301	4143	-	carbapenem-hydrolyzing class D beta-lactamase OXA-58
+OXA-59	CAG15145.1	AJ632249.1	blaOXA-59	1	810	+	oxacillin-hydrolyzing class D beta-lactamase OXA-59
+OXA-60	AAQ08905.1	AF525303.2	blaOXA-60	2771	3586	+	carbapenem-hydrolyzing class D beta-lactamase OXA-60
+OXA-61	AAT01092.1	AY587956.1	blaOXA-61	123	896	+	class D beta-lactamase OXA-61
+OXA-62	AAR32134.1	AY423074.1	blaOXA-62	1	858	+	carbapenem-hydrolyzing class D beta-lactamase OXA-62
+OXA-63	AAU88145.1	AY619003.1	blaOXA-63	704	1510	+	oxacillin-hydrolyzing class D beta-lactamase OXA-63
+OXA-64	AAW81336.1	AY750907.1	blaOXA-64	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-64
+OXA-65	AAW81337.1	AY750908.1	blaOXA-65	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-65
+OXA-66	AAW81338.1	AY750909.1	blaOXA-66	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-66
+OXA-67	ABF50983.1	DQ491200.1	blaOXA-67	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-67
+OXA-68	AAW81339.1	AY750910.1	blaOXA-68	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-68
+OXA-69	AAW81340.1	AY750911.1	blaOXA-69	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-69
+OXA-7	CAA53242.1	X75562.1	blaOXA-7	135	935	+	oxacillin-hydrolyzing class D beta-lactamase OXA-7
+OXA-70	AAW81341.1	AY750912.1	blaOXA-70	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-70
+OXA-71	AAW81342.1	AY750913.1	blaOXA-71	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-71
+OXA-72	ABP87779.2	EF534256.2	blaOXA-72	1	827	+	OXA-24 family carbapenem-hydrolyzing class D beta-lactamase OXA-72
+OXA-73	AAW22056.1	AY762325.1	blaOXA-73	116	937	+	OXA-23 family carbapenem-hydrolyzing class D beta-lactamase OXA-73
+OXA-74	CAH69530.1	AJ854182.1	blaOXA-74	1	801	+	class D beta-lactamase OXA-74
+OXA-75	AAW51373.1	AY859529.1	blaOXA-75	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-75
+OXA-76	AAX51234.1	AY949203.1	blaOXA-76	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-76
+OXA-77	AAX51233.1	AY949202.1	blaOXA-77	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-77
+OXA-78	AAW81358.1	AY862132.1	blaOXA-78	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-78
+OXA-79	ABV71246.1	EU019534.1	blaOXA-79	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-79
+OXA-80	ABV71247.1	EU019535.1	blaOXA-80	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-80
+OXA-82	ABV71248.1	EU019536.1	blaOXA-82	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-82
+OXA-83	ABC26007.1	DQ309277.1	blaOXA-83	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-83
+OXA-84	ABC26006.1	DQ309276.1	blaOXA-84	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-84
+OXA-85	ALQ43092.1	CP013328.1	blaOXA-85	2101450	2102235	-	oxacillin-hydrolyzing class D beta-lactamase OXA-85
+OXA-86	AAZ78361.1	DQ149247.1	blaOXA-86	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-86
+OXA-87	ABC84263.1	DQ348075.1	blaOXA-87	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-87
+OXA-88	ABD48715.1	DQ392963.1	blaOXA-88	9	833	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-88
+OXA-89	ABE03012.1	DQ445683.1	blaOXA-89	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-89
+OXA-9	AAA98406.2	M55547.1	blaOXA-9	2314	3138	+	oxacillin-hydrolyzing class D beta-lactamase OXA-9
+OXA-90	CAJ77809.1	AM231719.1	blaOXA-90	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-90
+OXA-91	ABF47914.1	DQ519086.1	blaOXA-91	1199	2023	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-91
+OXA-92	ABC61637.1	DQ335566.1	blaOXA-92	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-92
+OXA-93	ABF47916.1	DQ519087.1	blaOXA-93	39	863	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-93
+OXA-94	ABF47917.1	DQ519088.1	blaOXA-94	9	833	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-94
+OXA-95	ABF47918.1	DQ519089.1	blaOXA-95	9	833	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-95
+OXA-96	ABF47919.1	DQ519090.1	blaOXA-96	63	905	+	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-96
+OXA-97	ABO33299.1	EF102240.1	blaOXA-97	11723	12565	-	OXA-58 family carbapenem-hydrolyzing class D beta-lactamase OXA-97
+OXA-98	CAK50801.1	AM279652.1	blaOXA-98	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-98
+OXA-99	ABI53716.1	DQ888718.1	blaOXA-99	1	825	+	OXA-51 family carbapenem-hydrolyzing class D beta-lactamase OXA-99
+PDC-1	ACQ82807.1	FJ666065.1	blaPDC-1	1	1194	+	cephalosporin-hydrolyzing class C beta-lactamase PDC-1
+PDC-10	ACQ82815.1	FJ666073.1	blaPDC-10	1	1194	+	class C beta-lactamase PDC-10
+PDC-11	ACX31161.1	GQ845014.1	blaPDC-11	1	1194	+	class C beta-lactamase PDC-11
+PDC-12	AEM44534.1	JF326299.1	blaPDC-12	1	1194	+	class C beta-lactamase PDC-12
+PDC-13	ACX31163.1	GQ845016.1	blaPDC-13	1	1194	+	class C beta-lactamase PDC-13
+PDC-14	ACX31164.1	GQ845017.1	blaPDC-14	1	1194	+	class C beta-lactamase PDC-14
+PDC-15	ACX31165.1	GQ845018.1	blaPDC-15	1	1194	+	class C beta-lactamase PDC-15
+PDC-16	ADT64395.1	HQ615927.1	blaPDC-16	1	1194	+	class C beta-lactamase PDC-16
+PDC-17	ACX31167.1	GQ845020.1	blaPDC-17	1	1194	+	class C beta-lactamase PDC-17
+PDC-18	ADC96714.1	GU433600.1	blaPDC-18	1	1194	+	class C beta-lactamase PDC-18
+PDC-19a	CBZ41769.1	FR822743.1	blaPDC-19a	1	1194	+	class C beta-lactamase PDC-19a
+PDC-19b	AEM44530.1	JF326295.1	blaPDC-19b	1	1194	+	class C beta-lactamase PDC-19b
+PDC-2	ACQ82806.1	FJ666064.1	blaPDC-2	1	1194	+	class C extended-spectrum beta-lactamase PDC-2
+PDC-20	AEM44531.1	JF326296.1	blaPDC-20	1	1194	+	class C beta-lactamase PDC-20
+PDC-21a	CBZ41771.1	FR822745.1	blaPDC-21a	1	1194	+	class C beta-lactamase PDC-21a
+PDC-21b	AEM44532.1	JF326297.1	blaPDC-21b	1	1194	+	class C beta-lactamase PDC-21b
+PDC-22	CBZ41772.1	FR822746.1	blaPDC-22	1	1194	+	class C beta-lactamase PDC-22
+PDC-23	CBZ41773.1	FR822747.1	blaPDC-23	1	1194	+	class C beta-lactamase PDC-23
+PDC-24	AEM44535.1	JF326300.1	blaPDC-24	1	1194	+	class C beta-lactamase PDC-24
+PDC-25	AEM44536.1	JF326301.1	blaPDC-25	1	1194	+	class C beta-lactamase PDC-25
+PDC-26	AEM44537.1	JF326302.1	blaPDC-26	1	1194	+	class C beta-lactamase PDC-26
+PDC-28	AIG19968.1	KJ949046.1	blaPDC-28	1	1194	+	class C beta-lactamase PDC-28
+PDC-3	CAW25588.1	FM209186.1	blaPDC-3	940031	941224	-	class C extended-spectrum beta-lactamase PDC-3
+PDC-30	AIG19969.1	KJ949047.1	blaPDC-30	1	1194	+	class C beta-lactamase PDC-30
+PDC-31	AIG19970.1	KJ949048.1	blaPDC-31	1	1194	+	class C beta-lactamase PDC-31
+PDC-32	BAE46546.1	AB211125.1	blaPDC-32	1	1194	+	class C beta-lactamase PDC-32
+PDC-34	AIG19971.1	KJ949049.1	blaPDC-34	1	1194	+	class C beta-lactamase PDC-34
+PDC-35	CBZ41770.1	FR822744.1	blaPDC-35	1	1194	+	class C beta-lactamase PDC-35
+PDC-36	AIG19973.1	KJ949051.1	blaPDC-36	1	1194	+	class C beta-lactamase PDC-36
+PDC-37	AIG19974.1	KJ949052.1	blaPDC-37	1	1194	+	class C beta-lactamase PDC-37
+PDC-38	AIG19975.1	KJ949053.1	blaPDC-38	1	1194	+	class C beta-lactamase PDC-38
+PDC-39	AIG19976.1	KJ949054.1	blaPDC-39	1	1194	+	class C beta-lactamase PDC-39
+PDC-4	ACQ82809.1	FJ666067.1	blaPDC-4	1	1194	+	class C extended-spectrum beta-lactamase PDC-4
+PDC-40	AIG19977.1	KJ949055.1	blaPDC-40	1	1194	+	class C beta-lactamase PDC-40
+PDC-43	AIG19980.1	KJ949058.1	blaPDC-43	1	1194	+	class C beta-lactamase PDC-43
+PDC-44	AIG19981.1	KJ949059.1	blaPDC-44	1	1194	+	class C beta-lactamase PDC-44
+PDC-45	AIG19982.1	KJ949060.1	blaPDC-45	1	1194	+	class C beta-lactamase PDC-45
+PDC-46	AIG19983.1	KJ949061.1	blaPDC-46	1	1194	+	class C beta-lactamase PDC-46
+PDC-47	AIG19984.1	KJ949062.1	blaPDC-47	1	1194	+	class C beta-lactamase PDC-47
+PDC-48	AIG19985.1	KJ949063.1	blaPDC-48	1	1194	+	class C beta-lactamase PDC-48
+PDC-49	AIG19986.1	KJ949064.1	blaPDC-49	1	1194	+	class C beta-lactamase PDC-49
+PDC-5	ACQ82810.1	FJ666068.1	blaPDC-5	1	1194	+	class C extended-spectrum beta-lactamase PDC-5
+PDC-50	AIG19987.1	KJ949065.1	blaPDC-50	1	1194	+	class C beta-lactamase PDC-50
+PDC-51	AIG19988.1	KJ949066.1	blaPDC-51	1	1194	+	class C beta-lactamase PDC-51
+PDC-52	AIG19989.1	KJ949067.1	blaPDC-52	1	1194	+	class C beta-lactamase PDC-52
+PDC-53	AIG19990.1	KJ949068.1	blaPDC-53	1	1194	+	class C beta-lactamase PDC-53
+PDC-54	AIG19991.1	KJ949069.1	blaPDC-54	1	1194	+	class C beta-lactamase PDC-54
+PDC-55	AIG19992.1	KJ949070.1	blaPDC-55	1	1215	+	class C beta-lactamase PDC-55
+PDC-56	AIG19993.1	KJ949071.1	blaPDC-56	1	1194	+	class C beta-lactamase PDC-56
+PDC-57	AIG19994.1	KJ949072.1	blaPDC-57	1	1194	+	class C beta-lactamase PDC-57
+PDC-58	AIG19995.1	KJ949073.1	blaPDC-58	1	1194	+	class C beta-lactamase PDC-58
+PDC-59	AIG19996.1	KJ949074.1	blaPDC-59	1	1194	+	class C beta-lactamase PDC-59
+PDC-6	ACQ82811.1	FJ666069.1	blaPDC-6	1	1194	+	class C beta-lactamase PDC-6
+PDC-60	AIG19997.1	KJ949075.1	blaPDC-60	1	1194	+	class C beta-lactamase PDC-60
+PDC-61	AIG19998.1	KJ949076.1	blaPDC-61	1	1194	+	class C beta-lactamase PDC-61
+PDC-63	AIG20000.1	KJ949078.1	blaPDC-63	1	1194	+	class C beta-lactamase PDC-63
+PDC-64	AIG20001.1	KJ949079.1	blaPDC-64	1	1194	+	class C beta-lactamase PDC-64
+PDC-65	AIG20002.1	KJ949080.1	blaPDC-65	1	1194	+	class C beta-lactamase PDC-65
+PDC-66	AIG20003.1	KJ949081.1	blaPDC-66	1	1194	+	class C beta-lactamase PDC-66
+PDC-67	AIG20004.1	KJ949082.1	blaPDC-67	1	1194	+	class C beta-lactamase PDC-67
+PDC-68	AIG20005.1	KJ949083.1	blaPDC-68	1	1194	+	class C beta-lactamase PDC-68
+PDC-69	AIG20006.1	KJ949084.1	blaPDC-69	1	1194	+	class C beta-lactamase PDC-69
+PDC-7	ACQ82812.1	FJ666070.1	blaPDC-7	1	1194	+	class C beta-lactamase PDC-7
+PDC-70	AIG20007.1	KJ949085.1	blaPDC-70	1	1194	+	class C beta-lactamase PDC-70
+PDC-71	AIG20008.1	KJ949086.1	blaPDC-71	1	1194	+	class C beta-lactamase PDC-71
+PDC-72	AIG20009.1	KJ949087.1	blaPDC-72	1	1194	+	class C beta-lactamase PDC-72
+PDC-8	ACQ82813.1	FJ666071.1	blaPDC-8	1	1194	+	class C beta-lactamase PDC-8
+PDC-9	ACQ82814.1	FJ666072.1	blaPDC-9	1	1194	+	class C beta-lactamase PDC-9
+PDC-94	AMR55736.1	KU963196.1	blaPDC-94	1	1194	+	class C beta-lactamase PDC-94
+PDC-95	AMR55738.1	KU963198.1	blaPDC-95	1	1194	+	class C beta-lactamase PDC-95
+PDC-96	AMR55739.1	KU963199.1	blaPDC-96	1	1194	+	class C beta-lactamase PDC-96
+PDC-97	AMR55740.1	KU963200.1	blaPDC-97	1	1194	+	class C beta-lactamase PDC-97
+PER-1	CAA79968.1	Z21957.1	blaPER-1	285	1211	-	class A extended-spectrum beta-lactamase PER-1
+PER-2	CAA63714.1	X93314.1	blaPER-2	278	1204	+	class A extended-spectrum beta-lactamase PER-2
+PER-3	AAU89132.1	AY740681.1	blaPER-3	7103	8029	+	class A extended-spectrum beta-lactamase PER-3
+PER-4	ACE77058.1	EU748544.1	blaPER-4	1	927	+	class A extended-spectrum beta-lactamase PER-4
+PER-5	ACN22483.1	FJ627180.1	blaPER-5	1	926	+	class A extended-spectrum beta-lactamase PER-5
+PER-6	ADD80743.1	GQ396303.1	blaPER-6	1	927	+	class A extended-spectrum beta-lactamase PER-6
+PER-7	AEI54993.1	HQ713678.1	blaPER-7	5757	6683	+	class A extended-spectrum beta-lactamase PER-7
+PER-8	BAP39824.1	AB985401.1	blaPER-8	5557	6483	+	class A extended-spectrum beta-lactamase PER-8
+PER-9	BAU25894.1	LC110323.1	blaPER-9	1	927	+	class A extended-spectrum beta-lactamase PER-9
+SHV-1	AAD37412.1	AF148850.1	blaSHV-1	6	866	+	class A broad-spectrum beta-lactamase SHV-1
+SHV-100	CAQ03505.1	AM941846.1	blaSHV-100	1	900	+	class A beta-lactamase SHV-100
+SHV-101	ABV72593.1	EU155018.1	blaSHV-101	1	861	+	class A beta-lactamase SHV-101
+SHV-102	ABS72342.1	EU024485.1	blaSHV-102	1	861	+	class A extended-spectrum beta-lactamase SHV-102
+SHV-103	ABS72351.1	EU032604.1	blaSHV-103	1	861	+	class A beta-lactamase SHV-103
+SHV-104	ABX71158.1	EU274581.1	blaSHV-104	1	861	+	class A extended-spectrum beta-lactamase SHV-104
+SHV-105	ACI22621.1	FJ194944.1	blaSHV-105	47	907	+	class A extended-spectrum beta-lactamase SHV-105
+SHV-106	CAP58290.1	AM922307.1	blaSHV-106	1	861	+	class A extended-spectrum beta-lactamase SHV-106
+SHV-107	CAP58291.1	AM922308.1	blaSHV-107	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase SHV-107
+SHV-108	CAP58292.1	AM922309.1	blaSHV-108	1	861	+	class A beta-lactamase SHV-108
+SHV-109	ACM04459.1	EU418913.1	blaSHV-109	17	877	+	class A broad-spectrum beta-lactamase SHV-109
+SHV-11	CAA66729.1	X98101.1	blaSHV-11	74	934	+	class A broad-spectrum beta-lactamase SHV-11
+SHV-110	AEK48094.1	HQ877615.1	blaSHV-110	1	861	+	class A beta-lactamase SHV-110
+SHV-111	BAF95849.1	AB372881.1	blaSHV-111	9	869	+	class A beta-lactamase SHV-111
+SHV-119	AIG51284.1	KJ776406.1	blaSHV-119	17	877	+	class A beta-lactamase SHV-119
+SHV-120	AEG79634.1	JF812965.1	blaSHV-120	1	861	+	class A beta-lactamase SHV-120
+SHV-121	ACV53157.1	GQ428198.1	blaSHV-121	48	908	+	class A beta-lactamase SHV-121
+SHV-128	ADE58494.1	GU932590.1	blaSHV-128	1	861	+	class A extended-spectrum beta-lactamase SHV-128
+SHV-129	ADE08533.1	GU827715.1	blaSHV-129	1	861	+	class A extended-spectrum beta-lactamase SHV-129
+SHV-13	AAD43815.1	AF164577.1	blaSHV-13	1	861	+	class A extended-spectrum beta-lactamase SHV-13
+SHV-132	ADU15837.1	GU981741.1	blaSHV-132	794	1654	-	class A beta-lactamase SHV-132
+SHV-133	BAI94487.1	AB551737.1	blaSHV-133	15	875	+	class A beta-lactamase SHV-133
+SHV-134	ADM25824.1	HM559945.1	blaSHV-134	1	861	+	class A extended-spectrum beta-lactamase SHV-134
+SHV-135	ADR66517.1	HQ637576.1	blaSHV-135	1	861	+	class A beta-lactamase SHV-135
+SHV-137	AEI83430.1	HQ661363.1	blaSHV-137	72	932	+	class A beta-lactamase SHV-137
+SHV-14	AAG17550.1	AF226622.1	blaSHV-14	55	915	+	class A broad-spectrum beta-lactamase SHV-14
+SHV-141	AFC60795.1	JQ388884.1	blaSHV-141	1	861	+	class A broad-spectrum beta-lactamase SHV-141
+SHV-142	AEX99752.1	JQ029959.1	blaSHV-142	29	889	+	class A beta-lactamase SHV-142
+SHV-143	AFQ32277.1	JQ341060.1	blaSHV-143	882	1742	-	class A beta-lactamase SHV-143
+SHV-144	AFK93491.1	JQ926986.1	blaSHV-144	1	861	+	class A beta-lactamase SHV-144
+SHV-145	AFN88952.1	JX013655.1	blaSHV-145	1	861	+	class A beta-lactamase SHV-145
+SHV-146	AKK23731.1	KP868752.1	blaSHV-146	1	861	+	class A beta-lactamase SHV-146
+SHV-147	AFQ23953.1	JX121114.1	blaSHV-147	1	858	+	class A beta-lactamase SHV-147
+SHV-148	AFQ23954.1	JX121115.1	blaSHV-148	1	858	+	class A extended-spectrum beta-lactamase SHV-148
+SHV-149	AFQ23955.1	JX121116.1	blaSHV-149	1	858	+	class A beta-lactamase SHV-149
+SHV-15	CAB37325.2	AJ011428.2	blaSHV-15	1	861	+	class A extended-spectrum beta-lactamase SHV-15
+SHV-150	AFQ23956.1	JX121117.1	blaSHV-150	1	858	+	class A beta-lactamase SHV-150
+SHV-151	AFQ23957.1	JX121118.1	blaSHV-151	1	858	+	class A beta-lactamase SHV-151
+SHV-152	AFQ23958.1	JX121119.1	blaSHV-152	1	858	+	class A beta-lactamase SHV-152
+SHV-153	AFQ23959.1	JX121120.1	blaSHV-153	1	858	+	class A beta-lactamase SHV-153
+SHV-154	AFQ23960.1	JX121121.1	blaSHV-154	1	858	+	class A beta-lactamase SHV-154
+SHV-155	AFQ23961.1	JX121122.1	blaSHV-155	1	858	+	class A beta-lactamase SHV-155
+SHV-156	AFQ23962.1	JX121123.1	blaSHV-156	1	861	+	class A beta-lactamase SHV-156
+SHV-157	AFQ23963.1	JX121124.1	blaSHV-157	1	861	+	class A beta-lactamase SHV-157
+SHV-158	AFQ23964.1	JX121125.1	blaSHV-158	1	858	+	class A beta-lactamase SHV-158
+SHV-159	AFQ23965.1	JX121126.1	blaSHV-159	1	858	+	class A beta-lactamase SHV-159
+SHV-16	AAC98092.2	AF072684.2	blaSHV-16	118	993	+	class A extended-spectrum beta-lactamase SHV-16
+SHV-160	AFQ23966.1	JX121127.1	blaSHV-160	1	861	+	class A beta-lactamase SHV-160
+SHV-161	AFQ23967.1	JX121128.1	blaSHV-161	1	861	+	class A beta-lactamase SHV-161
+SHV-162	AFQ23968.1	JX121129.1	blaSHV-162	1	858	+	class A beta-lactamase SHV-162
+SHV-163	AFQ23969.1	JX121130.1	blaSHV-163	1	858	+	class A beta-lactamase SHV-163
+SHV-164	CCK86744.1	HE981194.1	blaSHV-164	1	861	+	class A broad-spectrum beta-lactamase SHV-164
+SHV-165	AFQ23970.1	JX121131.1	blaSHV-165	1	858	+	class A beta-lactamase SHV-165
+SHV-168	AFW16978.1	JX870080.1	blaSHV-168	1	861	+	class A beta-lactamase SHV-168
+SHV-172	AHA80958.1	KF513177.1	blaSHV-172	1	861	+	class A beta-lactamase SHV-172
+SHV-173	AHA80959.1	KF513178.1	blaSHV-173	1	861	+	class A beta-lactamase SHV-173
+SHV-178	AHA80963.1	KF705209.1	blaSHV-178	1	861	+	class A beta-lactamase SHV-178
+SHV-179	AHA80962.1	KF705208.1	blaSHV-179	1	861	+	class A beta-lactamase SHV-179
+SHV-18	AAF64386.1	AF132290.1	blaSHV-18	88	948	+	class A extended-spectrum beta-lactamase SHV-18
+SHV-180	AJO16041.1	KP050488.1	blaSHV-180	1	861	+	class A beta-lactamase SHV-180
+SHV-182	AJO16042.1	KP050489.1	blaSHV-182	1	861	+	class A beta-lactamase SHV-182
+SHV-183	CDN33427.1	HG934764.1	blaSHV-183	1	864	+	class A extended-spectrum beta-lactamase SHV-183
+SHV-185	AIS67768.1	KM233164.1	blaSHV-185	1	861	+	class A beta-lactamase SHV-185
+SHV-186	AIS67769.1	KM233165.1	blaSHV-186	1	861	+	class A beta-lactamase SHV-186
+SHV-187	CEA29750.1	LN515533.1	blaSHV-187	1	867	+	class A beta-lactamase SHV-187
+SHV-188	CEA29751.1	LN515534.1	blaSHV-188	1	873	+	class A beta-lactamase SHV-188
+SHV-189	AJO16047.1	KP050494.1	blaSHV-189	1	861	+	class A beta-lactamase SHV-189
+SHV-190	AKK23732.1	KP868753.1	blaSHV-190	1	861	+	class A beta-lactamase SHV-190
+SHV-191	AKK23733.1	KP868754.1	blaSHV-191	1	861	+	class A beta-lactamase SHV-191
+SHV-193	ALI16958.1	KR347170.1	blaSHV-193	1	861	+	class A beta-lactamase SHV-193
+SHV-1b-b	AAZ98828.1	DQ166783.1	blaSHV-1b-b	1	861	+	class A beta-lactamase SHV-1b-b
+SHV-2	AAD37413.1	AF148851.1	blaSHV-2	6	866	+	class A extended-spectrum beta-lactamase SHV-2
+SHV-24	BAA84973.1	AB023477.1	blaSHV-24	1	861	+	class A extended-spectrum beta-lactamase SHV-24
+SHV-25	AAF37209.2	AF208796.2	blaSHV-25	1	861	+	class A broad-spectrum beta-lactamase SHV-25
+SHV-26	AAF36719.1	AF227204.1	blaSHV-26	74	934	+	inhibitor-resistant class A broad-spectrum beta-lactamase SHV-26
+SHV-27	AAG01039.1	AF293345.1	blaSHV-27	1	861	+	class A extended-spectrum beta-lactamase SHV-27
+SHV-28	ACA09611.1	EU441172.1	blaSHV-28	57	917	+	class A beta-lactamase SHV-28
+SHV-29	AAG49894.1	AF301532.1	blaSHV-29	8	868	+	class A beta-lactamase SHV-29
+SHV-2A	CAA66730.1	X98102.1	blaSHV-2A	74	934	+	class A extended-spectrum beta-lactamase SHV-2a
+SHV-3	ANA06389.1	KX092356.1	blaSHV-3	193	1053	+	class A extended-spectrum beta-lactamase SHV-3
+SHV-30	AAT75225.1	AY661885.1	blaSHV-30	49	909	+	class A extended-spectrum beta-lactamase SHV-30
+SHV-31	AAP33454.2	AY277255.2	blaSHV-31	67	927	+	class A extended-spectrum beta-lactamase SHV-31
+SHV-32	AAK69828.1	AY037778.1	blaSHV-32	92	952	+	class A broad-spectrum beta-lactamase SHV-32
+SHV-33	AAK69829.1	AY037779.1	blaSHV-33	89	949	+	class A broad-spectrum beta-lactamase SHV-33
+SHV-34	AAK64187.1	AY036620.1	blaSHV-34	89	949	+	class A extended-spectrum beta-lactamase SHV-34
+SHV-35	AAL68926.1	AY070258.1	blaSHV-35	1	861	+	class A beta-lactamase SHV-35
+SHV-36	AAL82592.1	AF467947.1	blaSHV-36	1	861	+	class A beta-lactamase SHV-36
+SHV-37	AAL82593.1	AF467948.1	blaSHV-37	1	861	+	class A beta-lactamase SHV-37
+SHV-38	AAL79576.1	AY079099.1	blaSHV-38	149	1009	+	class A extended-spectrum beta-lactamase SHV-38
+SHV-40	AAN04882.1	AF535128.1	blaSHV-40	1	861	+	class A extended-spectrum beta-lactamase SHV-40
+SHV-41	AAN04883.1	AF535129.1	blaSHV-41	1	861	+	class A extended-spectrum beta-lactamase SHV-41
+SHV-42	AAN04884.1	AF535130.1	blaSHV-42	1	861	+	class A extended-spectrum beta-lactamase SHV-42
+SHV-43	AAL40899.1	AY065991.1	blaSHV-43	7	867	+	class A broad-spectrum beta-lactamase SHV-43
+SHV-44	AAP82228.1	AY259119.1	blaSHV-44	117	977	+	class A broad-spectrum beta-lactamase SHV-44
+SHV-45	AAN39364.1	AF547625.1	blaSHV-45	1	861	+	class A extended-spectrum beta-lactamase SHV-45
+SHV-46	AAO53445.1	AY210887.1	blaSHV-46	112	972	+	class A extended-spectrum beta-lactamase SHV-46
+SHV-48	AAP03063.1	AY263404.1	blaSHV-48	1	861	+	class A broad-spectrum beta-lactamase SHV-48
+SHV-49	AAS98184.1	AY528718.1	blaSHV-49	414	1274	+	inhibitor-resistant class A broad-spectrum beta-lactamase SHV-49
+SHV-5	CAA39164.1	X55640.1	blaSHV-5	112	972	+	class A extended-spectrum beta-lactamase SHV-5
+SHV-50	AAP41108.1	AY288915.1	blaSHV-50	1	861	+	class A beta-lactamase SHV-50
+SHV-51	AAP41944.1	AY289548.1	blaSHV-51	1	861	+	class A beta-lactamase SHV-51
+SHV-52	AEJ08681.1	HQ845196.1	blaSHV-52	1	861	+	class A beta-lactamase SHV-52
+SHV-55	AAY51674.1	DQ054528.1	blaSHV-55	1	861	+	class A extended-spectrum beta-lactamase SHV-55
+SHV-56	ACB73258.1	EU586041.1	blaSHV-56	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase SHV-56
+SHV-57	AAO66446.1	AY223863.1	blaSHV-57	171	1031	+	class A extended-spectrum beta-lactamase SHV-57
+SHV-59	AAV66328.1	AY790341.1	blaSHV-59	1	861	+	class A beta-lactamase SHV-59
+SHV-60	CAI30649.2	AJ866283.2	blaSHV-60	1	861	+	class A broad-spectrum beta-lactamase SHV-60
+SHV-61	CAI30650.2	AJ866284.2	blaSHV-61	1	861	+	class A broad-spectrum beta-lactamase SHV-61
+SHV-62	CAI30651.2	AJ866285.2	blaSHV-62	1	861	+	class A broad-spectrum beta-lactamase SHV-62
+SHV-63	ABY56290.1	EU342351.1	blaSHV-63	173	1033	+	class A beta-lactamase SHV-63
+SHV-64	ABA06586.1	DQ174304.1	blaSHV-64	5	865	+	class A extended-spectrum beta-lactamase SHV-64
+SHV-65	ABA06587.1	DQ174305.1	blaSHV-65	5	865	+	class A beta-lactamase SHV-65
+SHV-66	ABA06588.1	DQ174306.1	blaSHV-66	5	865	+	class A extended-spectrum beta-lactamase SHV-66
+SHV-67	ABA06589.1	DQ174307.1	blaSHV-67	5	865	+	class A beta-lactamase SHV-67
+SHV-69	ABA06590.1	DQ174308.1	blaSHV-69	5	865	+	class A beta-lactamase SHV-69
+SHV-7	AAA87176.1	U20270.1	blaSHV-7	125	985	+	class A extended-spectrum beta-lactamase SHV-7
+SHV-70	AAY42633.1	DQ013287.1	blaSHV-70	1	861	+	class A extended-spectrum beta-lactamase SHV-70
+SHV-71	CAJ47126.2	AM176546.2	blaSHV-71	1	861	+	class A broad-spectrum beta-lactamase SHV-71
+SHV-72	CAJ47127.2	AM176547.2	blaSHV-72	31	891	+	inhibitor-resistant class A broad-spectrum beta-lactamase SHV-72
+SHV-73	CAJ47128.2	AM176548.2	blaSHV-73	17	874	+	class A broad-spectrum beta-lactamase SHV-73
+SHV-74	CAJ47129.2	AM176549.2	blaSHV-74	31	891	+	class A broad-spectrum beta-lactamase SHV-74
+SHV-75	CAJ47130.2	AM176550.2	blaSHV-75	31	891	+	class A broad-spectrum beta-lactamase SHV-75
+SHV-76	CAJ47131.2	AM176551.2	blaSHV-76	31	891	+	class A broad-spectrum beta-lactamase SHV-76
+SHV-77	CAJ47132.2	AM176552.2	blaSHV-77	31	891	+	class A broad-spectrum beta-lactamase SHV-77
+SHV-78	CAJ47133.2	AM176553.2	blaSHV-78	31	891	+	class A broad-spectrum beta-lactamase SHV-78
+SHV-79	CAJ47134.2	AM176554.2	blaSHV-79	31	891	+	class A broad-spectrum beta-lactamase SHV-79
+SHV-8	AAB51384.1	U92041.1	blaSHV-8	1	861	+	class A extended-spectrum beta-lactamase SHV-8
+SHV-80	CAJ47135.2	AM176555.2	blaSHV-80	1	861	+	class A broad-spectrum beta-lactamase SHV-80
+SHV-81	CAJ47136.2	AM176556.2	blaSHV-81	26	886	+	class A broad-spectrum beta-lactamase SHV-81
+SHV-82	CAJ47137.2	AM176557.2	blaSHV-82	1	861	+	class A broad-spectrum beta-lactamase SHV-82
+SHV-85	ABC54571.1	DQ322460.1	blaSHV-85	16	876	+	class A broad-spectrum beta-lactamase SHV-85
+SHV-86	ABC58727.1	DQ328802.1	blaSHV-86	1	861	+	class A extended-spectrum beta-lactamase SHV-86
+SHV-89	ABA60809.1	DQ193536.1	blaSHV-89	1	861	+	class A broad-spectrum beta-lactamase SHV-89
+SHV-9	AAB37395.2	S82452.1	blaSHV-9	121	978	+	class A beta-lactamase SHV-9
+SHV-92	ABH04327.1	DQ836922.1	blaSHV-92	1	861	+	class A beta-lactamase SHV-92
+SHV-93	ABN49110.1	EF373969.1	blaSHV-93	1	861	+	class A beta-lactamase SHV-93
+SHV-94	ABN49111.1	EF373970.1	blaSHV-94	1	861	+	class A beta-lactamase SHV-94
+SHV-95	ABN49113.1	EF373972.1	blaSHV-95	1	861	+	class A beta-lactamase SHV-95
+SHV-96	ABN49112.1	EF373971.1	blaSHV-96	1	861	+	class A beta-lactamase SHV-96
+SHV-97	ABN49114.1	EF373973.1	blaSHV-97	1	861	+	class A beta-lactamase SHV-97
+SHV-98	CAQ03503.1	AM941844.1	blaSHV-98	1	861	+	class A extended-spectrum beta-lactamase SHV-98
+SHV-99	CAQ03504.1	AM941845.1	blaSHV-99	1	861	+	class A extended-spectrum beta-lactamase SHV-99
+SME-1	CAA82281.1	Z28968.1	blaSME-1	128	1012	+	carbapenem-hydrolyzing class A beta-lactamase SME-1
+SME-2	AAG29813.1	AF275256.1	blaSME-2	1	885	+	carbapenem-hydrolyzing class A beta-lactamase SME-2
+SME-3	AAS92558.1	AY584237.1	blaSME-3	124	1008	+	carbapenem-hydrolyzing class A beta-lactamase SME-3
+SME-4	AHA49908.1	KF481967.1	blaSME-4	1	885	+	carbapenem-hydrolyzing class A beta-lactamase SME-4
+SME-5	AHV85514.1	KJ188748.1	blaSME-5	1	885	+	carbapenem-hydrolyzing class A beta-lactamase SME-5
+TEM-1	AAB59737.1	J01749.1	blaTEM-1	3293	4153	-	class A broad-spectrum beta-lactamase TEM-1
+TEM-10	AAC72362.1	AF093512.1	blaTEM-10	198	1058	+	class A extended-spectrum beta-lactamase TEM-10
+TEM-101	AAM18924.1	AF495873.1	blaTEM-101	1	861	+	class A extended-spectrum beta-lactamase TEM-101
+TEM-102	AAK82652.1	AY040093.1	blaTEM-102	69	929	+	class A extended-spectrum beta-lactamase TEM-102
+TEM-104	AAM61952.1	AF516719.1	blaTEM-104	215	1075	+	class A beta-lactamase TEM-104
+TEM-105	AAM61953.1	AF516720.1	blaTEM-105	215	1075	+	class A beta-lactamase TEM-105
+TEM-106	AAM52207.1	AY101578.1	blaTEM-106	215	1075	+	class A extended-spectrum beta-lactamase TEM-106
+TEM-107	AAM52215.1	AY101764.1	blaTEM-107	207	1067	+	class A extended-spectrum beta-lactamase TEM-107
+TEM-108	AAM28884.1	AF506748.1	blaTEM-108	39	899	+	class A beta-lactamase TEM-108
+TEM-109	AAT46413.1	AY628175.1	blaTEM-109	211	1071	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-109
+TEM-11	AAW66604.1	AY874537.1	blaTEM-11	178	1038	+	class A extended-spectrum beta-lactamase TEM-11
+TEM-110	AAL68923.1	AY072920.1	blaTEM-110	1	861	+	class A broad-spectrum beta-lactamase TEM-110
+TEM-111	AAL77062.1	AF468003.1	blaTEM-111	1	861	+	class A beta-lactamase TEM-111
+TEM-112	AAS89982.1	AY589493.1	blaTEM-112	167	1027	+	class A extended-spectrum beta-lactamase TEM-112
+TEM-113	AAS89983.1	AY589494.1	blaTEM-113	194	1054	+	class A extended-spectrum beta-lactamase TEM-113
+TEM-114	AAS89984.1	AY589495.1	blaTEM-114	182	1042	+	class A extended-spectrum beta-lactamase TEM-114
+TEM-115	AAN04881.1	AF535127.1	blaTEM-115	209	1069	+	class A extended-spectrum beta-lactamase TEM-115
+TEM-116	AAB39956.1	U36911.1	blaTEM-116	1430	2290	+	class A broad-spectrum beta-lactamase TEM-116
+TEM-12	AAA25053.1	M88143.1	blaTEM-12	368	1228	+	class A extended-spectrum beta-lactamase TEM-12
+TEM-120	AAO85882.1	AY243512.1	blaTEM-120	209	1069	+	class A extended-spectrum beta-lactamase TEM-120
+TEM-121	AAQ01671.1	AY271267.1	blaTEM-121	1	861	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-121
+TEM-122	AAQ98890.1	AY307100.1	blaTEM-122	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-122
+TEM-123	AAQ93490.1	AY327539.1	blaTEM-123	1	858	+	class A extended-spectrum beta-lactamase TEM-123
+TEM-124	AAQ93491.1	AY327540.1	blaTEM-124	1	858	+	class A extended-spectrum beta-lactamase TEM-124
+TEM-125	AAT46414.1	AY628176.1	blaTEM-125	76	936	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-125
+TEM-126	AAT45742.1	AY628199.1	blaTEM-126	204	1064	+	class A extended-spectrum beta-lactamase TEM-126
+TEM-127	AAR89358.1	AY368236.1	blaTEM-127	1	861	+	class A broad-spectrum beta-lactamase TEM-127
+TEM-128	AAR89359.1	AY368237.1	blaTEM-128	1	861	+	class A broad-spectrum beta-lactamase TEM-128
+TEM-129	CAG34105.1	AJ746225.1	blaTEM-129	1	861	+	class A extended-spectrum beta-lactamase TEM-129
+TEM-130	CAI29263.1	AJ866988.1	blaTEM-130	1	861	+	class A extended-spectrum beta-lactamase TEM-130
+TEM-131	AAR10958.1	AY436361.1	blaTEM-131	132	992	+	class A extended-spectrum beta-lactamase TEM-131
+TEM-132	AAR84298.1	AY491682.1	blaTEM-132	1	861	+	class A extended-spectrum beta-lactamase TEM-132
+TEM-133	AAS19171.1	AY528425.1	blaTEM-133	1	861	+	class A extended-spectrum beta-lactamase TEM-133
+TEM-134	AAS79107.1	AY574271.1	blaTEM-134	1	861	+	class A extended-spectrum beta-lactamase TEM-134
+TEM-135	CAG25427.1	AJ634602.1	blaTEM-135	7840	8700	-	class A broad-spectrum beta-lactamase TEM-135
+TEM-136	AAV83795.1	AY826417.1	blaTEM-136	1	861	+	class A extended-spectrum beta-lactamase TEM-136
+TEM-137	CAL08007.1	AM286274.1	blaTEM-137	1	861	+	class A extended-spectrum beta-lactamase TEM-137
+TEM-138	AAW47922.1	AY853593.1	blaTEM-138	215	1075	+	class A extended-spectrum beta-lactamase TEM-138
+TEM-139	AAZ23494.1	DQ072853.1	blaTEM-139	1	861	+	class A extended-spectrum beta-lactamase TEM-139
+TEM-141	AAX56615.1	AY956335.1	blaTEM-141	39	899	+	class A broad-spectrum beta-lactamase TEM-141
+TEM-142	ABD60314.1	DQ388882.1	blaTEM-142	1	861	+	class A beta-lactamase TEM-142
+TEM-143	AAY85632.1	DQ075245.1	blaTEM-143	218	1078	+	class A extended-spectrum beta-lactamase TEM-143
+TEM-144	CAJ17558.1	AM049399.1	blaTEM-144	1	861	+	class A extended-spectrum beta-lactamase TEM-144
+TEM-145	AAZ14083.2	DQ105528.2	blaTEM-145	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-145
+TEM-146	AAZ14084.2	DQ105529.2	blaTEM-146	1	861	+	class A beta-lactamase TEM-146
+TEM-147	ABB84515.1	DQ279850.1	blaTEM-147	1	861	+	class A extended-spectrum beta-lactamase TEM-147
+TEM-148	CAJ32372.1	AM087454.1	blaTEM-148	209	1069	+	class A beta-lactamase TEM-148
+TEM-149	ABC96711.1	DQ369751.1	blaTEM-149	1	861	+	class A extended-spectrum beta-lactamase TEM-149
+TEM-15	CAO98721.1	AM849805.1	blaTEM-15	263	1123	+	class A extended-spectrum beta-lactamase TEM-15
+TEM-150	CAJ66089.1	AM183304.1	blaTEM-150	209	1069	+	class A beta-lactamase TEM-150
+TEM-151	ABI74448.1	DQ834729.1	blaTEM-151	206	1066	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-151
+TEM-152	ABI74447.1	DQ834728.1	blaTEM-152	206	1066	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-152
+TEM-153	AGA83484.1	KC149518.1	blaTEM-153	1	861	+	class A extended-spectrum beta-lactamase TEM-153
+TEM-154	ACO07310.1	FJ807656.1	blaTEM-154	1	861	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-154
+TEM-155	ABG77582.1	DQ679961.1	blaTEM-155	115	975	+	class A extended-spectrum beta-lactamase TEM-155
+TEM-156	CAQ00120.1	AM941159.1	blaTEM-156	209	1069	+	class A beta-lactamase TEM-156
+TEM-157	ABI81768.1	DQ909059.1	blaTEM-157	1	861	+	class A extended-spectrum beta-lactamase TEM-157
+TEM-158	ABQ00181.1	EF534736.1	blaTEM-158	214	1074	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-158
+TEM-159	ABM54869.1	EF136376.1	blaTEM-159	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-159
+TEM-16	CAA46346.1	X65254.1	blaTEM-16	176	1036	+	class A extended-spectrum beta-lactamase TEM-16
+TEM-160	ABM54870.1	EF136377.1	blaTEM-160	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-160
+TEM-162	ABO64442.1	EF468463.1	blaTEM-162	67	927	+	class A beta-lactamase TEM-162
+TEM-163	ACF32746.1	EU815939.1	blaTEM-163	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-163
+TEM-164	ABX71157.1	EU274580.1	blaTEM-164	215	1075	+	class A extended-spectrum beta-lactamase TEM-164
+TEM-166	ACI25375.1	FJ197316.1	blaTEM-166	1	861	+	class A beta-lactamase TEM-166
+TEM-167	ACJ04051.1	FJ360884.1	blaTEM-167	214	1074	+	class A extended-spectrum beta-lactamase TEM-167
+TEM-168	ACR22829.1	FJ919776.1	blaTEM-168	209	1069	+	class A extended-spectrum beta-lactamase TEM-168
+TEM-169	ACP18864.1	FJ873740.1	blaTEM-169	1	858	+	class A extended-spectrum beta-lactamase TEM-169
+TEM-17	CAA74912.2	Y14574.2	blaTEM-17	1	861	+	class A extended-spectrum beta-lactamase TEM-17
+TEM-171	ADA79630.1	GQ149347.1	blaTEM-171	5270	6130	+	class A beta-lactamase TEM-171
+TEM-176	ADB90239.1	GU550123.1	blaTEM-176	145	1005	+	class A beta-lactamase TEM-176
+TEM-177	CBJ06718.1	FN652295.1	blaTEM-177	1	861	+	class A extended-spectrum beta-lactamase TEM-177
+TEM-178	CAA65888.1	X97254.1	blaTEM-178	154	1011	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-178
+TEM-181	AAA72077.1	M33625.1	blaTEM-181	1689	2549	+	class A beta-lactamase TEM-181
+TEM-182	ADP20705.1	HQ317449.1	blaTEM-182	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-182
+TEM-183	ADR71220.1	HQ529916.1	blaTEM-183	111	971	+	class A broad-spectrum beta-lactamase TEM-183
+TEM-184	CCA61905.1	FR848831.1	blaTEM-184	1	861	+	class A extended-spectrum beta-lactamase TEM-184
+TEM-185	AEG64812.1	JF795538.1	blaTEM-185	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-185
+TEM-186	AET99222.1	JN227084.1	blaTEM-186	309	1169	+	class A broad-spectrum beta-lactamase TEM-186
+TEM-187	ADM61585.1	HM246246.1	blaTEM-187	212	1069	+	class A extended-spectrum beta-lactamase TEM-187
+TEM-188	AEL17198.1	JN211012.1	blaTEM-188	214	1074	+	class A extended-spectrum beta-lactamase TEM-188
+TEM-189	AEL79515.1	JN254627.1	blaTEM-189	1	861	+	class A beta-lactamase TEM-189
+TEM-19	AFN21551.1	JX042489.1	blaTEM-19	142	1002	+	class A extended-spectrum beta-lactamase TEM-19
+TEM-190	AEL88240.1	JN416112.1	blaTEM-190	1	861	+	class A beta-lactamase TEM-190
+TEM-193	AFC75523.1	JN935135.1	blaTEM-193	1	861	+	class A beta-lactamase TEM-193
+TEM-194	AFC75524.1	JN935136.1	blaTEM-194	1	861	+	class A beta-lactamase TEM-194
+TEM-195	AFC75525.1	JN935137.1	blaTEM-195	1	861	+	class A beta-lactamase TEM-195
+TEM-197	AEK48085.1	HQ877606.1	blaTEM-197	1	861	+	class A extended-spectrum beta-lactamase TEM-197
+TEM-198	BAL68178.1	AB700703.1	blaTEM-198	162	1022	+	class A beta-lactamase TEM-198
+TEM-2	CAA38429.1	X54606.1	blaTEM-2	215	1075	+	class A broad-spectrum beta-lactamase TEM-2
+TEM-20	CAA76793.1	Y17581.1	blaTEM-20	79	936	+	class A extended-spectrum beta-lactamase TEM-20
+TEM-201	AFS44742.1	JX310327.1	blaTEM-201	1	861	+	class A beta-lactamase TEM-201
+TEM-205	AGZ20205.1	KC900516.1	blaTEM-205	1	858	+	class A beta-lactamase TEM-205
+TEM-206	AGK82336.1	KC783461.1	blaTEM-206	1	861	+	class A broad-spectrum beta-lactamase TEM-206
+TEM-207	AGK40892.1	KC818234.1	blaTEM-207	1	861	+	class A extended-spectrum beta-lactamase TEM-207
+TEM-208	AGL39384.1	KC865667.1	blaTEM-208	184	1044	+	class A beta-lactamase TEM-208
+TEM-209	AGW25367.1	KF240808.1	blaTEM-209	1	861	+	class A beta-lactamase TEM-209
+TEM-21	CAA76794.1	Y17582.1	blaTEM-21	1	858	+	class A extended-spectrum beta-lactamase TEM-21
+TEM-210	AIF78090.1	KJ484630.1	blaTEM-210	77865	78725	-	class A beta-lactamase TEM-210
+TEM-211	AHA80960.1	KF513179.1	blaTEM-211	1	861	+	class A extended-spectrum beta-lactamase TEM-211
+TEM-212	AHA49909.1	KF481968.1	blaTEM-212	1	858	+	class A beta-lactamase TEM-212
+TEM-213	AHA58207.1	KF663615.1	blaTEM-213	1	858	+	class A beta-lactamase TEM-213
+TEM-214	AJO16044.1	KP050491.1	blaTEM-214	1	861	+	class A beta-lactamase TEM-214
+TEM-215	AJO16045.1	KP050492.1	blaTEM-215	1	861	+	class A beta-lactamase TEM-215
+TEM-216	AHJ78622.1	KF944358.1	blaTEM-216	1	861	+	class A beta-lactamase TEM-216
+TEM-217	CDN33426.1	HG934763.1	blaTEM-217	1	861	+	class A beta-lactamase TEM-217
+TEM-219	AIS39742.1	KM114268.1	blaTEM-219	1	861	+	class A beta-lactamase TEM-219
+TEM-22	CAA76795.1	Y17583.1	blaTEM-22	214	1071	+	class A extended-spectrum beta-lactamase TEM-22
+TEM-220	AIW68620.1	KM998962.1	blaTEM-220	1	861	+	class A beta-lactamase TEM-220
+TEM-224	AMD11804.1	KU664545.1	blaTEM-224	1	861	+	class A beta-lactamase TEM-224
+TEM-24	CAA46345.1	X65253.1	blaTEM-24	176	1036	+	class A extended-spectrum beta-lactamase TEM-24
+TEM-26	KLG19745.1	LDCJ01000052.1	blaTEM-26	6540	7400	-	class A extended-spectrum beta-lactamase TEM-26
+TEM-28	AAC32891.1	U37195.1	blaTEM-28	76	936	+	class A extended-spectrum beta-lactamase TEM-28
+TEM-29	CAA76796.1	Y17584.1	blaTEM-29	1	858	+	class A extended-spectrum beta-lactamase TEM-29
+TEM-3	CAA45828.1	X64523.1	blaTEM-3	477	1337	-	class A extended-spectrum beta-lactamase TEM-3
+TEM-30	CAD24670.1	AJ437107.1	blaTEM-30	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-30
+TEM-32	CTD69961.1	CXOC01000011.1	blaTEM-32	27785	28645	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-32
+TEM-33	ADL13944.1	GU371926.1	blaTEM-33	50305	51165	-	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-33
+TEM-34	AGE11905.1	KC292503.1	blaTEM-34	4335	5195	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-34
+TEM-35	AKA60778.1	KP860986.1	blaTEM-35	6	866	-	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-35
+TEM-4	CDR98216.1	LK391770.1	blaTEM-4	19708	20568	+	class A extended-spectrum beta-lactamase TEM-4
+TEM-40	CBX53726.1	FR717535.1	blaTEM-40	1	861	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-40
+TEM-43	AAC32889.2	U95363.2	blaTEM-43	1	861	+	class A extended-spectrum beta-lactamase TEM-43
+TEM-45	CAA64682.1	X95401.1	blaTEM-45	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-45
+TEM-47	CAA71322.1	Y10279.1	blaTEM-47	1	861	+	class A extended-spectrum beta-lactamase TEM-47
+TEM-48	CAA71323.1	Y10280.1	blaTEM-48	1	861	+	class A extended-spectrum beta-lactamase TEM-48
+TEM-49	CAA71324.1	Y10281.1	blaTEM-49	1	861	+	class A extended-spectrum beta-lactamase TEM-49
+TEM-52	CAA73933.1	Y13612.1	blaTEM-52	1	861	+	class A extended-spectrum beta-lactamase TEM-52
+TEM-53	AAD22538.1	AF104441.1	blaTEM-53	194	1054	+	class A extended-spectrum beta-lactamase TEM-53
+TEM-54	AAD22539.1	AF104442.1	blaTEM-54	194	1054	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-54
+TEM-55	ABB97007.1	DQ286729.1	blaTEM-55	1	861	+	class A broad-spectrum beta-lactamase TEM-55
+TEM-57	ACJ43254.1	FJ405211.1	blaTEM-57	1	861	+	class A broad-spectrum beta-lactamase TEM-57
+TEM-6	CAA41038.1	X57972.1	blaTEM-6	340	1200	+	class A extended-spectrum beta-lactamase TEM-6
+TEM-60	AAC05975.1	AF047171.1	blaTEM-60	136	996	+	class A extended-spectrum beta-lactamase TEM-60
+TEM-63	AAK17194.1	AF332513.1	blaTEM-63	104	964	+	class A extended-spectrum beta-lactamase TEM-63
+TEM-67	AAD33116.2	AF091113.2	blaTEM-67	451	1311	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-67
+TEM-68	CAB92324.1	AJ239002.1	blaTEM-68	1	861	+	inhibitor-resistant class A extended-spectrum beta-lactamase TEM-68
+TEM-70	AAF01046.1	AF188199.1	blaTEM-70	215	1075	+	class A beta-lactamase TEM-70
+TEM-71	AAL03985.1	AF203816.1	blaTEM-71	211	1071	+	class A extended-spectrum beta-lactamase TEM-71
+TEM-72	AAF19151.1	AF157553.1	blaTEM-72	148	1008	+	class A extended-spectrum beta-lactamase TEM-72
+TEM-76	AAF05613.1	AF190694.1	blaTEM-76	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-76
+TEM-77	AAF05614.1	AF190695.1	blaTEM-77	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-77
+TEM-78	AAF05612.1	AF190693.1	blaTEM-78	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-78
+TEM-79	AAF05611.1	AF190692.1	blaTEM-79	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-79
+TEM-8	CAA46344.1	X65252.1	blaTEM-8	176	1036	+	class A extended-spectrum beta-lactamase TEM-8
+TEM-80	AAM15527.1	AF347054.1	blaTEM-80	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-80
+TEM-81	AAL29433.1	AF427127.1	blaTEM-81	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-81
+TEM-82	AAL29434.1	AF427128.1	blaTEM-82	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-82
+TEM-83	AAL29435.1	AF427129.1	blaTEM-83	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-83
+TEM-84	AAL29436.1	AF427130.1	blaTEM-84	209	1069	+	inhibitor-resistant class A broad-spectrum beta-lactamase TEM-84
+TEM-85	CAC43229.1	AJ277414.1	blaTEM-85	1	861	+	class A extended-spectrum beta-lactamase TEM-85
+TEM-86	CAC43230.1	AJ277415.1	blaTEM-86	1	861	+	class A extended-spectrum beta-lactamase TEM-86
+TEM-87	AAG44570.1	AF250872.1	blaTEM-87	1	861	+	class A extended-spectrum beta-lactamase TEM-87
+TEM-88	AAK14792.1	AY027590.1	blaTEM-88	113	973	+	class A extended-spectrum beta-lactamase TEM-88
+TEM-90	AAK30619.1	AF351241.1	blaTEM-90	90	950	+	class A broad-spectrum beta-lactamase TEM-90
+TEM-91	BAB16308.1	AB049569.1	blaTEM-91	1	861	+	class A extended-spectrum beta-lactamase TEM-91
+TEM-92	AAF66653.1	AF143804.1	blaTEM-92	1	861	+	class A extended-spectrum beta-lactamase TEM-92
+TEM-93	CAC85660.1	AJ318093.1	blaTEM-93	1	861	+	class A extended-spectrum beta-lactamase TEM-93
+TEM-94	CAC85661.1	AJ318094.1	blaTEM-94	1	861	+	class A extended-spectrum beta-lactamase TEM-94
+TEM-95	CAC67290.1	AJ308558.1	blaTEM-95	182	1042	+	class A broad-spectrum beta-lactamase TEM-95
+TEM-96	AAM22276.1	AY092401.1	blaTEM-96	1	861	+	class A beta-lactamase TEM-96
+TEM-97	AAK85244.1	AF397067.1	blaTEM-97	1	861	+	class A beta-lactamase TEM-97
+TEM-98	AAK85245.1	AF397068.1	blaTEM-98	1	861	+	class A beta-lactamase TEM-98
+TEM-99	AAK85243.1	AF397066.1	blaTEM-99	1	861	+	class A beta-lactamase TEM-99
+VEB-1	AAD01435.1	AF010416.1	blaVEB-1	164	1063	+	class A extended-spectrum beta-lactamase VEB-1
+VEB-10	AJH76942.1	KM983336.1	blaVEB-10	1	900	+	class A extended-spectrum beta-lactamase VEB-10
+VEB-11	AKO63208.1	KP681692.1	blaVEB-11	1	900	+	class A extended-spectrum beta-lactamase VEB-11
+VEB-12	AKO63209.1	KP681693.1	blaVEB-12	1	900	+	class A extended-spectrum beta-lactamase VEB-12
+VEB-13	ALB25884.1	KR021283.1	blaVEB-13	1	900	+	class A extended-spectrum beta-lactamase VEB-13
+VEB-14	AMJ32273.1	KU686220.1	blaVEB-14	1	897	+	class A extended-spectrum beta-lactamase VEB-14
+VEB-15	ALB25886.1	KR021285.1	blaVEB-15	1	900	+	class A extended-spectrum beta-lactamase VEB-15
+VEB-16	ALB25887.1	KR021286.1	blaVEB-16	1	900	+	class A extended-spectrum beta-lactamase VEB-16
+VEB-17	AMJ32272.1	KU686219.1	blaVEB-17	1	900	+	class A extended-spectrum beta-lactamase VEB-17
+VEB-2	AAK29174.1	AY027870.1	blaVEB-2	47	946	+	class A extended-spectrum beta-lactamase VEB-2
+VEB-3	AAS48620.1	AY536519.1	blaVEB-3	38	937	+	class A extended-spectrum beta-lactamase VEB-3
+VEB-4	ABM54868.1	EF136375.1	blaVEB-4	1	900	+	class A extended-spectrum beta-lactamase VEB-4
+VEB-5	ABN80430.1	EF420108.1	blaVEB-5	38	937	+	class A extended-spectrum beta-lactamase VEB-5
+VEB-6	ACA34904.1	EU259884.2	blaVEB-6	6412	7311	-	class A extended-spectrum beta-lactamase VEB-6
+VEB-7	ACO56763.1	FJ825622.1	blaVEB-7	1	900	+	class A extended-spectrum beta-lactamase VEB-7
+VEB-8	AGH33739.1	JX679208.1	blaVEB-8	1	900	+	class A extended-spectrum beta-lactamase VEB-8
+VEB-9	AAK14293.1	AF324833.1	blaVEB-9	1	900	+	class A extended-spectrum beta-lactamase VEB-9
+VHH-1	AAF23817.1	AF217649.1	blaVHH-1	134	985	+	carbenicillin-hydrolyzing class A beta-lactamase VHH-1
+VHW-1	AAF23816.1	AF217648.1	blaVHW-1	133	1005	+	carbenicillin-hydrolyzing class A beta-lactamase VHW-1
+VIM-1	CAB46686.1	Y18050.2	blaVIM-1	3225	4025	+	subclass B1 metallo-beta-lactamase VIM-1
+VIM-10	AAS13761.1	AY524989.1	blaVIM-10	1	801	+	subclass B1 metallo-beta-lactamase VIM-10
+VIM-11	AAT36613.1	AY605049.2	blaVIM-11	128	928	+	subclass B1 metallo-beta-lactamase VIM-11
+VIM-12	AAZ73123.1	DQ143913.1	blaVIM-12	1775	2575	+	subclass B1 metallo-beta-lactamase VIM-12
+VIM-13	ABC94518.1	DQ365886.1	blaVIM-13	1	801	+	subclass B1 metallo-beta-lactamase VIM-13
+VIM-14	AAT48653.1	AY635904.1	blaVIM-14	1	801	+	subclass B1 metallo-beta-lactamase VIM-14
+VIM-15	ACB54702.1	EU419745.1	blaVIM-15	1	801	+	subclass B1 metallo-beta-lactamase VIM-15
+VIM-16	ACB54703.1	EU419746.1	blaVIM-16	1	801	+	subclass B1 metallo-beta-lactamase VIM-16
+VIM-17	ABW90721.1	EU118148.2	blaVIM-17	1011	1811	+	subclass B1 metallo-beta-lactamase VIM-17
+VIM-18	CAO83029.1	AM778091.1	blaVIM-18	27	815	+	subclass B1 metallo-beta-lactamase VIM-18
+VIM-19	ACY29468.1	FJ822963.1	blaVIM-19	1	801	+	subclass B1 metallo-beta-lactamase VIM-19
+VIM-2	AAF61483.1	AF191564.1	blaVIM-2	1316	2116	+	subclass B1 metallo-beta-lactamase VIM-2
+VIM-20	ACV13198.1	GQ414736.1	blaVIM-20	1	801	+	subclass B1 metallo-beta-lactamase VIM-20
+VIM-23	ACT33323.1	GQ242167.1	blaVIM-23	1	801	+	subclass B1 metallo-beta-lactamase VIM-23
+VIM-24	ADL27533.1	HM855205.1	blaVIM-24	1	801	+	subclass B1 metallo-beta-lactamase VIM-24
+VIM-25	ADO50679.1	HM750249.1	blaVIM-25	91	891	+	subclass B1 metallo-beta-lactamase VIM-25
+VIM-26	CBY80143.1	FR748153.1	blaVIM-26	260	1060	+	subclass B1 metallo-beta-lactamase VIM-26
+VIM-27	ADX78234.1	HQ858608.1	blaVIM-27	1	801	+	subclass B1 metallo-beta-lactamase VIM-27
+VIM-28	AEI25539.1	JF900599.1	blaVIM-28	1	801	+	subclass B1 metallo-beta-lactamase VIM-28
+VIM-29	AFP99885.1	JX311308.1	blaVIM-29	1	801	+	subclass B1 metallo-beta-lactamase VIM-29
+VIM-3	AAG27703.1	AF300454.1	blaVIM-3	1	801	+	subclass B1 metallo-beta-lactamase VIM-3
+VIM-30	AET05999.1	JN129451.1	blaVIM-30	88	888	+	subclass B1 metallo-beta-lactamase VIM-30
+VIM-31	AFK24647.1	JN982330.1	blaVIM-31	246	1046	+	subclass B1 metallo-beta-lactamase VIM-31
+VIM-32	AEZ49857.1	JN676230.2	blaVIM-32	1550	2350	+	subclass B1 metallo-beta-lactamase VIM-32
+VIM-33	AFP99175.1	JX258134.1	blaVIM-33	1	801	+	subclass B1 metallo-beta-lactamase VIM-33
+VIM-34	AFN88953.1	JX013656.1	blaVIM-34	1	801	+	subclass B1 metallo-beta-lactamase VIM-34
+VIM-35	AGC50805.1	JX982634.1	blaVIM-35	1	801	+	subclass B1 metallo-beta-lactamase VIM-35
+VIM-36	AGC50806.1	JX982635.1	blaVIM-36	1	801	+	subclass B1 metallo-beta-lactamase VIM-36
+VIM-37	AGC50807.1	JX982636.1	blaVIM-37	1	801	+	subclass B1 metallo-beta-lactamase VIM-37
+VIM-38	AGE83081.2	KC469971.2	blaVIM-38	1	801	+	subclass B1 metallo-beta-lactamase VIM-38
+VIM-39	AGS82586.1	KF131539.1	blaVIM-39	1	801	+	subclass B1 metallo-beta-lactamase VIM-39
+VIM-4	AAN04257.1	AY135661.1	blaVIM-4	68	868	+	subclass B1 metallo-beta-lactamase VIM-4
+VIM-40	CDN33428.1	HG934765.1	blaVIM-40	1	801	+	subclass B1 metallo-beta-lactamase VIM-40
+VIM-41	AKQ98358.1	KP771862.1	blaVIM-41	1	801	+	subclass B1 metallo-beta-lactamase VIM-41
+VIM-42	AJP08641.1	KP071470.1	blaVIM-42	1	801	+	subclass B1 metallo-beta-lactamase VIM-42
+VIM-43	AJP67511.1	KP096412.1	blaVIM-43	1	801	+	subclass B1 metallo-beta-lactamase VIM-43
+VIM-44	AKO63212.1	KP681696.1	blaVIM-44	1	801	+	subclass B1 metallo-beta-lactamase VIM-44
+VIM-45	AKO63211.1	KP681695.1	blaVIM-45	1	801	+	subclass B1 metallo-beta-lactamase VIM-45
+VIM-46	AKQ98357.1	KP749829.1	blaVIM-46	1	801	+	subclass B1 metallo-beta-lactamase VIM-46
+VIM-47	ALK87206.1	KT954134.1	blaVIM-47	1	801	+	subclass B1 metallo-beta-lactamase VIM-47
+VIM-49	AMD11802.1	KU663374.1	blaVIM-49	1	801	+	subclass B1 metallo-beta-lactamase VIM-49
+VIM-5	AAN52134.1	AY144612.1	blaVIM-5	1	801	+	subclass B1 metallo-beta-lactamase VIM-5
+VIM-50	AMD11803.1	KU663375.1	blaVIM-50	1	801	+	subclass B1 metallo-beta-lactamase VIM-50
+VIM-51	AMK97465.1	KU746270.1	blaVIM-51	1	801	+	subclass B1 metallo-beta-lactamase VIM-51
+VIM-6	AAN84550.1	AY165025.1	blaVIM-6	1	801	+	subclass B1 metallo-beta-lactamase VIM-6
+VIM-7	CAD61201.1	AJ536835.1	blaVIM-7	150	947	+	subclass B1 metallo-beta-lactamase VIM-7
+VIM-8	AAS13759.1	AY524987.1	blaVIM-8	1	801	+	subclass B1 metallo-beta-lactamase VIM-8
+VIM-9	AAS13760.1	AY524988.1	blaVIM-9	1	801	+	subclass B1 metallo-beta-lactamase VIM-9
