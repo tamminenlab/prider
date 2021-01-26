@@ -11,6 +11,19 @@
 NULL
 
 
+#' Checks if set1 is a subset of set2. The sets are comma-delimited strings.
+#'
+#' @param set1 A string
+#' @param set2 A string
+#' @return Boolean
+is_subset_of <- function(set1, set2)
+{
+    set1 <- str_split(set1, ",") %>% unlist
+    set2 <- str_split(set2, ",") %>% unlist
+    all(set1 %in% set2)
+}
+
+
 #' Runs the Prider workflow
 #'
 #' @param input_fasta A DataFrame or a string
@@ -231,21 +244,6 @@ prider <- function(input_fasta,
          seq_clusters = seq_clusters,
          cluster_overlap = cluster_overlap,
          primer_list = primer_list)
-}
-
-
-#' Checks if set1 is a subset of set2. The sets are comma-delimited strings.
-#'
-#' @param set1 A string
-#' @param set2 A string
-#' @return Boolean
-#' @examples
-#' is_subset_of("A,S,D", "A,A,S,D,B"
-is_subset_of <- function(set1, set2)
-{
-    set1 <- str_split(set1, ",") %>% unlist
-    set2 <- str_split(set2, ",") %>% unlist
-    all(set1 %in% set2)
 }
 
 
