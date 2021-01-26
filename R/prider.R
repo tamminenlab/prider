@@ -15,7 +15,12 @@ NULL
 #'
 #' @param input_fasta A DataFrame or a string
 #' @param primer_length A number
-#' @return A list containing three tibbles: conversion table, converted sequences and primer chunks
+#' @return A list containing sequence names, sequence network, primer clusters,
+#'         sequence clusters, cluster overlap and primer list
+#' @examples
+#'
+#' primer_designs <- prider("test.fasta", primer_length = 20)
+#' 
 #' @export
 #' @importFrom stringr str_length
 #' @importFrom stringr str_split
