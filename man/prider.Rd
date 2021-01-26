@@ -8,7 +8,7 @@
 prider(input_fasta, primer_length, min_identity = 0.95)
 }
 \arguments{
-\item{input_fasta}{A string}
+\item{input_fasta}{A DataFrame or a string}
 
 \item{primer_length}{A number}
 }

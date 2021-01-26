@@ -30,7 +30,7 @@ List process_blast_table(std::string filename, int hit_len)
     int TargetMatchEnd;
 
     int ix { 0 };
-    while (getline(s, field, ',')) {
+    while (std::getline(s, field, ',')) {
       switch (ix)
         {
         case 0:
@@ -49,18 +49,23 @@ List process_blast_table(std::string filename, int hit_len)
       ++ix;
     }
 
-  int obs_hit_len = TargetMatchEnd - TargetMatchStart;
+    std::string IndId;
+    std::istringstream QId(QueryId);
 
-  std::string TruncQueryId { QueryId.substr(0, QueryId.find("_")) };
-  std::string seq_pair { TruncQueryId + "," + TargetId };
-  if (TruncQueryId != TargetId && hit_len == obs_hit_len)
-      seq_set.insert(seq_pair);
+    while (std::getline(QId, IndId, ';')) {
 
-  std::string LongTargetId { TargetId + "_" + std::to_string(TargetMatchStart) };
-  std::string primer_pair { QueryId + "," + LongTargetId };
-  if (QueryId != LongTargetId && hit_len == obs_hit_len)
-      primer_set.insert(primer_pair);
-    
+      int obs_hit_len = TargetMatchEnd - TargetMatchStart;
+
+      std::string TruncQueryId { IndId.substr(0, IndId.find("_")) };
+      std::string seq_pair { TruncQueryId + "," + TargetId };
+      if (TruncQueryId != TargetId && hit_len == obs_hit_len)
+        seq_set.insert(seq_pair);
+
+      std::string LongTargetId { TargetId + "_" + std::to_string(TargetMatchStart) };
+      std::string primer_pair { IndId + "," + LongTargetId };
+      if (IndId != LongTargetId && hit_len == obs_hit_len)
+        primer_set.insert(primer_pair);
+    }
   }
   
   std::vector < std::string > left_primers;

@@ -11,11 +11,10 @@
 NULL
 
 
-#' Prepares a fasta file for primer design by replacing simple names and chunking the sequences
-#' using a sliding window function
+#' Runs the Prider workflow
 #'
-#' @param input_fasta A string
-#' @param  primer_length A number
+#' @param input_fasta A DataFrame or a string
+#' @param primer_length A number
 #' @return A list containing three tibbles: conversion table, converted sequences and primer chunks
 #' @export
 #' @importFrom stringr str_length
@@ -53,6 +52,9 @@ prider <- function(input_fasta,
     if (min_identity > 1 || min_identity < 0.6)
         stop("min_identity should be between 0.6 and 1")
 
+    if (is.character(input_fasta))
+        input_fasta <- read_fasta(input_fasta)
+
     message("Preparing BLAST data.")
     fasta_table <-
         input_fasta %>% 
@@ -75,6 +77,11 @@ prider <- function(input_fasta,
         chunker(window_size = primer_length) %>% 
         dplyr::as_tibble(.)
 
+    clust_primers <- 
+        primers %>% 
+        group_by(Seq) %>%
+        summarise(Id = paste0(Id, collapse = ";"))
+
     accepts <-
         database %>% 
         dim %>% 
@@ -82,13 +89,14 @@ prider <- function(input_fasta,
     
     message("Running BLAST.")
     tmp_output <- 
-        blast(query_table = primers,
-              db_table = database,
+        blast(query = clust_primers,
+              db = database,
               minIdentity = min_identity,
               maxAccepts = accepts, 
+              alphabet = "nt", 
               strand = "plus",
-              output_to_tmp_file = TRUE)
-    on.exit(file.remove(tmp_output), add = TRUE)
+              output_to_file = TRUE)
+    on.exit(if (exists(tmp_output)) file.remove(tmp_output), add = TRUE)
 
     seq_len <-
         primers$Seq %>%

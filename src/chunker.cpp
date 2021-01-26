@@ -15,12 +15,6 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
   return acc;
 }
 
-
-//' Create chunks from a DNA sequence using a sliding window
-//' 
-//' @param seq_table A DataFrame
-//' @param window_size An integer
-//' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,
                   int window_size = 20) 
