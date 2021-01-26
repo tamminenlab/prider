@@ -15,3 +15,4 @@ devtools::install_github("manutamminen/prider")
 ```R
 primer_designs <- prider("test.fasta", primer_length = 20)
 ```
+
