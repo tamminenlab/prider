@@ -63,6 +63,8 @@ is_subset_of <- function(set1, set2)
 #' @importFrom dplyr n
 #' @importFrom tibble tibble
 #' @importFrom magrittr %>%
+#' @importFrom blaster blast
+#' @importFrom blaster read_fasta
 prider <- function(input_fasta,
             primer_length,
             min_identity = 0.95)

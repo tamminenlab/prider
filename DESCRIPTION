@@ -16,5 +16,7 @@ Imports:
     stringr,
     magrittr,
     tibble
+Remotes:
+    manutamminen/blaster
 LinkingTo: Rcpp
 RoxygenNote: 7.1.1
