@@ -238,7 +238,9 @@ prider <- function(input_fasta,
                          by = c("Primer_series" = "Seq")) %>% 
         dplyr::select(-Seq_series) %>%
         dplyr::select(Cluster, Primer_cluster, Id, Primer_series) %>% 
-        dplyr::rename(Primer_sequence = Primer_series)
+        dplyr::rename(Primer_sequence = Primer_series) %>% 
+        group_by(Cluster, Primer_cluster, Primer_sequence) %>%
+        summarise(Ids = paste0(Id, collapse = ","))
     
     list(conversion_table = conversion_table, 
          seq_network = data_list$seq_network, 

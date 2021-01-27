@@ -15,7 +15,8 @@ Imports:
     purrr,
     stringr,
     magrittr,
-    tibble
+    tibble,
+    blaster
 Remotes:
     manutamminen/blaster
 LinkingTo: Rcpp
