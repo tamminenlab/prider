@@ -42,11 +42,23 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// unique_network
+DataFrame unique_network(DataFrame network);
+RcppExport SEXP _prider_unique_network(SEXP networkSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< DataFrame >::type network(networkSEXP);
+    rcpp_result_gen = Rcpp::wrap(unique_network(network));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_prider_chunker", (DL_FUNC) &_prider_chunker, 2},
     {"_prider_make_degenerate_sequence", (DL_FUNC) &_prider_make_degenerate_sequence, 3},
     {"_prider_process_blast_table", (DL_FUNC) &_prider_process_blast_table, 2},
+    {"_prider_unique_network", (DL_FUNC) &_prider_unique_network, 1},
     {NULL, NULL, 0}
 };
 

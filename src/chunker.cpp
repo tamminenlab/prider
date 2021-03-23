@@ -15,6 +15,7 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
   return acc;
 }
 
+//' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,
                   int window_size = 20) 

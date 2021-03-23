@@ -8,14 +8,15 @@
 
 using namespace Rcpp;
 
+//' @export
 // [[Rcpp::export]]
 List process_blast_table(std::string filename, int hit_len) 
 {
   std::fstream csv_file(filename);    
   std::string line;
 
-  std::set< std::string > primer_set;
-  std::set< std::string > seq_set;
+  std::unordered_set< std::string > primer_set;
+  std::unordered_set< std::string > seq_set;
 
   std::getline(csv_file, line);
 

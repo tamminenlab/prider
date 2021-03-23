@@ -5,6 +5,7 @@
 
 using namespace Rcpp;
 
+//' @export
 // [[Rcpp::export]]
 StringVector make_degenerate_sequence(StringVector sequences,
                                       int sequence_length,
@@ -35,7 +36,6 @@ StringVector make_degenerate_sequence(StringVector sequences,
     {"C", 'C'},
     {"G", 'G'},
     {"AT", 'W'},
-    {"CG", 'S'},
     {"CG", 'S'},
     {"AC", 'M'},
     {"GT", 'K'},
