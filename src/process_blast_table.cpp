@@ -27,12 +27,10 @@ List process_blast_table(std::string filename, int hit_len)
 
     std::string QueryId;
     std::string TargetId;
-    int QueryMatchStart;
-    int QueryMatchEnd;
     int TargetMatchStart;
     int TargetMatchEnd;
-    // std::string QueryMatchSeq;
-    // std::string TargetMatchSeq;
+    std::string QueryMatchSeq;
+    std::string TargetMatchSeq;
 
     int ix { 0 };
     while (std::getline(s, field, ',')) {
@@ -44,17 +42,17 @@ List process_blast_table(std::string filename, int hit_len)
         case 1:
           TargetId = field;
           break;
-        case 2:
-          QueryMatchStart = std::stoi(field);
-          break;
-        case 3:
-          QueryMatchEnd = std::stoi(field);
-          break;
         case 4:
           TargetMatchStart = std::stoi(field);
           break;
         case 5:
           TargetMatchEnd = std::stoi(field);
+          break;
+        case 6:
+          QueryMatchSeq = field;
+          break;
+        case 7:
+          TargetMatchSeq = field;
           break;
         }
       ++ix;
@@ -66,16 +64,15 @@ List process_blast_table(std::string filename, int hit_len)
     while (std::getline(QId, IndId, ';')) {
 
       int obs_hit_len = TargetMatchEnd - TargetMatchStart;
-      int obs_qry_len = QueryMatchEnd - QueryMatchStart;
 
       std::string TruncQueryId { IndId.substr(0, IndId.find("_")) };
       std::string seq_pair { TruncQueryId + "," + TargetId };
-      if (TruncQueryId != TargetId && hit_len == obs_hit_len && hit_len == obs_qry_len)
+      if (TruncQueryId != TargetId && QueryMatchSeq == TargetMatchSeq)
         seq_set.insert(seq_pair);
 
       std::string LongTargetId { TargetId + "_" + std::to_string(TargetMatchStart) };
       std::string primer_pair { IndId + "," + LongTargetId };
-      if (IndId != LongTargetId && hit_len == obs_hit_len && hit_len == obs_qry_len)
+      if (IndId != LongTargetId && QueryMatchSeq == TargetMatchSeq)
         primer_set.insert(primer_pair);
     }
   }
