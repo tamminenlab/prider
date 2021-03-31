@@ -6,6 +6,10 @@ chunker <- function(seq_table, window_size = 20L) {
     .Call('_prider_chunker', PACKAGE = 'prider', seq_table, window_size)
 }
 
+group_primers <- function(primer_tbl) {
+    .Call('_prider_group_primers', PACKAGE = 'prider', primer_tbl)
+}
+
 #' @export
 make_degenerate_sequence <- function(sequences, sequence_length, cutoff = 0.1) {
     .Call('_prider_make_degenerate_sequence', PACKAGE = 'prider', sequences, sequence_length, cutoff)

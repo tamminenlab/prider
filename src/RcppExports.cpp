@@ -17,6 +17,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// group_primers
+DataFrame group_primers(LogicalMatrix primer_tbl);
+RcppExport SEXP _prider_group_primers(SEXP primer_tblSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< LogicalMatrix >::type primer_tbl(primer_tblSEXP);
+    rcpp_result_gen = Rcpp::wrap(group_primers(primer_tbl));
+    return rcpp_result_gen;
+END_RCPP
+}
 // make_degenerate_sequence
 StringVector make_degenerate_sequence(StringVector sequences, int sequence_length, double cutoff);
 RcppExport SEXP _prider_make_degenerate_sequence(SEXP sequencesSEXP, SEXP sequence_lengthSEXP, SEXP cutoffSEXP) {
@@ -56,6 +67,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_prider_chunker", (DL_FUNC) &_prider_chunker, 2},
+    {"_prider_group_primers", (DL_FUNC) &_prider_group_primers, 1},
     {"_prider_make_degenerate_sequence", (DL_FUNC) &_prider_make_degenerate_sequence, 3},
     {"_prider_process_blast_table", (DL_FUNC) &_prider_process_blast_table, 2},
     {"_prider_unique_network", (DL_FUNC) &_prider_unique_network, 1},
