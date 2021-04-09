@@ -1,6 +1,6 @@
-# Prider - primer designer for complex DNA sequence sets
+# Prider
 
-Prider detects groups of conserved sequence areas across complex, internally diverse DNA sequence sets. Prider leverages the fast, scalable sequence similarity search algorithm implemented in [Blaster](https://github.com/manutamminen/blaster).
+Prider detects groups of conserved sequence areas across complex, internally diverse DNA sequence sets.
 
 ## Installation
 

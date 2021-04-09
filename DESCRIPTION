@@ -1,7 +1,7 @@
 Package: prider
 Title: Primer designer for complex DNA sequence sets
-Version: 0.2
-Date: 2021-01-21
+Version: 0.3
+Date: 2021-04-09
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
                   role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")))
 Maintainer: Manu Tamminen <mavatam@utu.fi>
