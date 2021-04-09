@@ -58,7 +58,8 @@ prepare_primer_table <- function(fasta_file,
   pri_targets <-
     primers %>%
     dplyr::group_by(Seq) %>%
-    dplyr::summarise(Seqs = paste0(sort(Id), collapse =","))
+    dplyr::summarise(Seq_size = n(),
+                     Seqs = paste0(sort(Id), collapse =","))
 
   return(list(conversion_table, boolean_table, pri_targets))
 }
@@ -91,7 +92,8 @@ sample_coverage <- function(primer_table,
 #' @param fasta_file A string
 #' @param primer_length A number
 #' @param coverage A number
-#' @param minimum_group_size A number
+#' @param minimum_primer_group_size A number
+#' @param minimum_sequence_group_size A number
 #' @param draws A number
 #' @return A list containing a sequence conversion table and 
 #'         a primer coverage table
@@ -118,7 +120,8 @@ sample_coverage <- function(primer_table,
 draw_primers <- function(fasta_file,
                          primer_length = 20,
                          coverage = 0.9,
-                         minimum_group_size = 10,
+                         minimum_primer_group_size = 10,
+                         minimum_sequence_group_size = 10,
                          draws = 100) {
 
   message("Tabulating primers...")
@@ -126,15 +129,26 @@ draw_primers <- function(fasta_file,
 		prepare_primer_table(fasta_file, primer_length)
 
   message("Clustering primers...")
-	primer_clusters <-
-		group_primers(ag_data[[2]])
+
+  big_clusters <-
+    ag_data[[3]] %>%
+    filter(Seq_size >= minimum_sequence_group_size)
+
+  abund_primers <-
+    ag_data[[2]][big_clusters$Seq, ]
+
+  primer_clusters <-
+    group_primers(abund_primers)
+
+	# primer_clusters <-
+	#   group_primers(ag_data[[2]])
 
 	abund_clusters <-
 		primer_clusters %>%
 		.$Primer_groups %>%
 		dplyr::group_by(Primer_group) %>% 
 		dplyr::mutate(Primer_group_size = dplyr::n()) %>% 
-		dplyr::filter(Primer_group_size > minimum_group_size) %>% 
+		dplyr::filter(Primer_group_size >= minimum_primer_group_size) %>% 
 		dplyr::mutate(Primer_group = as.character(Primer_group))
 
 	abund_matrix <-

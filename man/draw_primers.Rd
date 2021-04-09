@@ -8,7 +8,8 @@ draw_primers(
   fasta_file,
   primer_length = 20,
   coverage = 0.9,
-  minimum_group_size = 10,
+  minimum_primer_group_size = 10,
+  minimum_sequence_group_size = 10,
   draws = 100
 )
 }
@@ -19,7 +20,9 @@ draw_primers(
 
 \item{coverage}{A number}
 
-\item{minimum_group_size}{A number}
+\item{minimum_primer_group_size}{A number}
+
+\item{minimum_sequence_group_size}{A number}
 
 \item{draws}{A number}
 }
