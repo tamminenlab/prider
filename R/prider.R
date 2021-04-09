@@ -11,518 +11,163 @@
 NULL
 
 
-#' Checks if set1 is a subset of set2. The sets are comma-delimited strings.
+#' Prepares a primer table for downstream analyses
 #'
-#' @param set1 A string
-#' @param set2 A string
-#' @return Boolean
-is_subset_of <- function(set1, set2)
-{
-    set1 <- str_split(set1, ",") %>% unlist
-    set2 <- str_split(set2, ",") %>% unlist
-    all(set1 %in% set2)
+#' @param fasta_file A string
+#' @param primer_length A number
+#' @return A list containing sequence id conversions, primer matrix
+#'         and a list of primers with their target sequences
+#' @importFrom dplyr select
+#' @importFrom dplyr as_tibble
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarise
+#' @importFrom dplyr row_number
+#' @importFrom magrittr %>%
+#' @importFrom blaster read_fasta
+prepare_primer_table <- function(fasta_file,
+                                 primer_length = 20) {
+  input_fasta <-
+    blaster::read_fasta(fasta_file)
+
+  fasta_table <-
+    input_fasta %>%
+    dplyr::mutate(Seq_no = paste0("P", dplyr::row_number()))
+
+  conversion_table <-
+    fasta_table %>%
+    select(Seq_no, Id) %>%
+    dplyr::rename(Original_id = Id, Id = Seq_no) %>%
+    dplyr::as_tibble(.)
+
+  primers <-
+    fasta_table %>%
+    dplyr::select(Seq_no, Seq) %>%
+    dplyr::rename(Id = Seq_no) %>%
+    dplyr::as_tibble(.) %>%
+    chunker(window_size = primer_length) %>%
+    dplyr::as_tibble(.) %>%
+    dplyr::select(Seq, Id)
+
+  primer_table <-
+    primers %>%
+    table
+
+  boolean_table <-
+    primer_table == 1
+
+  pri_targets <-
+    primers %>%
+    dplyr::group_by(Seq) %>%
+    dplyr::summarise(Seqs = paste0(sort(Id), collapse =","))
+
+  return(list(conversion_table, boolean_table, pri_targets))
 }
 
 
-#' Runs the Prider workflow
+#' Randomly samples primer matrix to recoved the specified coverage
 #'
-#' @param input_fasta A DataFrame or a string
+#' @param primer_table A matrix
+#' @param coverage A number
+#' @return A character vector containing the primer group number ids
+sample_coverage <- function(primer_table,
+                            coverage = 0.9) {
+  row_len <- ncol(primer_table)
+  tbl_len <- rownames(primer_table)
+  draws <- sample(tbl_len)
+  row_acc <- primer_table[draws[1], ]
+  acc <- 0
+  for (draw in draws[2:length(draws)]) {
+    acc <- acc + 1
+    row_acc <- row_acc | primer_table[draw, ]
+    if (sum(row_acc) / row_len > coverage)
+      break
+  }
+  return(draws[1:acc])
+}
+
+
+#' Prepare a (nearly) optimal primer coverage of the sample set
+#'
+#' @param fasta_file A string
 #' @param primer_length A number
-#' @return A list containing sequence names, sequence network, primer clusters,
-#'         sequence clusters, cluster overlap and primer list
+#' @param coverage A number
+#' @param minimum_group_size A number
+#' @param draws A number
+#' @return A list containing a sequence conversion table and 
+#'         a primer coverage table
 #' @examples
 #'
 #' primer_designs <- prider("test.fasta", primer_length = 20)
 #' 
 #' @export
-#' @importFrom stringr str_length
-#' @importFrom stringr str_split
-#' @importFrom purrr pluck
-#' @importFrom purrr map
-#' @importFrom purrr map_dbl
-#' @importFrom purrr map2
-#' @importFrom purrr map2_lgl
-#' @importFrom igraph graph_from_data_frame
-#' @importFrom igraph components
-#' @importFrom igraph groups
-#' @importFrom tidyr separate
-#' @importFrom tidyr unnest
-#' @importFrom tidyr unite
 #' @importFrom dplyr select
-#' @importFrom dplyr rename
+#' @importFrom dplyr mutate
+#' @importFrom dplyr filter
 #' @importFrom dplyr as_tibble
 #' @importFrom dplyr group_by
-#' @importFrom dplyr mutate
-#' @importFrom dplyr bind_rows
+#' @importFrom dplyr n
+#' @importFrom dplyr summarise
+#' @importFrom dplyr row_number
 #' @importFrom dplyr left_join
 #' @importFrom dplyr ungroup
-#' @importFrom dplyr summarise
-#' @importFrom dplyr arrange
-#' @importFrom dplyr pull
-#' @importFrom dplyr row_number
-#' @importFrom dplyr n
+#' @importFrom purrr map
+#' @importFrom purrr map_dfr
 #' @importFrom tibble tibble
 #' @importFrom magrittr %>%
-#' @importFrom blaster blast
-#' @importFrom blaster read_fasta
-prider <- function(input_fasta,
-            primer_length,
-            min_identity = 0.95)
-{
-    if (min_identity > 1 || min_identity < 0.6)
-        stop("min_identity should be between 0.6 and 1")
+#' @importFrom stringr str_split
+draw_primers <- function(fasta_file,
+                         primer_length = 20,
+                         coverage = 0.9,
+                         minimum_group_size = 10,
+                         draws = 100) {
 
-    if (is.character(input_fasta))
-        input_fasta <- read_fasta(input_fasta)
+  message("Tabulating primers...")
+	ag_data <-
+		prepare_primer_table(fasta_file, primer_length)
 
-    message("Preparing BLAST data.")
-    fasta_table <-
-        input_fasta %>% 
-        dplyr::mutate(Seq_no = paste0("P", row_number()))
+  message("Clustering primers...")
+	primer_clusters <-
+		group_primers(ag_data[[2]])
 
-    conversion_table <- 
-        fasta_table %>%
-        select(Seq_no, Id) %>% 
-        dplyr::rename(Original_id = Id, Id = Seq_no) %>% 
-        dplyr::as_tibble(.)
+	abund_clusters <-
+		primer_clusters %>%
+		.$Primer_groups %>%
+		dplyr::group_by(Primer_group) %>% 
+		dplyr::mutate(Primer_group_size = dplyr::n()) %>% 
+		dplyr::filter(Primer_group_size > minimum_group_size) %>% 
+		dplyr::mutate(Primer_group = as.character(Primer_group))
 
-    database <- 
-        fasta_table %>%
-        dplyr::select(Seq_no, Seq) %>%
-        dplyr::rename(Id = Seq_no) %>% 
-        dplyr::as_tibble(.)
+	abund_matrix <-
+		primer_clusters %>% 
+		.$Primer_matrix %>% 
+		.[unique(abund_clusters$Primer_group), ]
 
-    primers <- 
-        database %>%
-        chunker(window_size = primer_length) %>% 
-        dplyr::as_tibble(.)
+	abund_matrix <-
+		abund_matrix[, colSums(abund_matrix) != 0]
+  
+  message("Sampling primers...")
+  primer_draws <-
+    purrr::map(1:draws, ~sample_coverage(abund_matrix, coverage)) %>% 
+    purrr::map_dfr(~tibble::tibble(Primer_group = .), .id="Draw") %>%
+    dplyr::group_by(Draw) %>% 
+    dplyr::mutate(Draw_size = dplyr::n()) %>% 
+    dplyr::left_join(abund_clusters, by = "Primer_group") %>% 
+    dplyr::ungroup(.) %>% 
+    dplyr::left_join(ag_data[[3]], by = c("Primer" = "Seq")) %>% 
+    dplyr::filter(Draw_size == min(Draw_size)) %>% 
+    dplyr::select(-Draw)
 
-    clust_primers <- 
-        primers %>% 
-        group_by(Seq) %>%
-        summarise(Id = paste0(Id, collapse = ";"))
+  covered_seqs <-
+    primer_draws$Seqs %>%
+    unique %>%
+    stringr::str_split(",") %>%
+    unlist  %>% 
+    unique
 
-    accepts <-
-        database %>% 
-        dim %>% 
-        purrr::pluck(1)
-    
-    message("Running BLAST.")
-    tmp_output <- 
-        blast(query = clust_primers,
-              db = database,
-              minIdentity = min_identity,
-              maxAccepts = accepts, 
-              alphabet = "nt", 
-              strand = "plus",
-              output_to_file = TRUE)
-    on.exit(if (exists(tmp_output)) file.remove(tmp_output), add = TRUE)
+  excluded_seqs <- 
+    filter(ag_data[[1]], !(Id %in% covered_seqs))
 
-    seq_len <-
-        primers$Seq %>%
-        purrr::pluck(1) %>%
-        stringr::str_length(.) - 1
-
-    message("")
-    message("Processing BLAST output.")
-    data_list <- 
-        process_blast_table(tmp_output,
-                            hit_len = seq_len) %>% 
-        purrr::map(as_tibble) %>% 
-        setNames(c("primer_network", "seq_network"))
-
-    message("Clustering primers.")
-    primer_clusters <- 
-        data_list$primer_network %>% 
-        igraph::graph_from_data_frame(directed=FALSE) %>% 
-        igraph::components(.) %>%
-        igraph::groups(.) %>%
-        purrr::map_df(~dplyr::tibble(Id=.), .id='Primer_cluster') %>% 
-        dplyr::left_join(primers, by = "Id") %>% 
-        dplyr::group_by(Primer_cluster) %>%
-        dplyr::mutate(Seq = make_degenerate_sequence(Seq, sequence_length = seq_len + 1)) %>% 
-        dplyr::ungroup(.)
-    
-    message("Clustering sequence targets.")
-    seq_clusters <- 
-        primer_clusters %>% 
-        tidyr::separate(Id, c("Seq_id", "Locus"), sep="_") %>% 
-        dplyr::group_by(Seq) %>%
-        dplyr::summarise(
-                   Seq_n = n(),
-                   Seq_series = paste(sort(Seq_id), collapse=","),
-                   .groups = "drop") %>%
-        dplyr::group_by(Seq_series, Seq_n) %>%
-        dplyr::summarise(
-                   Primer_n = n(),
-                   Primer_series = paste(sort(Seq), collapse=","),
-                   .groups = "drop") %>%
-        dplyr::arrange(desc(Seq_n))
-
-    message("Removing redundant sub-clusters.")
-    subsets <- 
-        seq_clusters %>%
-        dplyr::pull(Seq_series) %>% 
-        combn(2) %>%
-        t %>% 
-        as.data.frame %>% 
-        dplyr::as_tibble(colnames = c("V1", "V2")) %>% 
-        dplyr::mutate(V1 = as.character(V1),
-                      V2 = as.character(V2)) %>% 
-        dplyr::bind_rows(., rename(., V1 = V2, V2 = V1)) %>% 
-        dplyr::mutate(
-                   Is_subset = map2_lgl(V1, V2, ~is_subset_of(.x, .y))) %>% 
-        dplyr::filter(Is_subset == TRUE) %>% 
-        dplyr::mutate(
-                   V1_n = map_dbl(V1, ~length(unlist(str_split(., ",")))),
-                   V2_n = map_dbl(V2, ~length(unlist(str_split(., ",")))))
-
-    redundant_groups <- 
-        subsets %>%
-        dplyr::group_by(V1) %>%
-        dplyr::mutate(Max = max(V2_n)) %>%
-        dplyr::filter(V2_n == Max,
-                      V1_n != V2_n) %>%
-        dplyr::select(V1)
-
-    seq_clusters<- 
-        seq_clusters %>%
-        dplyr::ungroup(.) %>% 
-        dplyr::filter(!(Seq_series %in% redundant_groups$V1)) %>% 
-        dplyr::mutate(Cluster = row_number()) %>% 
-        dplyr::select(Cluster, Seq_n, Primer_n, Seq_series, Primer_series)
-
-    cluster_ids <-
-        seq_clusters %>% 
-        dplyr::select(Cluster, Seq_series)
-    
-    message("Detecting cluster overlaps.")
-    cluster_overlap <- 
-        seq_clusters %>%
-        dplyr::pull(Seq_series) %>% 
-        combn(2) %>%
-        t %>% 
-        as.data.frame %>% 
-        dplyr::as_tibble(.) %>% 
-        dplyr::mutate(
-                   V1 = as.character(V1),
-                   V2 = as.character(V2),
-                   X1 = purrr::map(V1, ~unlist(str_split(., ","))),
-                   X2 = purrr::map(V2, ~unlist(str_split(., ","))),
-                   Int = purrr::map2(X1, X2, ~intersect(.x, .y)),
-                   Empty = purrr::map_lgl(Int, ~identical(., character(0))),
-                   Overlap = purrr::map_chr(Int, ~paste0(., collapse = " ")),
-                   Len_C1 = purrr::map_dbl(X1, length),
-                   Len_C2 = purrr::map_dbl(X2, length),
-                   Len_Int = purrr::map_dbl(Int, length), 
-                   Perc_of_cluster1 = round(Len_Int / Len_C1 * 100, 2), 
-                   Perc_of_cluster2 = round(Len_Int / Len_C2 * 100, 2)) %>%
-        dplyr::filter(!Empty) %>% 
-        dplyr::left_join(cluster_ids, by = c("V1" = "Seq_series")) %>% 
-        dplyr::rename(Cluster1 = Cluster) %>% 
-        dplyr::left_join(cluster_ids, by = c("V2" = "Seq_series")) %>% 
-        dplyr::rename(Cluster2 = Cluster) %>% 
-        dplyr::select(Cluster1, Cluster2, Overlap, Perc_of_cluster1, Perc_of_cluster2)
-
-    message("Creating primer list.")
-    primer_list <- 
-        seq_clusters %>%
-        dplyr::select(Cluster, Primer_series, Seq_series) %>% 
-        dplyr::mutate(
-                   Seq_series = map(Seq_series, ~unlist(str_split(., ",")))) %>% 
-        tidyr::unnest(cols = c(Seq_series)) %>%
-        dplyr::mutate(
-                   Primer_series = map(Primer_series, ~unlist(str_split(., ",")))) %>%
-        tidyr::unnest(cols = c(Primer_series)) %>% 
-        dplyr::left_join(primer_clusters,
-                         by = c("Primer_series" = "Seq")) %>% 
-        dplyr::select(-Seq_series) %>%
-        dplyr::select(Cluster, Primer_cluster, Id, Primer_series) %>% 
-        dplyr::rename(Primer_sequence = Primer_series) %>% 
-        group_by(Cluster, Primer_cluster, Primer_sequence) %>%
-        summarise(Ids = paste0(Id, collapse = ","))
-    
-    list(conversion_table = conversion_table, 
-         seq_network = data_list$seq_network, 
-         primer_clusters = primer_clusters,
-         seq_clusters = seq_clusters,
-         cluster_overlap = cluster_overlap,
-         primer_list = primer_list)
+  message("Done!")
+  return(list(ag_data[[1]], primer_draws, excluded_seqs))
 }
 
-
-#' Prepares a Gephi network file from data_list
-#'
-#' @param data_list A list
-#' @param output_gephi_file A string
-#' @export
-make_gephi <- function(data_list, 
-                       output_gephi_file)
-{
-    annotation <- 
-        data_list$seq_clusters %>%
-        dplyr::select(Seq_series) %>%
-        unique %>% 
-        dplyr::mutate(Seq_series = map(Seq_series, ~unlist(str_split(., ","))),
-                      Clust_no = row_number()) %>%
-        tidyr::unnest(cols = c(Seq_series)) %>%
-        tidyr::unite(Annot, Seq_series, Clust_no, sep=",") %>%
-        dplyr::pull(Annot)
-
-    seq_netw <-
-        data_list$seq_network %>% 
-        tidyr::unite(Netw, Left, Right, sep=",") %>%
-        dplyr::pull(Netw)
-
-    gdf <- c("nodedef>name VARCHAR,type VARCHAR",
-             annotation,
-             "edgedef>node1 VARCHAR,node2 VARCHAR",
-             seq_netw)
-
-    write(gdf, output_gephi_file)
-}
-
-
-
-## run_process <- function(chunk,
-##                         database,
-##                         accepts,
-##                         min_identity,
-##                         seq_len) {
-##     tmp_output <-
-##         blast(query = chunk,
-##               db = database,
-##               minIdentity = min_identity,
-##               maxAccepts = accepts,
-##               alphabet = "nt",
-##               strand = "plus",
-##               output_to_file = TRUE)
-##     on.exit(if (exists(tmp_output)) file.remove(tmp_output), add = TRUE)
-
-##     data_list <-
-##         process_blast_table(tmp_output,
-##                             hit_len = seq_len) %>%
-##         purrr::map(as_tibble) %>%
-##         setNames(c("primer_network", "seq_network"))
-
-## }
-
-
-## #' Outputs primer sequences as chunks
-## #'
-## #' @param input_fasta A DataFrame or a string
-## #' @param primer_length A number
-## #' @examples
-## #'
-## #' primer_designs <- prider("test.fasta", primer_length = 20)
-## #'
-## #' @export
-## #' @importFrom tidyr nest
-## #' @importFrom dplyr select
-## #' @importFrom dplyr rename
-## #' @importFrom dplyr as_tibble
-## #' @importFrom dplyr group_by
-## #' @importFrom dplyr mutate
-## #' @importFrom dplyr row_number
-## #' @importFrom tibble tibble
-## #' @importFrom magrittr %>%
-## #' @importFrom blaster read_fasta
-## prider_slurm <- function(input_fasta,
-##                          primer_length,
-##                          cluster_size)
-## {
-##     if (is.character(input_fasta))
-##         input_fasta <- read_fasta(input_fasta)
-
-##     message("Preparing BLAST data.")
-##     fasta_table <-
-##         input_fasta %>%
-##         dplyr::mutate(Seq_no = paste0("P", row_number()))
-
-##     conversion_table <-
-##         fasta_table %>%
-##         select(Seq_no, Id) %>%
-##         dplyr::rename(Original_id = Id, Id = Seq_no) %>%
-##         dplyr::as_tibble(.)
-
-##     database <-
-##         fasta_table %>%
-##         dplyr::select(Seq_no, Seq) %>%
-##         dplyr::rename(Id = Seq_no) %>%
-##         dplyr::as_tibble(.)
-
-##     primers <-
-##         database %>%
-##         chunker(window_size = primer_length) %>%
-##         dplyr::as_tibble(.)
-
-##     accepts <-
-##         database %>%
-##         dim %>%
-##         purrr::pluck(1)
-
-##     seq_len <-
-##         primers$Seq %>%
-##         purrr::pluck(1) %>%
-##         stringr::str_length(.) - 1
-
-##     clust_primers <-
-##         primers %>%
-##         group_by(Seq) %>%
-##         summarise(Id = paste0(Id, collapse = ";")) %>%
-##         mutate(Pkg = (row_number() - 1) %/% 1000) %>%
-##         nest(data = c(Seq, Id)) %>%
-##         select(-Pkg) %>%
-##         rename(chunk = data) %>%
-##         mutate(database = list(database),
-##                accepts = list(accepts),
-##                min_identity = list(0.99),
-##                seq_len = list(seq_len))
-
-
-## }
-
-
-
-## sopt <- list(time = '1:00:00', mem = '8000', account = "project_2001765")
-
-## sjob <- slurm_apply(run_process,
-##                     clust_primers,
-##                     nodes = 107,
-##                     cpus_per_node = 1,
-##                     slurm_options = sopt,
-##                     jobname = 'test_apply')
-
-
-## res <- get_slurm_out(sjob, outtype = 'table')
-
-## primer_network <-
-##     bind_rows(res$primer_network)
-
-## seq_network <-
-##     bind_rows(res$seq_network)
-
-
-
-## primer_clusters <-
-##     primer_network %>%
-##     igraph::graph_from_data_frame(directed=FALSE) %>%
-##     igraph::components(.) %>%
-##     igraph::groups(.) %>%
-##     purrr::map_df(~dplyr::tibble(Id=.), .id='Primer_cluster') %>%
-##     dplyr::left_join(primers, by = "Id") %>%
-##     filter(!is.na(Seq)) %>%
-##     dplyr::group_by(Primer_cluster) %>%
-##     dplyr::mutate(Seq = make_degenerate_sequence(Seq, sequence_length = 39)) %>%
-##     dplyr::ungroup(.)
-
-
-## ## message("Clustering sequence targets.")
-## seq_clusters <-
-##     primer_clusters %>%
-##     tidyr::separate(Id, c("Seq_id", "Locus"), sep="_") %>%
-##     dplyr::group_by(Seq) %>%
-##     dplyr::summarise(
-##                Seq_n = n(),
-##                Seq_series = paste(sort(Seq_id), collapse=","),
-##                .groups = "drop") %>%
-##     dplyr::group_by(Seq_series, Seq_n) %>%
-##     dplyr::summarise(
-##                Primer_n = n(),
-##                Primer_series = paste(sort(Seq), collapse=","),
-##                .groups = "drop") %>%
-##     dplyr::arrange(desc(Seq_n)) %>%
-##     filter(Seq_n > 10, Primer_n > 10)
-
-
-## is_subset_of <- function(set1, set2)
-## {
-##     set1 <- str_split(set1, ",") %>% unlist
-##     set2 <- str_split(set2, ",") %>% unlist
-##     all(set1 %in% set2)
-## }
-
-## ## message("Removing redundant sub-clusters.")
-## subsets <-
-##     seq_clusters %>%
-##     dplyr::pull(Seq_series) %>%
-##     combn(2) %>%
-##     t %>%
-##     as.data.frame %>%
-##     dplyr::as_tibble(colnames = c("V1", "V2")) %>%
-##     dplyr::mutate(V1 = as.character(V1),
-##                   V2 = as.character(V2)) %>%
-##     dplyr::bind_rows(., rename(., V1 = V2, V2 = V1)) %>%
-##     dplyr::mutate(
-##                Is_subset = map2_lgl(V1, V2, ~is_subset_of(.x, .y))) %>%
-##     dplyr::filter(Is_subset == TRUE) %>%
-##     dplyr::mutate(
-##                V1_n = map_dbl(V1, ~length(unlist(str_split(., ",")))),
-##                V2_n = map_dbl(V2, ~length(unlist(str_split(., ",")))))
-
-
-
-## redundant_groups <-
-##     subsets %>%
-##     dplyr::group_by(V1) %>%
-##     dplyr::mutate(Max = max(V2_n)) %>%
-##     dplyr::filter(V2_n == Max,
-##                   V1_n != V2_n) %>%
-##     dplyr::select(V1)
-
-## seq_clusters<-
-##     seq_clusters %>%
-##     dplyr::ungroup(.) %>%
-##     dplyr::filter(!(Seq_series %in% redundant_groups$V1)) %>%
-##     dplyr::mutate(Cluster = row_number()) %>%
-##     dplyr::select(Cluster, Seq_n, Primer_n, Seq_series, Primer_series)
-
-## cluster_ids <-
-##     seq_clusters %>%
-##     dplyr::select(Cluster, Seq_series)
-
-## ## message("Detecting cluster overlaps.")
-## cluster_overlap <-
-##     seq_clusters %>%
-##     dplyr::pull(Seq_series) %>%
-##     combn(2) %>%
-##     t %>%
-##     as.data.frame %>%
-##     dplyr::as_tibble(.) %>%
-##     dplyr::mutate(
-##                V1 = as.character(V1),
-##                V2 = as.character(V2),
-##                X1 = purrr::map(V1, ~unlist(str_split(., ","))),
-##                X2 = purrr::map(V2, ~unlist(str_split(., ","))),
-##                Int = purrr::map2(X1, X2, ~intersect(.x, .y)),
-##                Empty = purrr::map_lgl(Int, ~identical(., character(0))),
-##                Overlap = purrr::map_chr(Int, ~paste0(., collapse = " ")),
-##                Len_C1 = purrr::map_dbl(X1, length),
-##                Len_C2 = purrr::map_dbl(X2, length),
-##                Len_Int = purrr::map_dbl(Int, length),
-##                Perc_of_cluster1 = round(Len_Int / Len_C1 * 100, 2),
-##                Perc_of_cluster2 = round(Len_Int / Len_C2 * 100, 2)) %>%
-##     dplyr::filter(!Empty) %>%
-##     dplyr::left_join(cluster_ids, by = c("V1" = "Seq_series")) %>%
-##     dplyr::rename(Cluster1 = Cluster) %>%
-##     dplyr::left_join(cluster_ids, by = c("V2" = "Seq_series")) %>%
-##     dplyr::rename(Cluster2 = Cluster) %>%
-##     dplyr::select(Cluster1, Cluster2, Overlap, Perc_of_cluster1, Perc_of_cluster2)
-
-## ## message("Creating primer list.")
-## primer_list <-
-##     seq_clusters %>%
-##     dplyr::select(Cluster, Primer_series, Seq_series) %>%
-##     dplyr::mutate(
-##                Seq_series = map(Seq_series, ~unlist(str_split(., ",")))) %>%
-##     tidyr::unnest(cols = c(Seq_series)) %>%
-##     dplyr::mutate(
-##                Primer_series = map(Primer_series, ~unlist(str_split(., ",")))) %>%
-##     tidyr::unnest(cols = c(Primer_series)) %>%
-##     dplyr::left_join(primer_clusters,
-##                      by = c("Primer_series" = "Seq")) %>%
-##     dplyr::select(-Seq_series) %>%
-##     dplyr::select(Cluster, Primer_cluster, Id, Primer_series) %>%
-##     dplyr::rename(Primer_sequence = Primer_series) %>%
-##     group_by(Cluster, Primer_cluster, Primer_sequence) %>%
-##     summarise(Ids = paste0(Id, collapse = ","))

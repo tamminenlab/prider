@@ -10,18 +10,3 @@ group_primers <- function(primer_tbl) {
     .Call('_prider_group_primers', PACKAGE = 'prider', primer_tbl)
 }
 
-#' @export
-make_degenerate_sequence <- function(sequences, sequence_length, cutoff = 0.1) {
-    .Call('_prider_make_degenerate_sequence', PACKAGE = 'prider', sequences, sequence_length, cutoff)
-}
-
-#' @export
-process_blast_table <- function(filename, hit_len) {
-    .Call('_prider_process_blast_table', PACKAGE = 'prider', filename, hit_len)
-}
-
-#' @export
-unique_network <- function(network) {
-    .Call('_prider_unique_network', PACKAGE = 'prider', network)
-}
-

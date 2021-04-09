@@ -4,25 +4,8 @@
 \name{prider}
 \alias{prider}
 \title{Prider}
-\usage{
-prider(input_fasta, primer_length, min_identity = 0.95)
-}
-\arguments{
-\item{input_fasta}{A DataFrame or a string}
-
-\item{primer_length}{A number}
-}
-\value{
-A list containing sequence names, sequence network, primer clusters,
-        sequence clusters, cluster overlap and primer list
-}
 \description{
 Prider implements a BLAST-based primer design algorithm for complex sequence sets.
-}
-\examples{
-
-primer_designs <- prider("test.fasta", primer_length = 20)
-
 }
 \author{
 Manu Tamminen <mavatam.@utu.fi>

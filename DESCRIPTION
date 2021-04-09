@@ -9,7 +9,6 @@ Description: Implementation of a BLAST-based primer design algorithm for complex
 License: BSD_3_clause + file LICENSE
 Imports: 
     Rcpp (>= 1.0.5),
-    igraph,
     dplyr,
     tidyr,
     purrr,
