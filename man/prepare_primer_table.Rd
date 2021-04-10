@@ -4,10 +4,10 @@
 \alias{prepare_primer_table}
 \title{Prepares a primer table for downstream analyses}
 \usage{
-prepare_primer_table(fasta_file, primer_length = 20)
+prepare_primer_table(input_fasta, primer_length = 20)
 }
 \arguments{
-\item{fasta_file}{A string}
+\item{input_fasta}{A string or a DataFrame containing Id and Seq columns}
 
 \item{primer_length}{A number}
 }

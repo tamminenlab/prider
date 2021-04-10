@@ -4,8 +4,40 @@
 \name{prider}
 \alias{prider}
 \title{Prider}
+\usage{
+prider(
+  fasta_file,
+  primer_length = 20,
+  coverage = 0.9,
+  minimum_primer_group_size = 10,
+  minimum_sequence_group_size = 10,
+  draws = 100
+)
+}
+\arguments{
+\item{fasta_file}{A string}
+
+\item{primer_length}{A number}
+
+\item{coverage}{A number}
+
+\item{minimum_primer_group_size}{A number}
+
+\item{minimum_sequence_group_size}{A number}
+
+\item{draws}{A number}
+}
+\value{
+A list containing a sequence conversion table and 
+        a primer coverage table
+}
 \description{
 Prider implements a BLAST-based primer design algorithm for complex sequence sets.
+}
+\examples{
+
+primer_designs <- prider("test.fasta", primer_length = 20)
+
 }
 \author{
 Manu Tamminen <mavatam.@utu.fi>

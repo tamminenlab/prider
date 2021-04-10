@@ -13,7 +13,7 @@ NULL
 
 #' Prepares a primer table for downstream analyses
 #'
-#' @param fasta_file A string
+#' @param input_fasta A string or a DataFrame containing Id and Seq columns
 #' @param primer_length A number
 #' @return A list containing sequence id conversions, primer matrix
 #'         and a list of primers with their target sequences
@@ -24,10 +24,14 @@ NULL
 #' @importFrom dplyr row_number
 #' @importFrom magrittr %>%
 #' @importFrom blaster read_fasta
-prepare_primer_table <- function(fasta_file,
+prepare_primer_table <- function(input_fasta,
                                  primer_length = 20) {
-  input_fasta <-
-    blaster::read_fasta(fasta_file)
+  if (is.character(input_fasta))
+      input_fasta <-
+        blaster::read_fasta(input_fasta)
+
+  if (!(all(names(input_fasta) == c("Id", "Seq"))))
+    stop("The input must contain Id and Seq columns")
 
   fasta_table <-
     input_fasta %>%
@@ -117,19 +121,18 @@ sample_coverage <- function(primer_table,
 #' @importFrom tibble tibble
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_split
-draw_primers <- function(fasta_file,
-                         primer_length = 20,
-                         coverage = 0.9,
-                         minimum_primer_group_size = 10,
-                         minimum_sequence_group_size = 10,
-                         draws = 100) {
+prider <- function(fasta_file,
+                   primer_length = 20,
+                   coverage = 0.9,
+                   minimum_primer_group_size = 10,
+                   minimum_sequence_group_size = 10,
+                   draws = 100) {
 
   message("Tabulating primers...")
 	ag_data <-
 		prepare_primer_table(fasta_file, primer_length)
 
   message("Clustering primers...")
-
   big_clusters <-
     ag_data[[3]] %>%
     filter(Seq_size >= minimum_sequence_group_size)
@@ -139,9 +142,6 @@ draw_primers <- function(fasta_file,
 
   primer_clusters <-
     group_primers(abund_primers)
-
-	# primer_clusters <-
-	#   group_primers(ag_data[[2]])
 
 	abund_clusters <-
 		primer_clusters %>%

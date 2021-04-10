@@ -15,6 +15,12 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
   return acc;
 }
 
+//' Creates all primer candidates for a group of sequences using a sliding window.
+//' 
+//' @param seq_table A DataFrame
+//' @param window_size An integer
+//' @return A DataFrame containing columns for sequence ids, 
+//'         indexes joined ids and indexes and the primer sequences
 //' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,
