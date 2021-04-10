@@ -102,8 +102,10 @@ sample_coverage <- function(primer_table,
 #' @return A list containing a sequence conversion table and 
 #'         a primer coverage table
 #' @examples
-#'
-#' primer_designs <- prider("test.fasta", primer_length = 20)
+#' 
+#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#' 
+#' primer_designs <- prider(test_fasta)
 #' 
 #' @export
 #' @importFrom dplyr select

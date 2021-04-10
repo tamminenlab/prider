@@ -14,6 +14,10 @@ chunker(seq_table, window_size = 20L)
 \value{
 A DataFrame containing columns for sequence ids, 
         indexes joined ids and indexes and the primer sequences
+
+test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+
+chunks <- chunker(test_fasta)
 }
 \description{
 Creates all primer candidates for a group of sequences using a sliding window.

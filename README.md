@@ -13,5 +13,6 @@ devtools::install_github("manutamminen/prider")
 ## Examples
 
 ```R
-primer_designs <- prider("test.fasta", primer_length = 20)
+test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+primer_designs <- prider(test_fasta)
 ```

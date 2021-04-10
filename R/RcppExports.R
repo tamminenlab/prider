@@ -7,6 +7,11 @@
 #' @param window_size An integer
 #' @return A DataFrame containing columns for sequence ids, 
 #'         indexes joined ids and indexes and the primer sequences
+#' 
+#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#' 
+#' chunks <- chunker(test_fasta)
+#' 
 #' @export
 chunker <- function(seq_table, window_size = 20L) {
     .Call('_prider_chunker', PACKAGE = 'prider', seq_table, window_size)

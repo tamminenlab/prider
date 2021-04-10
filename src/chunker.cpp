@@ -21,6 +21,11 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
 //' @param window_size An integer
 //' @return A DataFrame containing columns for sequence ids, 
 //'         indexes joined ids and indexes and the primer sequences
+//' 
+//' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+//' 
+//' chunks <- chunker(test_fasta)
+//' 
 //' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,
