@@ -63,7 +63,7 @@ prepare_primer_table <- function(input_fasta,
     primers %>%
     dplyr::group_by(Seq) %>%
     dplyr::summarise(Seq_size = n(),
-                     Seqs = paste0(sort(Id), collapse =","))
+                     Sequences = paste0(sort(Id), collapse =","))
 
   return(list(conversion_table, boolean_table, pri_targets))
 }
@@ -174,7 +174,7 @@ prider <- function(fasta_file,
     dplyr::select(-Draw)
 
   covered_seqs <-
-    primer_draws$Seqs %>%
+    primer_draws$Sequences %>%
     unique %>%
     stringr::str_split(",") %>%
     unlist  %>% 
@@ -184,6 +184,8 @@ prider <- function(fasta_file,
     filter(ag_data[[1]], !(Id %in% covered_seqs))
 
   message("Done!")
-  return(list(ag_data[[1]], primer_draws, excluded_seqs))
+  return(list(Conversion = ag_data[[1]],
+              Primer_candidates = primer_draws,
+              Excluded_sequences = excluded_seqs))
 }
 
