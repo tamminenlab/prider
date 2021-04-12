@@ -93,6 +93,7 @@ sample_coverage <- function(primer_table,
 
 #' Prepare a (nearly) optimal primer coverage of the sample set
 #'
+#' @title prider
 #' @param fasta_file A string
 #' @param primer_length A number
 #' @param coverage A number
@@ -133,6 +134,11 @@ prider <- function(fasta_file,
   message("Tabulating primers...")
 	ag_data <-
 		prepare_primer_table(fasta_file, primer_length)
+
+  if (!is.character(fasta_file))
+    description <- paste0("Primer candidates for DataFrame ", deparse(substitute(fasta_file)), ":\n")
+  else
+    description <- paste0("Primer candidates for file ", fasta_file, ":\n")
 
   message("Clustering primers...")
   big_clusters <-
@@ -183,9 +189,57 @@ prider <- function(fasta_file,
   excluded_seqs <- 
     filter(ag_data[[1]], !(Id %in% covered_seqs))
 
+  rows <- unique(primer_draws$Primer_group)
+  out_matrix <- abund_matrix[rows, ]
+
   message("Done!")
-  return(list(Conversion = ag_data[[1]],
-              Primer_candidates = primer_draws,
-              Excluded_sequences = excluded_seqs))
+
+  prider_output <- 
+    list(Description = description,
+         Conversion = ag_data[[1]],
+         Primer_candidates = primer_draws,
+         Excluded_sequences = excluded_seqs,
+         Primer_matrix = out_matrix )
+  class(prider_output) <- "prider"
+  return(prider_output)
 }
+
+
+#' @rdname prider
+#' @export
+#' @importFrom dplyr count
+print.prider <- function(prider_obj) {
+  descr <- prider_obj$Description
+  input_seqs <- nrow(prider_obj$Conversion)
+  excl_seqs <- nrow(prider_obj$Excluded_sequences)
+  incl_seqs <- input_seqs - excl_seqs
+  primer_candidates <- nrow(prider_obj$Primer_candidates)
+  groups <- nrow(dplyr::count(prider_obj$Primer_candidates, Primer_group))
+
+  total <- paste(input_seqs, "input sequences;", incl_seqs, "included and", excl_seqs, "excluded.\n")
+  cands <- paste(primer_candidates, "primer candidates in", groups, "groups.\n")
+  cat(descr)
+  cat(total)
+  cat(cands)
+  cat("\n")
+  cat("For details:\n")
+  cat(".$Primer_candidates\n")
+  cat(".$Conversion_table\n")
+  cat(".$Excluded_sequences\n")
+  }
+
+
+#' @rdname prider
+#' @export
+#' @importFrom gplots heatmap.2
+plot.prider <- function(prider_obj) {
+  matr <- prider_obj$Primer_matrix * 1
+  gplots::heatmap.2(matr,
+                    scale="none",
+                    trace="none",
+                    # key=FALSE,
+                    col=c("white", "black"),
+                    xlab="Sequence Id",
+                    ylab="Primer cluster")
+  }
 

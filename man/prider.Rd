@@ -3,6 +3,8 @@
 \docType{package}
 \name{prider}
 \alias{prider}
+\alias{print.prider}
+\alias{plot.prider}
 \title{Prider}
 \usage{
 prider(
@@ -13,6 +15,10 @@ prider(
   minimum_sequence_group_size = 10,
   draws = 100
 )
+
+\method{print}{prider}(prider_obj)
+
+\method{plot}{prider}(prider_obj)
 }
 \arguments{
 \item{fasta_file}{A string}
@@ -33,6 +39,8 @@ A list containing a sequence conversion table and
 }
 \description{
 Prider implements a BLAST-based primer design algorithm for complex sequence sets.
+
+Prepare a (nearly) optimal primer coverage of the sample set
 }
 \examples{
 
