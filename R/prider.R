@@ -11,7 +11,7 @@
 NULL
 
 
-#' Prepares a primer table for downstream analyses
+#' Prepare a primer table for downstream analyses
 #'
 #' @param input_fasta A string or a DataFrame containing Id and Seq columns
 #' @param primer_length A number
@@ -39,8 +39,8 @@ prepare_primer_table <- function(input_fasta,
 
   conversion_table <-
     fasta_table %>%
-    select(Seq_no, Id) %>%
-    dplyr::rename(Original_id = Id, Id = Seq_no) %>%
+    select(Seq_no, Id, Seq) %>%
+    dplyr::rename(Original_id = Id, Id = Seq_no, Sequence = Seq) %>%
     dplyr::as_tibble(.)
 
   primers <-
@@ -54,7 +54,7 @@ prepare_primer_table <- function(input_fasta,
 
   primer_table <-
     primers %>%
-    table
+    table(.)
 
   boolean_table <-
     primer_table == 1
@@ -62,7 +62,7 @@ prepare_primer_table <- function(input_fasta,
   pri_targets <-
     primers %>%
     dplyr::group_by(Seq) %>%
-    dplyr::summarise(Seq_size = n(),
+    dplyr::summarise(Seq_group_size = n(),
                      Sequences = paste0(sort(Id), collapse =","))
 
   return(list(conversion_table, boolean_table, pri_targets))
@@ -119,6 +119,9 @@ sample_coverage <- function(primer_table,
 #' @importFrom dplyr row_number
 #' @importFrom dplyr left_join
 #' @importFrom dplyr ungroup
+#' @importFrom dplyr slice_max
+#' @importFrom dplyr arrange
+#' @importFrom tidyr nest
 #' @importFrom purrr map
 #' @importFrom purrr map_dfr
 #' @importFrom tibble tibble
@@ -132,8 +135,8 @@ prider <- function(fasta_file,
                    draws = 100) {
 
   message("Tabulating primers...")
-	ag_data <-
-		prepare_primer_table(fasta_file, primer_length)
+  ag_data <-
+    prepare_primer_table(fasta_file, primer_length)
 
   if (!is.character(fasta_file))
     description <- paste0("Primer candidates for DataFrame ", deparse(substitute(fasta_file)), ":\n")
@@ -143,7 +146,7 @@ prider <- function(fasta_file,
   message("Clustering primers...")
   big_clusters <-
     ag_data[[3]] %>%
-    filter(Seq_size >= minimum_sequence_group_size)
+    filter(Seq_group_size >= minimum_sequence_group_size)
 
   abund_primers <-
     ag_data[[2]][big_clusters$Seq, ]
@@ -151,22 +154,22 @@ prider <- function(fasta_file,
   primer_clusters <-
     group_primers(abund_primers)
 
-	abund_clusters <-
-		primer_clusters %>%
-		.$Primer_groups %>%
-		dplyr::group_by(Primer_group) %>% 
-		dplyr::mutate(Primer_group_size = dplyr::n()) %>% 
-		dplyr::filter(Primer_group_size >= minimum_primer_group_size) %>% 
-		dplyr::mutate(Primer_group = as.character(Primer_group))
+  abund_clusters <-
+    primer_clusters %>%
+    .$Primer_groups %>%
+    dplyr::group_by(Primer_group) %>% 
+    dplyr::mutate(Primer_group_size = dplyr::n()) %>% 
+    dplyr::filter(Primer_group_size >= minimum_primer_group_size) %>% 
+    dplyr::mutate(Primer_group = as.character(Primer_group))
 
-	abund_matrix <-
-		primer_clusters %>% 
-		.$Primer_matrix %>% 
-		.[unique(abund_clusters$Primer_group), ]
+  abund_matrix <-
+    primer_clusters %>% 
+    .$Primer_matrix %>% 
+    .[unique(abund_clusters$Primer_group), ]
 
-	abund_matrix <-
-		abund_matrix[, colSums(abund_matrix) != 0]
-  
+  abund_matrix <-
+    abund_matrix[, colSums(abund_matrix) != 0]
+
   message("Sampling primers...")
   primer_draws <-
     purrr::map(1:draws, ~sample_coverage(abund_matrix, coverage)) %>% 
@@ -177,7 +180,11 @@ prider <- function(fasta_file,
     dplyr::ungroup(.) %>% 
     dplyr::left_join(ag_data[[3]], by = c("Primer" = "Seq")) %>% 
     dplyr::filter(Draw_size == min(Draw_size)) %>% 
-    dplyr::select(-Draw)
+    dplyr::select(-Draw, -Draw_size) %>%
+    dplyr::group_by(Primer_group, Primer_group_size, Seq_group_size, Sequences) %>%
+    dplyr::summarise(Primers = paste0(sort(Primer), collapse=",")) %>%
+    dplyr::ungroup(.) %>% 
+    dplyr::arrange(desc(Seq_group_size))
 
   covered_seqs <-
     primer_draws$Sequences %>%
@@ -189,6 +196,25 @@ prider <- function(fasta_file,
   excluded_seqs <- 
     filter(ag_data[[1]], !(Id %in% covered_seqs))
 
+  all_seqs <- colnames(abund_matrix)
+  cum_coverage <- c()
+  cum_seqs <- c()
+  for (seqs in primer_draws$Sequences) {
+    seqs <- unlist(str_split(seqs, ","))
+    cum_seqs <- unique(c(cum_seqs, seqs))
+    cover <- sum(all_seqs %in% cum_seqs) / length(all_seqs)
+    cum_coverage <- c(cum_coverage, cover)
+  }
+
+  primer_draws$Cumulative_coverage <- round(cum_coverage, 2)
+  primer_draws <-
+    primer_draws %>%
+    dplyr::group_by(Cumulative_coverage) %>%
+    dplyr::slice_max(1) %>% 
+    dplyr::select(Primer_group, Primer_group_size,
+           Seq_group_size, Cumulative_coverage,
+           Primers, Sequences)
+
   rows <- unique(primer_draws$Primer_group)
   out_matrix <- abund_matrix[rows, ]
 
@@ -196,7 +222,7 @@ prider <- function(fasta_file,
 
   prider_output <- 
     list(Description = description,
-         Conversion = ag_data[[1]],
+         Conversion_table = ag_data[[1]],
          Primer_candidates = primer_draws,
          Excluded_sequences = excluded_seqs,
          Primer_matrix = out_matrix )
@@ -213,7 +239,7 @@ print.prider <- function(prider_obj) {
   input_seqs <- nrow(prider_obj$Conversion)
   excl_seqs <- nrow(prider_obj$Excluded_sequences)
   incl_seqs <- input_seqs - excl_seqs
-  primer_candidates <- nrow(prider_obj$Primer_candidates)
+  primer_candidates <- sum(prider_obj$Primer_candidates$Primer_group_size)
   groups <- nrow(dplyr::count(prider_obj$Primer_candidates, Primer_group))
 
   total <- paste(input_seqs, "input sequences;", incl_seqs, "included and", excl_seqs, "excluded.\n")
@@ -226,20 +252,36 @@ print.prider <- function(prider_obj) {
   cat(".$Primer_candidates\n")
   cat(".$Conversion_table\n")
   cat(".$Excluded_sequences\n")
-  }
+}
 
 
 #' @rdname prider
 #' @export
 #' @importFrom gplots heatmap.2
-plot.prider <- function(prider_obj) {
-  matr <- prider_obj$Primer_matrix * 1
-  gplots::heatmap.2(matr,
-                    scale="none",
-                    trace="none",
-                    # key=FALSE,
-                    col=c("white", "black"),
-                    xlab="Sequence Id",
-                    ylab="Primer cluster")
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 geom_bar
+#' @importFrom ggplot2 coord_flip
+#' @importFrom dplyr select
+#' @importFrom tidyr pivot_longer
+plot.prider <- function(prider_obj, plot_type = "heatmap") {
+  if (plot_type == "heatmap") {
+    matr <- prider_obj$Primer_matrix * 1
+    gplots::heatmap.2(matr,
+                      scale="none",
+                      trace="none",
+                      col=c("white", "black"),
+                      xlab="Sequence Id",
+                      ylab="Primer cluster")
+  } else if (plot_type == "barchart") {
+    prider_obj$Primer_candidates %>%
+      dplyr::select(Primer_group, Primer_group_size, Seq_group_size) %>%
+      tidyr::pivot_longer(cols=-"Primer_group", names_to="Var", values_to="Val") %>%
+      ggplot2::ggplot(ggplot2::aes(x=Primer_group, y=Val, fill=Var)) +
+      ggplot2::geom_bar(stat="identity", position="dodge") +
+      ggplot2::coord_flip()
+  } else {
+    stop("Currently only heatmap and barchart are supported!")
   }
+}
 
