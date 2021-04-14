@@ -96,9 +96,7 @@ sample_coverage <- function(primer_table,
 #' @title prider
 #' @param fasta_file A string
 #' @param primer_length A number
-#' @param coverage A number
 #' @param minimum_primer_group_size A number
-#' @param minimum_sequence_group_size A number
 #' @param draws A number
 #' @return A list containing a sequence conversion table and 
 #'         a primer coverage table
@@ -129,10 +127,8 @@ sample_coverage <- function(primer_table,
 #' @importFrom stringr str_split
 prider <- function(fasta_file,
                    primer_length = 20,
-                   coverage = 1,
-                   minimum_primer_group_size = 1,
-                   minimum_sequence_group_size = 1,
-                   draws = 100) {
+                   minimum_primer_group_size = 10,
+                   draws = 10) {
 
   message("Tabulating primers...")
   ag_data <-
@@ -144,15 +140,9 @@ prider <- function(fasta_file,
     description <- paste0("Primer candidates for file ", fasta_file, ":\n")
 
   message("Clustering primers...")
-  big_clusters <-
-    ag_data[[3]] %>%
-    filter(Seq_group_size >= minimum_sequence_group_size)
-
-  abund_primers <-
-    ag_data[[2]][big_clusters$Seq, ]
 
   primer_clusters <-
-    group_primers(abund_primers)
+    group_primers(ag_data[[2]])
 
   abund_clusters <-
     primer_clusters %>%
@@ -172,7 +162,7 @@ prider <- function(fasta_file,
 
   message("Sampling primers...")
   primer_draws <-
-    purrr::map(1:draws, ~sample_coverage(abund_matrix, coverage)) %>% 
+    purrr::map(1:draws, ~sample_coverage(abund_matrix, 1)) %>% 
     purrr::map_dfr(~tibble::tibble(Primer_group = .), .id="Draw") %>%
     dplyr::group_by(Draw) %>% 
     dplyr::mutate(Draw_size = dplyr::n()) %>% 
@@ -185,16 +175,6 @@ prider <- function(fasta_file,
     dplyr::summarise(Primers = paste0(sort(Primer), collapse=",")) %>%
     dplyr::ungroup(.) %>% 
     dplyr::arrange(desc(Seq_group_size))
-
-  covered_seqs <-
-    primer_draws$Sequences %>%
-    unique %>%
-    stringr::str_split(",") %>%
-    unlist  %>% 
-    unique
-
-  excluded_seqs <- 
-    filter(ag_data[[1]], !(Id %in% covered_seqs))
 
   message("Eliminating redundancies...")
   all_seqs <- colnames(abund_matrix)
@@ -215,6 +195,16 @@ prider <- function(fasta_file,
     dplyr::select(Primer_group, Primer_group_size,
            Seq_group_size, Cumulative_coverage,
            Primers, Sequences)
+
+  covered_seqs <-
+    primer_draws$Sequences %>%
+    unique %>%
+    stringr::str_split(",") %>%
+    unlist  %>% 
+    unique
+
+  excluded_seqs <- 
+    filter(ag_data[[1]], !(Id %in% covered_seqs))
 
   rows <- unique(primer_draws$Primer_group)
   out_matrix <- abund_matrix[rows, ]
