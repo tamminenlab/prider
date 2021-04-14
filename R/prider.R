@@ -129,9 +129,9 @@ sample_coverage <- function(primer_table,
 #' @importFrom stringr str_split
 prider <- function(fasta_file,
                    primer_length = 20,
-                   coverage = 0.9,
-                   minimum_primer_group_size = 10,
-                   minimum_sequence_group_size = 10,
+                   coverage = 1,
+                   minimum_primer_group_size = 1,
+                   minimum_sequence_group_size = 1,
                    draws = 100) {
 
   message("Tabulating primers...")
@@ -196,6 +196,7 @@ prider <- function(fasta_file,
   excluded_seqs <- 
     filter(ag_data[[1]], !(Id %in% covered_seqs))
 
+  message("Eliminating redundancies...")
   all_seqs <- colnames(abund_matrix)
   cum_coverage <- c()
   cum_seqs <- c()
@@ -258,30 +259,13 @@ print.prider <- function(prider_obj) {
 #' @rdname prider
 #' @export
 #' @importFrom gplots heatmap.2
-#' @importFrom ggplot2 ggplot
-#' @importFrom ggplot2 aes
-#' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 coord_flip
-#' @importFrom dplyr select
-#' @importFrom tidyr pivot_longer
-plot.prider <- function(prider_obj, plot_type = "heatmap") {
-  if (plot_type == "heatmap") {
-    matr <- prider_obj$Primer_matrix * 1
-    gplots::heatmap.2(matr,
-                      scale="none",
-                      trace="none",
-                      col=c("white", "black"),
-                      xlab="Sequence Id",
-                      ylab="Primer cluster")
-  } else if (plot_type == "barchart") {
-    prider_obj$Primer_candidates %>%
-      dplyr::select(Primer_group, Primer_group_size, Seq_group_size) %>%
-      tidyr::pivot_longer(cols=-"Primer_group", names_to="Var", values_to="Val") %>%
-      ggplot2::ggplot(ggplot2::aes(x=Primer_group, y=Val, fill=Var)) +
-      ggplot2::geom_bar(stat="identity", position="dodge") +
-      ggplot2::coord_flip()
-  } else {
-    stop("Currently only heatmap and barchart are supported!")
-  }
+plot.prider <- function(prider_obj) {
+  matr <- prider_obj$Primer_matrix * 1
+  gplots::heatmap.2(matr,
+                    scale="none",
+                    trace="none",
+                    col=c("white", "black"),
+                    xlab="Sequence Id",
+                    ylab="Primer cluster")
 }
 
