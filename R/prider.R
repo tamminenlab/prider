@@ -309,16 +309,15 @@ print.primers <- function(primer_obj, rows=10) {
 #' @rdname primers
 #' @export
 #' @importFrom dplyr filter
-#' @importFrom dplyr select
 #' @importFrom dplyr mutate
 `[.primers` <- function(primer_obj, ix) {
   if (is.numeric(ix))
     ix <- as.character(ix)
   class(primer_obj) <- "data.frame"
   dplyr::filter(primer_obj, Primer_group == ix) %>%
-    dplyr::select(Primers) %>%
-    .[[1]]
-    # dplyr::mutate(Primers = unique(Primers))
+    dplyr::pull(Primers) %>%
+    .[[1]] %>%
+    unique
 }
 
 
