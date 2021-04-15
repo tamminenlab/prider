@@ -2,7 +2,7 @@
 % Please edit documentation in R/prider.R
 \name{prepare_primer_table}
 \alias{prepare_primer_table}
-\title{Prepares a primer table for downstream analyses}
+\title{Prepare a primer table for downstream analyses}
 \usage{
 prepare_primer_table(input_fasta, primer_length = 20)
 }
@@ -16,5 +16,5 @@ A list containing sequence id conversions, primer matrix
         and a list of primers with their target sequences
 }
 \description{
-Prepares a primer table for downstream analyses
+Prepare a primer table for downstream analyses
 }

@@ -10,10 +10,8 @@
 prider(
   fasta_file,
   primer_length = 20,
-  coverage = 0.9,
   minimum_primer_group_size = 10,
-  minimum_sequence_group_size = 10,
-  draws = 100
+  draws = 10
 )
 
 \method{print}{prider}(prider_obj)
@@ -25,11 +23,7 @@ prider(
 
 \item{primer_length}{A number}
 
-\item{coverage}{A number}
-
 \item{minimum_primer_group_size}{A number}
-
-\item{minimum_sequence_group_size}{A number}
 
 \item{draws}{A number}
 }

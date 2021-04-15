@@ -194,7 +194,8 @@ prider <- function(fasta_file,
     dplyr::slice_max(1) %>% 
     dplyr::select(Primer_group, Primer_group_size,
            Seq_group_size, Cumulative_coverage,
-           Primers, Sequences)
+           Primers, Sequences) %>%
+    dplyr::ungroup(.)
 
   covered_seqs <-
     primer_draws$Sequences %>%
@@ -232,7 +233,6 @@ print.prider <- function(prider_obj) {
   incl_seqs <- input_seqs - excl_seqs
   primer_candidates <- sum(prider_obj$Primer_candidates$Primer_group_size)
   groups <- nrow(dplyr::count(prider_obj$Primer_candidates, Primer_group))
-
   total <- paste(input_seqs, "input sequences;", incl_seqs, "included and", excl_seqs, "excluded.\n")
   cands <- paste(primer_candidates, "primer candidates in", groups, "groups.\n")
   cat(descr)
@@ -259,3 +259,132 @@ plot.prider <- function(prider_obj) {
                     ylab="Primer cluster")
 }
 
+
+#' @title primers
+#' @export
+primers <- function(x) UseMethod("primers")
+
+
+#' @rdname primers
+#' @export
+primers.default <- function(x, ...)
+  warning(paste("Function 'primer' does not know how to handle object of class",
+                class(x),
+                "and can only be used on class 'prider'."))
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr select
+#' @importFrom dplyr group_by
+#' @importFrom dplyr mutate
+#' @importFrom dplyr ungroup
+primers.prider <- function(prider_obj, ...) {
+  primer_obj <- 
+    prider_obj$Primer_candidates %>%
+    dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Primers) %>%
+    dplyr::group_by(Primer_group) %>%
+    dplyr::mutate(Primers = str_split(Primers, ",")) %>%
+    dplyr::ungroup(.)
+  class(primer_obj) <- "primers"
+  return(primer_obj)
+}
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr select
+print.primers <- function(primer_obj, rows=10) {
+  class(primer_obj) <- "data.frame"
+  remaining_table_length <- nrow(primer_obj) - rows
+  primer_obj %>%
+    dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
+    head(rows) %>%
+    print(.)
+  if (remaining_table_length > 0)
+  cat(paste("... with", remaining_table_length, "more rows.\n"))
+}
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr filter
+#' @importFrom dplyr select
+#' @importFrom dplyr mutate
+`[.primers` <- function(primer_obj, ix) {
+  if (is.numeric(ix))
+    ix <- as.character(ix)
+  class(primer_obj) <- "data.frame"
+  dplyr::filter(primer_obj, Primer_group == ix) %>%
+    dplyr::select(Primers) %>%
+    .[[1]]
+    # dplyr::mutate(Primers = unique(Primers))
+}
+
+
+#' @title sequences
+#' @export
+sequences <- function(x) UseMethod("sequences")
+
+
+#' @rdname primers
+#' @export
+sequences.default <- function(x, ...)
+  warning(paste("Function 'sequences' does not know how to handle object of class",
+                class(x),
+                "and can only be used on class 'prider'."))
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr select
+#' @importFrom dplyr group_by
+#' @importFrom dplyr mutate
+#' @importFrom dplyr ungroup
+#' @importFrom dplyr left_join
+#' @importFrom tidyr nest
+#' @importFrom tidyr unnest
+#' @importFrom stringr str_split
+sequences.prider <- function(prider_obj, ...) {
+  conversion_tbl <- 
+    prider_obj$Conversion_table
+  sequence_obj <- 
+    prider_obj$Primer_candidates %>%
+    dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Sequences) %>%
+    dplyr::group_by(Primer_group) %>%
+    dplyr::mutate(Sequences = stringr::str_split(Sequences, ",")) %>%
+    dplyr::ungroup(.) %>%
+    tidyr::unnest(Sequences) %>%
+    dplyr::left_join(conversion_tbl, by=c("Sequences" = "Id")) %>%
+    dplyr::select(-Sequences) %>%
+    tidyr::nest(Sequences = c(Original_id, Sequence))
+  class(sequence_obj) <- "sequences"
+  return(sequence_obj)
+}
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr select
+print.sequences <- function(sequence_obj, rows=10) {
+  class(sequence_obj) <- "data.frame"
+  remaining_table_length <- nrow(sequence_obj) - rows
+  sequence_obj %>%
+    dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
+    head(rows) %>%
+    print(.)
+  cat(paste("... with", remaining_table_length, "more rows.\n"))
+}
+
+
+#' @rdname primers
+#' @export
+#' @importFrom dplyr filter
+`[.sequences` <- function(sequence_obj, ix) {
+  if (is.numeric(ix))
+    ix <- as.character(ix)
+  class(sequence_obj) <- "data.frame"
+  dplyr::filter(sequence_obj, Primer_group == ix) %>%
+    .$Sequences %>%
+    .[[1]]
+}
