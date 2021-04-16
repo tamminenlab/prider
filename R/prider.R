@@ -39,7 +39,7 @@ prepare_primer_table <- function(input_fasta,
 
   conversion_table <-
     fasta_table %>%
-    select(Seq_no, Id, Seq) %>%
+    dplyr::select(Seq_no, Id, Seq) %>%
     dplyr::rename(Original_id = Id, Id = Seq_no, Sequence = Seq) %>%
     dplyr::as_tibble(.)
 
@@ -128,6 +128,7 @@ new_prider <- function(x = list()) {
 #' @importFrom dplyr ungroup
 #' @importFrom dplyr slice_max
 #' @importFrom dplyr arrange
+#' @importFrom dplyr desc
 #' @importFrom tidyr nest
 #' @importFrom purrr map
 #' @importFrom purrr map_dfr
@@ -183,7 +184,7 @@ prider <- function(fasta_file,
     dplyr::group_by(Primer_group, Primer_group_size, Seq_group_size, Sequences) %>%
     dplyr::summarise(Primers = paste0(sort(Primer), collapse=",")) %>%
     dplyr::ungroup(.) %>% 
-    dplyr::arrange(desc(Seq_group_size))
+    dplyr::arrange(dplyr::desc(Seq_group_size))
 
   cat("Eliminating redundancies...\n")
   all_seqs <- colnames(abund_matrix)
