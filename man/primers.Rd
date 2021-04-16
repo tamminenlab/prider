@@ -6,29 +6,17 @@
 \alias{primers.prider}
 \alias{print.primers}
 \alias{[.primers}
-\alias{sequences.default}
-\alias{sequences.prider}
-\alias{print.sequences}
-\alias{[.sequences}
 \title{primers}
 \usage{
 primers(x)
 
 \method{primers}{default}(x, ...)
 
-\method{primers}{prider}(prider_obj, ...)
+\method{primers}{prider}(prider_obj)
 
-\method{print}{primers}(primer_obj, rows = 10)
+\method{print}{primers}(primer_obj)
 
 \method{[}{primers}(primer_obj, ix)
-
-\method{sequences}{default}(x, ...)
-
-\method{sequences}{prider}(prider_obj, ...)
-
-\method{print}{sequences}(sequence_obj, rows = 10)
-
-\method{[}{sequences}(sequence_obj, ix)
 }
 \description{
 primers

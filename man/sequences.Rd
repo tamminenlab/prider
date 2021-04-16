@@ -2,9 +2,21 @@
 % Please edit documentation in R/prider.R
 \name{sequences}
 \alias{sequences}
+\alias{sequences.default}
+\alias{sequences.prider}
+\alias{print.sequences}
+\alias{[.sequences}
 \title{sequences}
 \usage{
 sequences(x)
+
+\method{sequences}{default}(x, ...)
+
+\method{sequences}{prider}(prider_obj)
+
+\method{print}{sequences}(sequence_obj)
+
+\method{[}{sequences}(sequence_obj, ix)
 }
 \description{
 sequences

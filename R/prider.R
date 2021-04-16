@@ -91,6 +91,15 @@ sample_coverage <- function(primer_table,
 }
 
 
+#' @title new_prider
+#' @param x A list
+#' @return A prider object
+new_prider <- function(x = list()) {
+  stopifnot(is.list(x))
+  structure(x, class = "prider")
+}
+
+
 #' Prepare a (nearly) optimal primer coverage of the sample set
 #'
 #' @title prider
@@ -130,7 +139,7 @@ prider <- function(fasta_file,
                    minimum_primer_group_size = 10,
                    draws = 10) {
 
-  message("Tabulating primers...")
+  cat("Tabulating primers...\n")
   ag_data <-
     prepare_primer_table(fasta_file, primer_length)
 
@@ -139,7 +148,7 @@ prider <- function(fasta_file,
   else
     description <- paste0("Primer candidates for file ", fasta_file, ":\n")
 
-  message("Clustering primers...")
+  cat("Clustering primers...\n")
 
   primer_clusters <-
     group_primers(ag_data[[2]])
@@ -160,7 +169,7 @@ prider <- function(fasta_file,
   abund_matrix <-
     abund_matrix[, colSums(abund_matrix) != 0]
 
-  message("Sampling primers...")
+  cat("Sampling primers...\n")
   primer_draws <-
     purrr::map(1:draws, ~sample_coverage(abund_matrix, 1)) %>% 
     purrr::map_dfr(~tibble::tibble(Primer_group = .), .id="Draw") %>%
@@ -176,7 +185,7 @@ prider <- function(fasta_file,
     dplyr::ungroup(.) %>% 
     dplyr::arrange(desc(Seq_group_size))
 
-  message("Eliminating redundancies...")
+  cat("Eliminating redundancies...\n")
   all_seqs <- colnames(abund_matrix)
   cum_coverage <- c()
   cum_seqs <- c()
@@ -210,16 +219,14 @@ prider <- function(fasta_file,
   rows <- unique(primer_draws$Primer_group)
   out_matrix <- abund_matrix[rows, ]
 
-  message("Done!")
+  cat("Done!\n")
 
-  prider_output <- 
+  new_prider(
     list(Description = description,
          Conversion_table = ag_data[[1]],
          Primer_candidates = primer_draws,
          Excluded_sequences = excluded_seqs,
-         Primer_matrix = out_matrix )
-  class(prider_output) <- "prider"
-  return(prider_output)
+         Primer_matrix = out_matrix ))
 }
 
 
@@ -239,10 +246,11 @@ print.prider <- function(prider_obj) {
   cat(total)
   cat(cands)
   cat("\n")
-  cat("For details:\n")
-  cat(".$Primer_candidates\n")
-  cat(".$Conversion_table\n")
-  cat(".$Excluded_sequences\n")
+  cat("To access the primer candidates,\n")
+  cat("please use function primers: primers(.)\n")
+  cat("\n")
+  cat("To access the sequences covered by the primer candidates,\n")
+  cat("please use function sequences: sequences(.)\n")
 }
 
 
@@ -257,6 +265,16 @@ plot.prider <- function(prider_obj) {
                     col=c("white", "black"),
                     xlab="Sequence Id",
                     ylab="Primer cluster")
+}
+
+
+#' @title new_primers
+#' @param x A tibble
+#' @return A primers object
+#' @importFrom tibble is_tibble
+new_primers <- function(x) {
+  stopifnot(tibble::is_tibble(x))
+  structure(x, class = "primers")
 }
 
 
@@ -279,30 +297,29 @@ primers.default <- function(x, ...)
 #' @importFrom dplyr group_by
 #' @importFrom dplyr mutate
 #' @importFrom dplyr ungroup
-primers.prider <- function(prider_obj, ...) {
+primers.prider <- function(prider_obj) {
   primer_obj <- 
     prider_obj$Primer_candidates %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Primers) %>%
     dplyr::group_by(Primer_group) %>%
     dplyr::mutate(Primers = str_split(Primers, ",")) %>%
     dplyr::ungroup(.)
-  class(primer_obj) <- "primers"
-  return(primer_obj)
+  new_primers(primer_obj)
 }
 
 
 #' @rdname primers
 #' @export
 #' @importFrom dplyr select
-print.primers <- function(primer_obj, rows=10) {
+print.primers <- function(primer_obj) {
+  cat("To access the primers within a group,\n")
+  cat("please use subsetting, eg. primers(.)[42]\n")
+  cat("\n")
   class(primer_obj) <- "data.frame"
-  remaining_table_length <- nrow(primer_obj) - rows
   primer_obj %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
-    head(rows) %>%
+    data.frame %>%
     print(.)
-  if (remaining_table_length > 0)
-  cat(paste("... with", remaining_table_length, "more rows.\n"))
 }
 
 
@@ -321,12 +338,22 @@ print.primers <- function(primer_obj, rows=10) {
 }
 
 
+#' @title new_sequences
+#' @param x A tibble
+#' @return A sequences object
+#' @importFrom tibble is_tibble
+new_sequences <- function(x) {
+  stopifnot(tibble::is_tibble(x))
+  structure(x, class = "sequences")
+}
+
+
 #' @title sequences
 #' @export
 sequences <- function(x) UseMethod("sequences")
 
 
-#' @rdname primers
+#' @rdname sequences
 #' @export
 sequences.default <- function(x, ...)
   warning(paste("Function 'sequences' does not know how to handle object of class",
@@ -334,7 +361,7 @@ sequences.default <- function(x, ...)
                 "and can only be used on class 'prider'."))
 
 
-#' @rdname primers
+#' @rdname sequences
 #' @export
 #' @importFrom dplyr select
 #' @importFrom dplyr group_by
@@ -344,7 +371,7 @@ sequences.default <- function(x, ...)
 #' @importFrom tidyr nest
 #' @importFrom tidyr unnest
 #' @importFrom stringr str_split
-sequences.prider <- function(prider_obj, ...) {
+sequences.prider <- function(prider_obj) {
   conversion_tbl <- 
     prider_obj$Conversion_table
   sequence_obj <- 
@@ -357,26 +384,26 @@ sequences.prider <- function(prider_obj, ...) {
     dplyr::left_join(conversion_tbl, by=c("Sequences" = "Id")) %>%
     dplyr::select(-Sequences) %>%
     tidyr::nest(Sequences = c(Original_id, Sequence))
-  class(sequence_obj) <- "sequences"
-  return(sequence_obj)
+  new_sequences(sequence_obj)
 }
 
 
-#' @rdname primers
+#' @rdname sequences
 #' @export
 #' @importFrom dplyr select
-print.sequences <- function(sequence_obj, rows=10) {
+print.sequences <- function(sequence_obj) {
+  cat("To access the sequences within a group,\n")
+  cat("please use subsetting, eg. sequences(.)[42]\n")
+  cat("\n")
   class(sequence_obj) <- "data.frame"
-  remaining_table_length <- nrow(sequence_obj) - rows
   sequence_obj %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
-    head(rows) %>%
+    data.frame %>%
     print(.)
-  cat(paste("... with", remaining_table_length, "more rows.\n"))
 }
 
 
-#' @rdname primers
+#' @rdname sequences
 #' @export
 #' @importFrom dplyr filter
 `[.sequences` <- function(sequence_obj, ix) {
@@ -387,3 +414,4 @@ print.sequences <- function(sequence_obj, rows=10) {
     .$Sequences %>%
     .[[1]]
 }
+
