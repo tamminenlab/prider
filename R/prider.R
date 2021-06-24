@@ -218,8 +218,9 @@ prider <- function(fasta_file,
     filter(ag_data[[1]], !(Id %in% covered_seqs))
 
   rows <- unique(primer_draws$Primer_group)
-  out_matrix <- abund_matrix[rows, ]
-
+  cols <- covered_seqs
+  out_matrix <- abund_matrix[rows, cols]
+  
   cat("Done!\n")
 
   new_prider(
