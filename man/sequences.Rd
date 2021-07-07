@@ -18,6 +18,11 @@ sequences(x)
 
 \method{[}{sequences}(sequence_obj, ix)
 }
+\arguments{
+\item{prider_obj}{A list}
+
+\item{sequence_obj}{}
+}
 \description{
 sequences
 }
