@@ -17,21 +17,9 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// group_primers
-List group_primers(LogicalMatrix primer_tbl);
-RcppExport SEXP _prider_group_primers(SEXP primer_tblSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< LogicalMatrix >::type primer_tbl(primer_tblSEXP);
-    rcpp_result_gen = Rcpp::wrap(group_primers(primer_tbl));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_prider_chunker", (DL_FUNC) &_prider_chunker, 2},
-    {"_prider_group_primers", (DL_FUNC) &_prider_group_primers, 1},
     {NULL, NULL, 0}
 };
 

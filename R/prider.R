@@ -15,6 +15,9 @@ NULL
 #'
 #' @param input_fasta A string or a DataFrame containing Id and Seq columns
 #' @param primer_length A number
+#' @param GCcheck A logical
+#' @param GCsimilarity A number
+#'
 #' @return A list containing sequence id conversions, primer matrix
 #'         and a list of primers with their target sequences
 #' @importFrom dplyr select
@@ -24,8 +27,11 @@ NULL
 #' @importFrom dplyr row_number
 #' @importFrom magrittr %>%
 #' @importFrom blaster read_fasta
-prepare_primer_table <- function(input_fasta,
-                                 primer_length = 20) {
+#' @importFrom stringr str_count
+prepare_primer_df <- function(input_fasta,
+                              primer_length = 20,
+                              GCcheck = FALSE,
+                              GCsimilarity = 0.1) {
   if (is.character(input_fasta))
       input_fasta <-
         blaster::read_fasta(input_fasta)
@@ -48,46 +54,26 @@ prepare_primer_table <- function(input_fasta,
     dplyr::select(Seq_no, Seq) %>%
     dplyr::rename(Id = Seq_no) %>%
     dplyr::as_tibble(.) %>%
-    chunker(window_size = primer_length) %>%
+    chunker(window_size = primer_length +1) %>%
     dplyr::as_tibble(.) %>%
-    dplyr::select(Seq, Id)
-
-  primer_table <-
-    primers %>%
-    table(.)
-
-  boolean_table <-
-    primer_table == 1
-
-  pri_targets <-
-    primers %>%
-    dplyr::group_by(Seq) %>%
-    dplyr::summarise(Seq_group_size = n(),
-                     Sequences = paste0(sort(Id), collapse =","))
-
-  return(list(conversion_table, boolean_table, pri_targets))
-}
-
-
-#' Randomly samples primer matrix to recoved the specified coverage
-#'
-#' @param primer_table A matrix
-#' @param coverage A number
-#' @return A character vector containing the primer group number ids
-sample_coverage <- function(primer_table,
-                            coverage = 0.9) {
-  row_len <- ncol(primer_table)
-  tbl_len <- rownames(primer_table)
-  draws <- sample(tbl_len)
-  row_acc <- primer_table[draws[1], ]
-  acc <- 0
-  for (draw in draws[2:length(draws)]) {
-    acc <- acc + 1
-    row_acc <- row_acc | primer_table[draw, ]
-    if (sum(row_acc) / row_len > coverage)
-      break
+    dplyr::select(Seq, Id) %>%
+    dplyr::filter(stringr::str_count(Seq, "A|G|C|T") == nchar(Seq))
+  
+  if(isTRUE(GCcheck)){
+    firsthalf <- substr(primers$Seq, 1, (primer_length/2))
+    secondhalf <- substr(primers$Seq, ((primer_length/2)+1), primer_length)
+    firsthalf <- str_count(firsthalf, "G|C") / nchar(firsthalf)
+    secondhalf <- str_count(secondhalf, "G|C") / nchar(secondhalf)
+    dplyr::filter(primers, abs(firsthalf-secondhalf) <= GCsimilarity) -> primers
   }
-  return(draws[1:acc])
+
+  primer_df <-
+    primers %>%
+    dplyr::select(Id, Seq)%>%
+    dplyr::group_by(Seq) %>%
+    dplyr::summarise(Ids = paste0(sort(Id), collapse=","))
+
+  return(list(conversion_table, primer_df))
 }
 
 
@@ -103,10 +89,15 @@ new_prider <- function(x = list()) {
 #' Prepare a (nearly) optimal primer coverage of the sample set
 #'
 #' @title prider
+#'
 #' @param fasta_file A string
-#' @param primer_length A number
-#' @param minimum_primer_group_size A number
-#' @param draws A number
+#' @param primer_length A number. Sets the primer length.
+#' @param minimum_primer_group_size A number. Sets the minimum number of primers in one primer cluster.
+#' @param minimum_seq_group_size A number. Sets the minimum number of sequences each primer cluster has to cover.
+#' @param cum_cov_decimals A number.
+#' @param GCcheck A logical
+#' @param GCsimilarity A number
+#'
 #' @return A list containing a sequence conversion table and 
 #'         a primer coverage table
 #' @examples
@@ -138,11 +129,14 @@ new_prider <- function(x = list()) {
 prider <- function(fasta_file,
                    primer_length = 20,
                    minimum_primer_group_size = 10,
-                   draws = 10) {
+                   minimum_seq_group_size = 5,
+                   cum_cov_decimals = 2,
+                   GCcheck = FALSE,
+                   GCsimilarity = 0.1) {
 
   cat("Tabulating primers...\n")
   ag_data <-
-    prepare_primer_table(fasta_file, primer_length)
+    prepare_primer_df(fasta_file, primer_length, GCcheck, GCsimilarity)
 
   if (!is.character(fasta_file))
     description <- paste0("Primer candidates for DataFrame ", deparse(substitute(fasta_file)), ":\n")
@@ -151,43 +145,32 @@ prider <- function(fasta_file,
 
   cat("Clustering primers...\n")
 
-  primer_clusters <-
-    group_primers(ag_data[[2]])
+  primer_df_summ <-
+    ag_data[[2]] %>%
+    dplyr::group_by(Ids) %>%
+    dplyr::summarise(Primers = paste0(sort(Seq), collapse=",")) %>%
+    dplyr::ungroup()
 
-  abund_clusters <-
-    primer_clusters %>%
-    .$Primer_groups %>%
-    dplyr::group_by(Primer_group) %>% 
-    dplyr::mutate(Primer_group_size = dplyr::n()) %>% 
-    dplyr::filter(Primer_group_size >= minimum_primer_group_size) %>% 
-    dplyr::mutate(Primer_group = as.character(Primer_group))
-
-  abund_matrix <-
-    primer_clusters %>% 
-    .$Primer_matrix %>% 
-    .[unique(abund_clusters$Primer_group), ]
-
-  abund_matrix <-
-    abund_matrix[, colSums(abund_matrix) != 0]
-
+  abund_clusters <- 
+    primer_df_summ %>%
+    dplyr::mutate(Primer_group_size = lengths(strsplit(primer_df_summ$Primers, ","))) %>%
+    dplyr::filter(Primer_group_size >= minimum_primer_group_size)
+  
+  if(isTRUE(max(lengths(strsplit(abund_clusters$Ids, ","))) < minimum_seq_group_size)) {
+    stop("All sequence group sizes smaller than the minimum_seq_group_size resulting to an empty dataframe.\nPlease make the minimum_seq_group_size parameter smaller")
+  }
+  
   cat("Sampling primers...\n")
   primer_draws <-
-    purrr::map(1:draws, ~sample_coverage(abund_matrix, 1)) %>% 
-    purrr::map_dfr(~tibble::tibble(Primer_group = .), .id="Draw") %>%
-    dplyr::group_by(Draw) %>% 
-    dplyr::mutate(Draw_size = dplyr::n()) %>% 
-    dplyr::left_join(abund_clusters, by = "Primer_group") %>% 
-    dplyr::ungroup(.) %>% 
-    dplyr::left_join(ag_data[[3]], by = c("Primer" = "Seq")) %>% 
-    dplyr::filter(Draw_size == min(Draw_size)) %>% 
-    dplyr::select(-Draw, -Draw_size) %>%
-    dplyr::group_by(Primer_group, Primer_group_size, Seq_group_size, Sequences) %>%
-    dplyr::summarise(Primers = paste0(sort(Primer), collapse=",")) %>%
-    dplyr::ungroup(.) %>% 
-    dplyr::arrange(dplyr::desc(Seq_group_size))
-
+    abund_clusters %>%
+    dplyr::mutate(Primer_group = rownames(abund_clusters)) %>%
+    dplyr::mutate(Seq_group_size = lengths(strsplit(abund_clusters$Ids, ","))) %>%
+    dplyr::filter(Seq_group_size >= minimum_seq_group_size) %>%
+    dplyr::mutate(Sequences = Ids, .keep = "unused")
+  primer_draws <- dplyr::arrange(primer_draws, desc(Seq_group_size))
+  
   cat("Eliminating redundancies...\n")
-  all_seqs <- colnames(abund_matrix)
+  all_seqs <- sort(unique(unlist(strsplit(primer_draws$Sequences, ","))))
   cum_coverage <- c()
   cum_seqs <- c()
   for (seqs in primer_draws$Sequences) {
@@ -197,30 +180,47 @@ prider <- function(fasta_file,
     cum_coverage <- c(cum_coverage, cover)
   }
 
-  primer_draws$Cumulative_coverage <- round(cum_coverage, 2)
+  primer_draws$Cumulative_coverage <- round(cum_coverage, cum_cov_decimals)
   primer_draws <-
     primer_draws %>%
     dplyr::group_by(Cumulative_coverage) %>%
+    dplyr::arrange(Cumulative_coverage, desc(Seq_group_size), desc(Primer_group_size), .by_group = TRUE) %>%
     dplyr::slice_max(1) %>% 
     dplyr::select(Primer_group, Primer_group_size,
-           Seq_group_size, Cumulative_coverage,
-           Primers, Sequences) %>%
+                  Seq_group_size, Cumulative_coverage,
+                  Primers, Sequences) %>%
     dplyr::ungroup(.)
 
-  covered_seqs <-
-    primer_draws$Sequences %>%
-    unique %>%
-    stringr::str_split(",") %>%
-    unlist  %>% 
-    unique
-
-  excluded_seqs <- 
-    filter(ag_data[[1]], !(Id %in% covered_seqs))
-
-  rows <- unique(primer_draws$Primer_group)
-  cols <- covered_seqs
-  out_matrix <- abund_matrix[rows, cols]
+  abund_df <- 
+    primer_draws %>%
+    select(Sequences, Primer_group) %>%
+    mutate(Sequences = strsplit(Sequences, ",")) %>%
+    unnest(Sequences)
   
+  abund_matrix <- table(abund_df$Primer_group, abund_df$Sequences)
+  
+  out_matrix <-
+    abund_matrix != 0
+  
+  if(nrow(out_matrix) > 1 && ncol(out_matrix) > 1){
+    out_matrix <-
+      out_matrix[,colSums(out_matrix)>0]
+    out_matrix <-
+      out_matrix[rowSums(out_matrix)>0,]
+  } else if (nrow(out_matrix) > 1 && ncol(out_matrix) <= 1){
+    out_matrix <-
+      out_matrix[rowSums(out_matrix)>0,]
+  } else if (nrow(out_matrix) <= 1 && ncol(out_matrix) > 1){
+    out_matrix <-
+      out_matrix[,colSums(out_matrix)>0]
+  }
+  
+  excluded_seqs <- 
+    filter(ag_data[[1]], !(Id %in% colnames(out_matrix)))
+  
+  Primer_candidates <-
+    filter(primer_draws, primer_draws$Primer_group %in% rownames(out_matrix))
+
   cat("Done!\n")
 
   new_prider(
@@ -231,7 +231,8 @@ prider <- function(fasta_file,
          Primer_matrix = out_matrix ))
 }
 
-
+#' @param prider_obj A list
+#'
 #' @rdname prider
 #' @export
 #' @importFrom dplyr count
@@ -256,22 +257,30 @@ print.prider <- function(prider_obj) {
 }
 
 
+#' @param prider_obj A list
+#'
 #' @rdname prider
 #' @export
 #' @importFrom gplots heatmap.2
 plot.prider <- function(prider_obj) {
   matr <- prider_obj$Primer_matrix * 1
-  gplots::heatmap.2(matr,
-                    scale="none",
-                    trace="none",
-                    col=c("white", "black"),
-                    xlab="Sequence Id",
-                    ylab="Primer cluster")
+  if(ncol(matr) >= 2 && nrow(matr) >= 2){
+    gplots::heatmap.2(matr,
+                      scale="none",
+                      trace="none",
+                      col=c("white", "black"),
+                      xlab="Sequence Id",
+                      ylab="Primer cluster")
+  } else {
+    cat("Primer_matrix too small to be plotted.")
+    cat("Please view the Primer_matrix to see the Ids and clusters.")
+  }
 }
 
-
 #' @title new_primers
+#'
 #' @param x A tibble
+#'
 #' @return A primers object
 #' @importFrom tibble is_tibble
 new_primers <- function(x) {
@@ -293,6 +302,8 @@ primers.default <- function(x, ...)
                 "and can only be used on class 'prider'."))
 
 
+#' @param prider_obj A list
+#'
 #' @rdname primers
 #' @export
 #' @importFrom dplyr select
@@ -310,6 +321,8 @@ primers.prider <- function(prider_obj) {
 }
 
 
+#' @param primer_obj A list
+#'
 #' @rdname primers
 #' @export
 #' @importFrom dplyr select
@@ -363,6 +376,8 @@ sequences.default <- function(x, ...)
                 "and can only be used on class 'prider'."))
 
 
+#' @param prider_obj A list
+#'
 #' @rdname sequences
 #' @export
 #' @importFrom dplyr select
@@ -390,6 +405,8 @@ sequences.prider <- function(prider_obj) {
 }
 
 
+#' @param sequence_obj 
+#'
 #' @rdname sequences
 #' @export
 #' @importFrom dplyr select

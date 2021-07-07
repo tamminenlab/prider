@@ -11,7 +11,10 @@ prider(
   fasta_file,
   primer_length = 20,
   minimum_primer_group_size = 10,
-  draws = 10
+  minimum_seq_group_size = 5,
+  cum_cov_decimals = 2,
+  GCcheck = FALSE,
+  GCsimilarity = 0.1
 )
 
 \method{print}{prider}(prider_obj)
@@ -21,11 +24,19 @@ prider(
 \arguments{
 \item{fasta_file}{A string}
 
-\item{primer_length}{A number}
+\item{primer_length}{A number. Sets the primer length.}
 
-\item{minimum_primer_group_size}{A number}
+\item{minimum_primer_group_size}{A number. Sets the minimum number of primers in one primer cluster.}
 
-\item{draws}{A number}
+\item{minimum_seq_group_size}{A number. Sets the minimum number of sequences each primer cluster has to cover.}
+
+\item{cum_cov_decimals}{A number.}
+
+\item{GCcheck}{A logical}
+
+\item{GCsimilarity}{A number}
+
+\item{prider_obj}{A list}
 }
 \value{
 A list containing a sequence conversion table and 

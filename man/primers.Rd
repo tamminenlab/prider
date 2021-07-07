@@ -18,6 +18,11 @@ primers(x)
 
 \method{[}{primers}(primer_obj, ix)
 }
+\arguments{
+\item{prider_obj}{A list}
+
+\item{primer_obj}{A list}
+}
 \description{
 primers
 }
