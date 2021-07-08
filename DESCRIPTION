@@ -1,21 +1,23 @@
 Package: prider
 Title: Primer designer for complex DNA sequence sets
-Version: 0.3
-Date: 2021-04-09
+Version: 0.4
+Date: 2021-07-08
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
-                  role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")))
+      role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")),
+    person("Niina", "Smolander", email = "nijasm@utu.fi",
+      role = c("aut"), comment = c(ORCID = "0000-0003-4329-4785")))
 Maintainer: Manu Tamminen <mavatam@utu.fi>
 Description: Implementation of a BLAST-based primer design algorithm for complex sequence sets.
 License: BSD_3_clause + file LICENSE
-Imports: 
-    Rcpp (>= 1.0.5),
-    dplyr,
-    tidyr,
-    purrr,
-    stringr,
-    magrittr,
-    tibble,
-    blaster,
-    gplots
+Imports:
+  Rcpp (>= 1.0.5),
+  dplyr,
+  tidyr,
+  purrr,
+  stringr,
+  magrittr,
+  tibble,
+  blaster,
+  gplots
 LinkingTo: Rcpp
 RoxygenNote: 7.1.1

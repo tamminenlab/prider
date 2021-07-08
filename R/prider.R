@@ -1,10 +1,10 @@
 #' Prider
-#' 
+#'
 #' Prider implements a BLAST-based primer design algorithm for complex sequence sets.
-#' 
+#'
 #' @docType package
-#' @author Manu Tamminen <mavatam.@utu.fi>
-#' @import Rcpp 
+#' @author Manu Tamminen <mavatam@utu.fi>, Niina Smolander <nijasm@utu.fi>
+#' @import Rcpp
 #' @importFrom Rcpp evalCpp
 #' @useDynLib prider
 #' @name prider
@@ -58,7 +58,7 @@ prepare_primer_df <- function(input_fasta,
     dplyr::as_tibble(.) %>%
     dplyr::select(Seq, Id) %>%
     dplyr::filter(stringr::str_count(Seq, "A|G|C|T") == nchar(Seq))
-  
+
   if(isTRUE(GCcheck)){
     firsthalf <- substr(primers$Seq, 1, (primer_length/2))
     secondhalf <- substr(primers$Seq, ((primer_length/2)+1), primer_length)
@@ -98,14 +98,14 @@ new_prider <- function(x = list()) {
 #' @param GCcheck A logical
 #' @param GCsimilarity A number
 #'
-#' @return A list containing a sequence conversion table and 
+#' @return A list containing a sequence conversion table and
 #'         a primer coverage table
 #' @examples
-#' 
+#'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-#' 
+#'
 #' primer_designs <- prider(test_fasta)
-#' 
+#'
 #' @export
 #' @importFrom dplyr select
 #' @importFrom dplyr mutate
@@ -134,7 +134,7 @@ prider <- function(fasta_file,
                    GCcheck = FALSE,
                    GCsimilarity = 0.1) {
 
-  cat("Tabulating primers...\n")
+  cat("Preparing primer candidates...\n")
   ag_data <-
     prepare_primer_df(fasta_file, primer_length, GCcheck, GCsimilarity)
 
@@ -144,22 +144,21 @@ prider <- function(fasta_file,
     description <- paste0("Primer candidates for file ", fasta_file, ":\n")
 
   cat("Clustering primers...\n")
-
   primer_df_summ <-
     ag_data[[2]] %>%
     dplyr::group_by(Ids) %>%
     dplyr::summarise(Primers = paste0(sort(Seq), collapse=",")) %>%
     dplyr::ungroup()
 
-  abund_clusters <- 
+  abund_clusters <-
     primer_df_summ %>%
     dplyr::mutate(Primer_group_size = lengths(strsplit(primer_df_summ$Primers, ","))) %>%
     dplyr::filter(Primer_group_size >= minimum_primer_group_size)
-  
+
   if(isTRUE(max(lengths(strsplit(abund_clusters$Ids, ","))) < minimum_seq_group_size)) {
     stop("All sequence group sizes smaller than the minimum_seq_group_size resulting to an empty dataframe.\nPlease make the minimum_seq_group_size parameter smaller")
   }
-  
+
   cat("Sampling primers...\n")
   primer_draws <-
     abund_clusters %>%
@@ -168,7 +167,7 @@ prider <- function(fasta_file,
     dplyr::filter(Seq_group_size >= minimum_seq_group_size) %>%
     dplyr::mutate(Sequences = Ids, .keep = "unused")
   primer_draws <- dplyr::arrange(primer_draws, desc(Seq_group_size))
-  
+
   cat("Eliminating redundancies...\n")
   all_seqs <- sort(unique(unlist(strsplit(primer_draws$Sequences, ","))))
   cum_coverage <- c()
@@ -185,23 +184,23 @@ prider <- function(fasta_file,
     primer_draws %>%
     dplyr::group_by(Cumulative_coverage) %>%
     dplyr::arrange(Cumulative_coverage, desc(Seq_group_size), desc(Primer_group_size), .by_group = TRUE) %>%
-    dplyr::slice_max(1) %>% 
+    dplyr::slice_max(1) %>%
     dplyr::select(Primer_group, Primer_group_size,
                   Seq_group_size, Cumulative_coverage,
                   Primers, Sequences) %>%
     dplyr::ungroup(.)
 
-  abund_df <- 
+  abund_df <-
     primer_draws %>%
     select(Sequences, Primer_group) %>%
     mutate(Sequences = strsplit(Sequences, ",")) %>%
     unnest(Sequences)
-  
+
   abund_matrix <- table(abund_df$Primer_group, abund_df$Sequences)
-  
+
   out_matrix <-
     abund_matrix != 0
-  
+
   if(nrow(out_matrix) > 1 && ncol(out_matrix) > 1){
     out_matrix <-
       out_matrix[,colSums(out_matrix)>0]
@@ -214,10 +213,10 @@ prider <- function(fasta_file,
     out_matrix <-
       out_matrix[,colSums(out_matrix)>0]
   }
-  
-  excluded_seqs <- 
+
+  excluded_seqs <-
     filter(ag_data[[1]], !(Id %in% colnames(out_matrix)))
-  
+
   Primer_candidates <-
     filter(primer_draws, primer_draws$Primer_group %in% rownames(out_matrix))
 
@@ -311,7 +310,7 @@ primers.default <- function(x, ...)
 #' @importFrom dplyr mutate
 #' @importFrom dplyr ungroup
 primers.prider <- function(prider_obj) {
-  primer_obj <- 
+  primer_obj <-
     prider_obj$Primer_candidates %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Primers) %>%
     dplyr::group_by(Primer_group) %>%
@@ -389,9 +388,9 @@ sequences.default <- function(x, ...)
 #' @importFrom tidyr unnest
 #' @importFrom stringr str_split
 sequences.prider <- function(prider_obj) {
-  conversion_tbl <- 
+  conversion_tbl <-
     prider_obj$Conversion_table
-  sequence_obj <- 
+  sequence_obj <-
     prider_obj$Primer_candidates %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Sequences) %>%
     dplyr::group_by(Primer_group) %>%
@@ -405,7 +404,7 @@ sequences.prider <- function(prider_obj) {
 }
 
 
-#' @param sequence_obj 
+#' @param sequence_obj
 #'
 #' @rdname sequences
 #' @export
