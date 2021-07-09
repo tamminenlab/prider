@@ -13,5 +13,5 @@ new_primers(x)
 A primers object
 }
 \description{
-new_primers
+Primers object constructor
 }

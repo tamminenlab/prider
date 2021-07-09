@@ -1,7 +1,5 @@
 #' Prider
 #'
-#' Prider implements a BLAST-based primer design algorithm for complex sequence sets.
-#'
 #' @docType package
 #' @author Manu Tamminen <mavatam@utu.fi>, Niina Smolander <nijasm@utu.fi>
 #' @import Rcpp
@@ -13,13 +11,15 @@ NULL
 
 #' Prepare a primer table for downstream analyses
 #'
-#' @param input_fasta A string or a DataFrame containing Id and Seq columns
-#' @param primer_length A number
-#' @param GCcheck A logical
-#' @param GCsimilarity A number
+#' @param input_fasta A string or a DataFrame containing Id and Seq columns.
+#' @param primer_length A number specifying length for the designed primers.
+#' @param GCcheck A logical; check the GC contents of the primer halves.
+#' @param GCsimilarity A number; if GCcheck is performed, this parameter
+#'                     determines the maximum proportional GC content
+#'                     difference between the primer halves.
 #'
 #' @return A list containing sequence id conversions, primer matrix
-#'         and a list of primers with their target sequences
+#'         and a list of primers with their target sequences.
 #' @importFrom dplyr select
 #' @importFrom dplyr as_tibble
 #' @importFrom dplyr group_by
@@ -86,25 +86,37 @@ new_prider <- function(x = list()) {
 }
 
 
-#' Prepare a (nearly) optimal primer coverage of the sample set
+#' Prepare a nearly optimal primer coverage for an input FASTA file
 #'
 #' @title prider
 #'
-#' @param fasta_file A string
+#' @param fasta_file A string. Name of the input FASTA file.
 #' @param primer_length A number. Sets the primer length.
-#' @param minimum_primer_group_size A number. Sets the minimum number of primers in one primer cluster.
-#' @param minimum_seq_group_size A number. Sets the minimum number of sequences each primer cluster has to cover.
-#' @param cum_cov_decimals A number.
-#' @param GCcheck A logical
-#' @param GCsimilarity A number
+#' @param minimum_primer_group_size A number. Sets the minimum number of primers per primer cluster; smaller
+#'                                            primer clusters will be discarded.
+#' @param minimum_seq_group_size A number. Sets the minimum number of target sequences each primer cluster has to cover.
+#' @param cum_cov_decimals A number. Sets the number of decimals for cumulative coverage of primer clusters.
+#'                                   More decimals corresponds to more clusters.
+#' @param GCcheck A logical; check the GC contents of the primer halves.
+#' @param GCsimilarity A number; if GCcheck is performed, this parameter
+#'                     determines the maximum proportional GC content
+#'                     difference between the primer halves.
 #'
 #' @return A list containing a sequence conversion table and
-#'         a primer coverage table
+#'         a primer coverage table.
 #' @examples
 #'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 #'
 #' primer_designs <- prider(test_fasta)
+#'
+#' primers(primer_designs)
+#'
+#' primers(primer_designs)[1]
+#'
+#' sequences(primer_designs)
+#'
+#' sequences(primer_designs)[1]
 #'
 #' @export
 #' @importFrom dplyr select
@@ -230,8 +242,7 @@ prider <- function(fasta_file,
          Primer_matrix = out_matrix ))
 }
 
-#' @param prider_obj A list
-#'
+#' @title print.prider
 #' @rdname prider
 #' @export
 #' @importFrom dplyr count
@@ -256,8 +267,7 @@ print.prider <- function(prider_obj) {
 }
 
 
-#' @param prider_obj A list
-#'
+#' @title plot.prider
 #' @rdname prider
 #' @export
 #' @importFrom gplots heatmap.2
@@ -276,10 +286,10 @@ plot.prider <- function(prider_obj) {
   }
 }
 
+#' Primers object constructor
+#'
 #' @title new_primers
-#'
 #' @param x A tibble
-#'
 #' @return A primers object
 #' @importFrom tibble is_tibble
 new_primers <- function(x) {
@@ -288,12 +298,25 @@ new_primers <- function(x) {
 }
 
 
+#' Definitions for the S3 methods for the primers classes
+#'
 #' @title primers
+#' @examples
+#'
+#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#'
+#' primer_designs <- prider(test_fasta)
+#'
+#' primers(primer_designs)
+#'
+#' primers(primer_designs)[1]
+#'
 #' @export
 primers <- function(x) UseMethod("primers")
 
 
 #' @rdname primers
+#' @method primers default
 #' @export
 primers.default <- function(x, ...)
   warning(paste("Function 'primer' does not know how to handle object of class",
@@ -301,9 +324,8 @@ primers.default <- function(x, ...)
                 "and can only be used on class 'prider'."))
 
 
-#' @param prider_obj A list
-#'
 #' @rdname primers
+#' @method primers prider
 #' @export
 #' @importFrom dplyr select
 #' @importFrom dplyr group_by
@@ -320,8 +342,6 @@ primers.prider <- function(prider_obj) {
 }
 
 
-#' @param primer_obj A list
-#'
 #' @rdname primers
 #' @export
 #' @importFrom dplyr select
@@ -352,6 +372,8 @@ print.primers <- function(primer_obj) {
 }
 
 
+#' Sequences object constructor
+#'
 #' @title new_sequences
 #' @param x A tibble
 #' @return A sequences object
@@ -362,7 +384,19 @@ new_sequences <- function(x) {
 }
 
 
+#' Definitions for the S3 methods for the sequences classes
+#'
 #' @title sequences
+#' @examples
+#'
+#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#'
+#' primer_designs <- prider(test_fasta)
+#'
+#' sequences(primer_designs)
+#'
+#' sequences(primer_designs)[1]
+#'
 #' @export
 sequences <- function(x) UseMethod("sequences")
 
@@ -375,8 +409,6 @@ sequences.default <- function(x, ...)
                 "and can only be used on class 'prider'."))
 
 
-#' @param prider_obj A list
-#'
 #' @rdname sequences
 #' @export
 #' @importFrom dplyr select
@@ -404,8 +436,6 @@ sequences.prider <- function(prider_obj) {
 }
 
 
-#' @param sequence_obj
-#'
 #' @rdname sequences
 #' @export
 #' @importFrom dplyr select

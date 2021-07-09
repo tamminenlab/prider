@@ -22,30 +22,30 @@ prider(
 \method{plot}{prider}(prider_obj)
 }
 \arguments{
-\item{fasta_file}{A string}
+\item{fasta_file}{A string. Name of the input FASTA file.}
 
 \item{primer_length}{A number. Sets the primer length.}
 
-\item{minimum_primer_group_size}{A number. Sets the minimum number of primers in one primer cluster.}
+\item{minimum_primer_group_size}{A number. Sets the minimum number of primers per primer cluster; smaller
+primer clusters will be discarded.}
 
-\item{minimum_seq_group_size}{A number. Sets the minimum number of sequences each primer cluster has to cover.}
+\item{minimum_seq_group_size}{A number. Sets the minimum number of target sequences each primer cluster has to cover.}
 
-\item{cum_cov_decimals}{A number.}
+\item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative coverage of primer clusters.
+More decimals corresponds to more clusters.}
 
-\item{GCcheck}{A logical}
+\item{GCcheck}{A logical; check the GC contents of the primer halves.}
 
-\item{GCsimilarity}{A number}
-
-\item{prider_obj}{A list}
+\item{GCsimilarity}{A number; if GCcheck is performed, this parameter
+determines the maximum proportional GC content
+difference between the primer halves.}
 }
 \value{
-A list containing a sequence conversion table and 
-        a primer coverage table
+A list containing a sequence conversion table and
+        a primer coverage table.
 }
 \description{
-Prider implements a BLAST-based primer design algorithm for complex sequence sets.
-
-Prepare a (nearly) optimal primer coverage of the sample set
+Prepare a nearly optimal primer coverage for an input FASTA file
 }
 \examples{
 
@@ -53,7 +53,15 @@ test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 
 primer_designs <- prider(test_fasta)
 
+primers(primer_designs)
+
+primers(primer_designs)[1]
+
+sequences(primer_designs)
+
+sequences(primer_designs)[1]
+
 }
 \author{
-Manu Tamminen <mavatam.@utu.fi>
+Manu Tamminen <mavatam@utu.fi>, Niina Smolander <nijasm@utu.fi>
 }

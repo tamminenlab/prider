@@ -18,11 +18,17 @@ primers(x)
 
 \method{[}{primers}(primer_obj, ix)
 }
-\arguments{
-\item{prider_obj}{A list}
-
-\item{primer_obj}{A list}
-}
 \description{
-primers
+Definitions for the S3 methods for the primers classes
+}
+\examples{
+
+test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+
+primer_designs <- prider(test_fasta)
+
+primers(primer_designs)
+
+primers(primer_designs)[1]
+
 }

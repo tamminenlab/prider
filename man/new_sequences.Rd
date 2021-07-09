@@ -13,5 +13,5 @@ new_sequences(x)
 A sequences object
 }
 \description{
-new_sequences
+Sequences object constructor
 }

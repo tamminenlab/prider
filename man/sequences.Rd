@@ -18,11 +18,17 @@ sequences(x)
 
 \method{[}{sequences}(sequence_obj, ix)
 }
-\arguments{
-\item{prider_obj}{A list}
-
-\item{sequence_obj}{}
-}
 \description{
-sequences
+Definitions for the S3 methods for the sequences classes
+}
+\examples{
+
+test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+
+primer_designs <- prider(test_fasta)
+
+sequences(primer_designs)
+
+sequences(primer_designs)[1]
+
 }

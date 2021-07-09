@@ -12,17 +12,19 @@ prepare_primer_df(
 )
 }
 \arguments{
-\item{input_fasta}{A string or a DataFrame containing Id and Seq columns}
+\item{input_fasta}{A string or a DataFrame containing Id and Seq columns.}
 
-\item{primer_length}{A number}
+\item{primer_length}{A number specifying length for the designed primers.}
 
-\item{GCcheck}{A logical}
+\item{GCcheck}{A logical; check the GC contents of the primer halves.}
 
-\item{GCsimilarity}{A number}
+\item{GCsimilarity}{A number; if GCcheck is performed, this parameter
+determines the maximum proportional GC content
+difference between the primer halves.}
 }
 \value{
 A list containing sequence id conversions, primer matrix
-        and a list of primers with their target sequences
+        and a list of primers with their target sequences.
 }
 \description{
 Prepare a primer table for downstream analyses
