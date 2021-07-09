@@ -15,25 +15,27 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
   return acc;
 }
 
-//' Creates all primer candidates for a group of sequences using a sliding window.
-//' 
-//' @param seq_table A DataFrame
-//' @param window_size An integer
-//' @return A DataFrame containing columns for sequence ids, 
-//'         indexes joined ids and indexes and the primer sequences
-//' 
+//' Sliding window to create chunks of DNA sequences
+//'
+//' @title chunker
+//' @description Creates all primer candidates for a group of sequences using a sliding window.
+//' @param seq_table A DataFrame containing a column for sequence ids (Id) and sequences (Seq).
+//' @param window_size An integer. Set the sliding window width.
+//' @return A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
+//' @examples
+//'
 //' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-//' 
+//'
 //' chunks <- chunker(test_fasta)
-//' 
+//'
 //' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,
-                  int window_size = 20) 
+                  int window_size = 20)
 {
   std::vector< std::string > ids = seq_table["Id"];
   std::vector< std::string > seqs = seq_table["Seq"];
-  
+
   std::vector< std::string > seq_chunk_acc;
   std::vector< std::string > seq_id_acc;
   std::vector< std::string > seq_ix_acc;

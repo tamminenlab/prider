@@ -2,23 +2,28 @@
 % Please edit documentation in R/RcppExports.R
 \name{chunker}
 \alias{chunker}
-\title{Creates all primer candidates for a group of sequences using a sliding window.}
+\title{chunker}
 \usage{
 chunker(seq_table, window_size = 20L)
 }
 \arguments{
-\item{seq_table}{A DataFrame}
+\item{seq_table}{A DataFrame containing a column for sequence ids (Id) and sequences (Seq).}
 
-\item{window_size}{An integer}
+\item{window_size}{An integer. Set the sliding window width.}
 }
 \value{
-A DataFrame containing columns for sequence ids, 
-        indexes joined ids and indexes and the primer sequences
+A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
+}
+\description{
+Creates all primer candidates for a group of sequences using a sliding window.
+}
+\details{
+Sliding window to create chunks of DNA sequences
+}
+\examples{
 
 test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 
 chunks <- chunker(test_fasta)
-}
-\description{
-Creates all primer candidates for a group of sequences using a sliding window.
+
 }
