@@ -244,15 +244,17 @@ prider <- function(fasta_file,
 
 #' @title print.prider
 #' @rdname prider
+#' @param x An object from prider function.
+#' @param ... Other arguments.
 #' @export
 #' @importFrom dplyr count
-print.prider <- function(prider_obj) {
-  descr <- prider_obj$Description
-  input_seqs <- nrow(prider_obj$Conversion)
-  excl_seqs <- nrow(prider_obj$Excluded_sequences)
+print.prider <- function(x, ...) {
+  descr <- x$Description
+  input_seqs <- nrow(x$Conversion)
+  excl_seqs <- nrow(x$Excluded_sequences)
   incl_seqs <- input_seqs - excl_seqs
-  primer_candidates <- sum(prider_obj$Primer_candidates$Primer_group_size)
-  groups <- nrow(dplyr::count(prider_obj$Primer_candidates, Primer_group))
+  primer_candidates <- sum(x$Primer_candidates$Primer_group_size)
+  groups <- nrow(dplyr::count(x$Primer_candidates, Primer_group))
   total <- paste(input_seqs, "input sequences;", incl_seqs, "included and", excl_seqs, "excluded.\n")
   cands <- paste(primer_candidates, "primer candidates in", groups, "groups.\n")
   cat(descr)
@@ -269,10 +271,12 @@ print.prider <- function(prider_obj) {
 
 #' @title plot.prider
 #' @rdname prider
+#' @param x An object from prider function.
+#' @param ... Other arguments.
 #' @export
 #' @importFrom gplots heatmap.2
-plot.prider <- function(prider_obj) {
-  matr <- prider_obj$Primer_matrix * 1
+plot.prider <- function(x, ...) {
+  matr <- x$Primer_matrix * 1
   if(ncol(matr) >= 2 && nrow(matr) >= 2){
     gplots::heatmap.2(matr,
                       scale="none",
@@ -301,6 +305,9 @@ new_primers <- function(x) {
 #' Definitions for the S3 methods for the primers classes
 #'
 #' @title primers
+#' @param prider_obj An object from prider function.
+#' @param ix A number. The number of the primer cluster.
+#' @return primer_obj
 #' @examples
 #'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
@@ -312,20 +319,18 @@ new_primers <- function(x) {
 #' primers(primer_designs)[1]
 #'
 #' @export
-primers <- function(x) UseMethod("primers")
+primers <- function(prider_obj) UseMethod("primers")
 
 
 #' @rdname primers
-#' @method primers default
 #' @export
-primers.default <- function(x, ...)
+primers.default <- function(prider_obj)
   warning(paste("Function 'primer' does not know how to handle object of class",
-                class(x),
+                class(prider_obj),
                 "and can only be used on class 'prider'."))
 
 
 #' @rdname primers
-#' @method primers prider
 #' @export
 #' @importFrom dplyr select
 #' @importFrom dplyr group_by
@@ -343,14 +348,16 @@ primers.prider <- function(prider_obj) {
 
 
 #' @rdname primers
+#' @param x An object from sequence function.
+#' @param ... Other arguments.
 #' @export
 #' @importFrom dplyr select
-print.primers <- function(primer_obj) {
+print.primers <- function(x, ...) {
   cat("To access the primers within a group,\n")
   cat("please use subsetting, eg. primers(.)[42]\n")
   cat("\n")
-  class(primer_obj) <- "data.frame"
-  primer_obj %>%
+  class(x) <- "data.frame"
+  x %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
     data.frame %>%
     print(.)
@@ -358,6 +365,8 @@ print.primers <- function(primer_obj) {
 
 
 #' @rdname primers
+#' @param primer_obj An object from sequence function.
+#' @param ix A number. The number of the primer cluster.
 #' @export
 #' @importFrom dplyr filter
 #' @importFrom dplyr mutate
@@ -387,6 +396,9 @@ new_sequences <- function(x) {
 #' Definitions for the S3 methods for the sequences classes
 #'
 #' @title sequences
+#' @param prider_obj An object from prider function.
+#' @param ix A number. The number of the primer cluster.
+#' @return sequence_obj
 #' @examples
 #'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
@@ -398,12 +410,12 @@ new_sequences <- function(x) {
 #' sequences(primer_designs)[1]
 #'
 #' @export
-sequences <- function(x) UseMethod("sequences")
+sequences <- function(prider_obj) UseMethod("sequences")
 
 
 #' @rdname sequences
 #' @export
-sequences.default <- function(x, ...)
+sequences.default <- function(prider_obj)
   warning(paste("Function 'sequences' does not know how to handle object of class",
                 class(x),
                 "and can only be used on class 'prider'."))
@@ -437,14 +449,16 @@ sequences.prider <- function(prider_obj) {
 
 
 #' @rdname sequences
+#' @param x An object from sequence function.
+#' @param ... Other arguments.
 #' @export
 #' @importFrom dplyr select
-print.sequences <- function(sequence_obj) {
+print.sequences <- function(x, ...) {
   cat("To access the sequences within a group,\n")
   cat("please use subsetting, eg. sequences(.)[42]\n")
   cat("\n")
-  class(sequence_obj) <- "data.frame"
-  sequence_obj %>%
+  class(x) <- "data.frame"
+  x %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size) %>%
     data.frame %>%
     print(.)
@@ -452,6 +466,8 @@ print.sequences <- function(sequence_obj) {
 
 
 #' @rdname sequences
+#' @param sequence_obj An object from sequence function.
+#' @param ix A number. The number of the primer cluster.
 #' @export
 #' @importFrom dplyr filter
 `[.sequences` <- function(sequence_obj, ix) {

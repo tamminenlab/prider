@@ -8,15 +8,29 @@
 \alias{[.sequences}
 \title{sequences}
 \usage{
-sequences(x)
+sequences(prider_obj)
 
-\method{sequences}{default}(x, ...)
+\method{sequences}{default}(prider_obj)
 
 \method{sequences}{prider}(prider_obj)
 
-\method{print}{sequences}(sequence_obj)
+\method{print}{sequences}(x, ...)
 
 \method{[}{sequences}(sequence_obj, ix)
+}
+\arguments{
+\item{prider_obj}{An object from prider function.}
+
+\item{x}{An object from sequence function.}
+
+\item{...}{Other arguments.}
+
+\item{sequence_obj}{An object from sequence function.}
+
+\item{ix}{A number. The number of the primer cluster.}
+}
+\value{
+sequence_obj
 }
 \description{
 Definitions for the S3 methods for the sequences classes

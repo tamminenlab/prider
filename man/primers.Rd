@@ -8,15 +8,29 @@
 \alias{[.primers}
 \title{primers}
 \usage{
-primers(x)
+primers(prider_obj)
 
-\method{primers}{default}(x, ...)
+\method{primers}{default}(prider_obj)
 
 \method{primers}{prider}(prider_obj)
 
-\method{print}{primers}(primer_obj)
+\method{print}{primers}(x, ...)
 
 \method{[}{primers}(primer_obj, ix)
+}
+\arguments{
+\item{prider_obj}{An object from prider function.}
+
+\item{x}{An object from sequence function.}
+
+\item{...}{Other arguments.}
+
+\item{primer_obj}{An object from sequence function.}
+
+\item{ix}{A number. The number of the primer cluster.}
+}
+\value{
+primer_obj
 }
 \description{
 Definitions for the S3 methods for the primers classes

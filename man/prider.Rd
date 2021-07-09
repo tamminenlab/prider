@@ -17,9 +17,9 @@ prider(
   GCsimilarity = 0.1
 )
 
-\method{print}{prider}(prider_obj)
+\method{print}{prider}(x, ...)
 
-\method{plot}{prider}(prider_obj)
+\method{plot}{prider}(x, ...)
 }
 \arguments{
 \item{fasta_file}{A string. Name of the input FASTA file.}
@@ -39,6 +39,10 @@ More decimals corresponds to more clusters.}
 \item{GCsimilarity}{A number; if GCcheck is performed, this parameter
 determines the maximum proportional GC content
 difference between the primer halves.}
+
+\item{x}{An object from prider function.}
+
+\item{...}{Other arguments.}
 }
 \value{
 A list containing a sequence conversion table and
