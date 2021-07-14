@@ -45,8 +45,8 @@ difference between the primer halves.}
 \item{...}{Other arguments.}
 }
 \value{
-A list containing a sequence conversion table and
-        a primer coverage table.
+A list containing a sequence conversion table, primer candidates table,
+        excluded sequences table and a primer coverage table.
 }
 \description{
 Prepare a nearly optimal primer coverage for an input FASTA file

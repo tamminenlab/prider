@@ -1,13 +1,13 @@
 Package: prider
 Title: Primer Designer for Complex DNA Sequence Sets
-Version: 0.4
+Version: 0.5
 Date: 2021-07-08
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
       role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")),
     person("Niina", "Smolander", email = "nijasm@utu.fi",
       role = c("aut"), comment = c(ORCID = "0000-0003-4329-4785")))
 Maintainer: Manu Tamminen <mavatam@utu.fi>
-Description: Prepare a nearly optimal primer coverage for an input FASTA file
+Description: Prepare a nearly optimal primer coverage for an input FASTA file.
 License: BSD_3_clause + file LICENSE
 Imports:
   Rcpp (>= 1.0.5),
@@ -21,3 +21,4 @@ Imports:
   gplots
 LinkingTo: Rcpp
 RoxygenNote: 7.1.1
+Encoding: UTF-8

@@ -8,6 +8,7 @@
 #' @name prider
 NULL
 
+utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", "Ids", "Primer_group_size", "Seq_group_size", "Cumulative_coverage", "Sequences", "Original_id", "x", "Sequence"))
 
 #' Prepare a primer table for downstream analyses
 #'
@@ -102,8 +103,8 @@ new_prider <- function(x = list()) {
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
 #'
-#' @return A list containing a sequence conversion table and
-#'         a primer coverage table.
+#' @return A list containing a sequence conversion table, primer candidates table,
+#'         excluded sequences table and a primer coverage table.
 #' @examples
 #'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")

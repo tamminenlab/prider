@@ -20,10 +20,3 @@ Creates all primer candidates for a group of sequences using a sliding window.
 \details{
 Sliding window to create chunks of DNA sequences
 }
-\examples{
-
-test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-
-chunks <- chunker(test_fasta)
-
-}
