@@ -23,6 +23,14 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
 //' @param window_size An integer. Set the sliding window width.
 //' @return A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
 //'
+//' @examples
+//' 
+//' test_csv <- system.file("extdata", "test.csv", package = "prider")
+//'
+//' test_csv <- read.csv(test_csv)
+//'
+//' chunks <- chunker(test_csv)
+//'
 //' @export
 // [[Rcpp::export]]
 DataFrame chunker(DataFrame seq_table,

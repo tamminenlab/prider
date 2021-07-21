@@ -20,3 +20,12 @@ Creates all primer candidates for a group of sequences using a sliding window.
 \details{
 Sliding window to create chunks of DNA sequences
 }
+\examples{
+
+test_csv <- system.file("extdata", "test.csv", package = "prider")
+
+test_csv <- read.csv(test_csv)
+
+chunks <- chunker(test_csv)
+
+}
