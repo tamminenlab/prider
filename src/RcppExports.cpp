@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // chunker
 DataFrame chunker(DataFrame seq_table, int window_size);
 RcppExport SEXP _prider_chunker(SEXP seq_tableSEXP, SEXP window_sizeSEXP) {

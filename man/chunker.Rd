@@ -22,8 +22,10 @@ Sliding window to create chunks of DNA sequences
 }
 \examples{
 
-test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+test_csv <- system.file("extdata", "test.csv", package = "prider")
 
-chunks <- chunker(test_fasta)
+test_csv <- read.csv(test_csv)
+
+chunks <- chunker(test_csv)
 
 }

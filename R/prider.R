@@ -8,6 +8,7 @@
 #' @name prider
 NULL
 
+utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", "Ids", "Primer_group_size", "Seq_group_size", "Cumulative_coverage", "Sequences", "Original_id", "x", "Sequence"))
 
 #' Prepare a primer table for downstream analyses
 #'
@@ -86,7 +87,7 @@ new_prider <- function(x = list()) {
 }
 
 
-#' Prepare a nearly optimal primer coverage for an input FASTA file
+#' Prepare a nearly optimal primer coverage for an input FASTA file.
 #'
 #' @title prider
 #'
@@ -94,28 +95,29 @@ new_prider <- function(x = list()) {
 #' @param primer_length A number. Sets the primer length.
 #' @param minimum_primer_group_size A number. Sets the minimum number of primers per primer cluster; smaller
 #'                                            primer clusters will be discarded.
-#' @param minimum_seq_group_size A number. Sets the minimum number of target sequences each primer cluster has to cover.
+#' @param minimum_seq_group_size A number. Sets the minimum number of target sequences (Ids) each primer cluster has to cover.
 #' @param cum_cov_decimals A number. Sets the number of decimals for cumulative coverage of primer clusters.
 #'                                   More decimals corresponds to more clusters.
-#' @param GCcheck A logical; check the GC contents of the primer halves.
-#' @param GCsimilarity A number; if GCcheck is performed, this parameter
+#' @param GCcheck A logical. Are the GC contents of the primer halves checked.
+#' @param GCsimilarity A decimal. If GCcheck is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
 #'
-#' @return A list containing a sequence conversion table and
-#'         a primer coverage table.
+#' @return A list containing a sequence conversion table, primer candidates table,
+#'         excluded sequences table and a primer coverage table.
 #' @examples
-#'
 #' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-#'
+#' 
+#' # Runs Prider with the default values:
 #' primer_designs <- prider(test_fasta)
 #'
+#' # Returns all the primers
 #' primers(primer_designs)
-#'
+#' # Returns the primers of a specific primer group
 #' primers(primer_designs)[1]
-#'
+#' # Returns all the sequences 
 #' sequences(primer_designs)
-#'
+#' # Returns the sequence of a specific Id 
 #' sequences(primer_designs)[1]
 #'
 #' @export

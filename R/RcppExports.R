@@ -8,11 +8,14 @@
 #' @param seq_table A DataFrame containing a column for sequence ids (Id) and sequences (Seq).
 #' @param window_size An integer. Set the sliding window width.
 #' @return A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
+#'
 #' @examples
+#' 
+#' test_csv <- system.file("extdata", "test.csv", package = "prider")
 #'
-#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#' test_csv <- read.csv(test_csv)
 #'
-#' chunks <- chunker(test_fasta)
+#' chunks <- chunker(test_csv)
 #'
 #' @export
 chunker <- function(seq_table, window_size = 20L) {

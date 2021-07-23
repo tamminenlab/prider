@@ -29,14 +29,14 @@ prider(
 \item{minimum_primer_group_size}{A number. Sets the minimum number of primers per primer cluster; smaller
 primer clusters will be discarded.}
 
-\item{minimum_seq_group_size}{A number. Sets the minimum number of target sequences each primer cluster has to cover.}
+\item{minimum_seq_group_size}{A number. Sets the minimum number of target sequences (Ids) each primer cluster has to cover.}
 
 \item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative coverage of primer clusters.
 More decimals corresponds to more clusters.}
 
-\item{GCcheck}{A logical; check the GC contents of the primer halves.}
+\item{GCcheck}{A logical. Are the GC contents of the primer halves checked.}
 
-\item{GCsimilarity}{A number; if GCcheck is performed, this parameter
+\item{GCsimilarity}{A decimal. If GCcheck is performed, this parameter
 determines the maximum proportional GC content
 difference between the primer halves.}
 
@@ -45,24 +45,25 @@ difference between the primer halves.}
 \item{...}{Other arguments.}
 }
 \value{
-A list containing a sequence conversion table and
-        a primer coverage table.
+A list containing a sequence conversion table, primer candidates table,
+        excluded sequences table and a primer coverage table.
 }
 \description{
-Prepare a nearly optimal primer coverage for an input FASTA file
+Prepare a nearly optimal primer coverage for an input FASTA file.
 }
 \examples{
-
 test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 
+# Runs Prider with the default values:
 primer_designs <- prider(test_fasta)
 
+# Returns all the primers
 primers(primer_designs)
-
+# Returns the primers of a specific primer group
 primers(primer_designs)[1]
-
+# Returns all the sequences 
 sequences(primer_designs)
-
+# Returns the sequence of a specific Id 
 sequences(primer_designs)[1]
 
 }
