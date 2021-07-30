@@ -187,9 +187,13 @@ prider <- function(fasta_file,
     primer_df_summ %>%
     dplyr::mutate(Primer_group_size = lengths(strsplit(primer_df_summ$Primers, ","))) %>%
     dplyr::filter(Primer_group_size >= minimum_primer_group_size)
+  
+  if(isTRUE(nrow(abund_clusters) < 1)){
+    stop("No primer candidates left in the data after clustering. \nPlease change the parameters or check the input FASTA file.")
+  }
 
   if(isTRUE(max(lengths(strsplit(abund_clusters$Ids, ","))) < minimum_seq_group_size)) {
-    stop("All sequence group sizes smaller than the minimum_seq_group_size resulting to an empty dataframe.\nPlease make the minimum_seq_group_size parameter smaller")
+    stop("All sequence group sizes smaller than the minimum_seq_group_size resulting to an empty dataframe.\nPlease make the minimum_seq_group_size parameter smaller or change other parameters.")
   }
 
   cat("Sampling primers...\n")
