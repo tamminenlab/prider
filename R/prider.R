@@ -14,8 +14,11 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 #'
 #' @param input_fasta A string or a DataFrame containing Id and Seq columns.
 #' @param primer_length A number specifying length for the designed primers.
-#' @param GCcheck A logical; check the GC contents of the primer halves.
-#' @param GCsimilarity A number; if GCcheck is performed, this parameter
+#' @param GCcheck A logical. Checks the GC content of the primers.
+#' @param GCmin A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.
+#' @param GCmax A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.
+#' @param GChalves A logical. Checks the GC contents of the primer halves.
+#' @param GCsimilarity A number. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
 #'
@@ -32,6 +35,9 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 prepare_primer_df <- function(input_fasta,
                               primer_length = 20,
                               GCcheck = FALSE,
+                              GCmin = 0.4,
+                              GCmax = 0.6,
+                              GChalves = FALSE,
                               GCsimilarity = 0.1) {
   if (is.character(input_fasta))
       input_fasta <-
@@ -61,10 +67,15 @@ prepare_primer_df <- function(input_fasta,
     dplyr::filter(stringr::str_count(Seq, "A|G|C|T") == nchar(Seq))
 
   if(isTRUE(GCcheck)){
+    content <- stringr::str_count(primers$Seq, "G|C") / nchar(primers$Seq)
+    dplyr::filter(primers, content >= GCmin & content <= GCmax) -> primers
+  }
+  
+  if(isTRUE(GChalves)){
     firsthalf <- substr(primers$Seq, 1, (primer_length/2))
     secondhalf <- substr(primers$Seq, ((primer_length/2)+1), primer_length)
-    firsthalf <- str_count(firsthalf, "G|C") / nchar(firsthalf)
-    secondhalf <- str_count(secondhalf, "G|C") / nchar(secondhalf)
+    firsthalf <- stringr::str_count(firsthalf, "G|C") / nchar(firsthalf)
+    secondhalf <- stringr::str_count(secondhalf, "G|C") / nchar(secondhalf)
     dplyr::filter(primers, abs(firsthalf-secondhalf) <= GCsimilarity) -> primers
   }
 
@@ -98,8 +109,11 @@ new_prider <- function(x = list()) {
 #' @param minimum_seq_group_size A number. Sets the minimum number of target sequences (Ids) each primer cluster has to cover.
 #' @param cum_cov_decimals A number. Sets the number of decimals for cumulative coverage of primer clusters.
 #'                                   More decimals corresponds to more clusters.
-#' @param GCcheck A logical. Are the GC contents of the primer halves checked.
-#' @param GCsimilarity A decimal. If GCcheck is performed, this parameter
+#' @param GCcheck A logical Checks the GC content of the primers.
+#' @param GCmin A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.
+#' @param GCmax A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.
+#' @param GChalves A logical. Checks the GC contents of the primer halves.
+#' @param GCsimilarity A decimal. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
 #'
@@ -111,14 +125,16 @@ new_prider <- function(x = list()) {
 #' # Runs Prider with the default values:
 #' primer_designs <- prider(test_fasta)
 #'
-#' # Returns all the primers
+#' # Returns all the primers:
 #' primers(primer_designs)
-#' # Returns the primers of a specific primer group
+#' # Returns the primers of a specific primer group:
 #' primers(primer_designs)[1]
-#' # Returns all the sequences 
+#' # Returns all the sequences:
 #' sequences(primer_designs)
-#' # Returns the sequence of a specific Id 
+#' # Returns the sequence of a specific Id:
 #' sequences(primer_designs)[1]
+#' # Plots the primers and target sequence Ids as a heatmap:
+#' plot(primer_designs)
 #'
 #' @export
 #' @importFrom dplyr select
@@ -146,11 +162,14 @@ prider <- function(fasta_file,
                    minimum_seq_group_size = 5,
                    cum_cov_decimals = 2,
                    GCcheck = FALSE,
+                   GCmin = 0.4,
+                   GCmax = 0.6,
+                   GChalves = FALSE,
                    GCsimilarity = 0.1) {
 
   cat("Preparing primer candidates...\n")
   ag_data <-
-    prepare_primer_df(fasta_file, primer_length, GCcheck, GCsimilarity)
+    prepare_primer_df(fasta_file, primer_length, GCcheck, GCmin, GCmax, GChalves, GCsimilarity)
 
   if (!is.character(fasta_file))
     description <- paste0("Primer candidates for DataFrame ", deparse(substitute(fasta_file)), ":\n")
@@ -187,7 +206,7 @@ prider <- function(fasta_file,
   cum_coverage <- c()
   cum_seqs <- c()
   for (seqs in primer_draws$Sequences) {
-    seqs <- unlist(str_split(seqs, ","))
+    seqs <- unlist(stringr::str_split(seqs, ","))
     cum_seqs <- unique(c(cum_seqs, seqs))
     cover <- sum(all_seqs %in% cum_seqs) / length(all_seqs)
     cum_coverage <- c(cum_coverage, cover)
@@ -275,6 +294,14 @@ print.prider <- function(x, ...) {
 #' @rdname prider
 #' @param x An object from prider function.
 #' @param ... Other arguments.
+#' @examples
+#' 
+#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+#' primer_designs <- prider(test_fasta)
+#' 
+#' # Plots the primers and target sequence Ids as a heatmap:
+#' plot(primer_designs)
+#' 
 #' @export
 #' @importFrom gplots heatmap.2
 plot.prider <- function(x, ...) {
@@ -343,7 +370,7 @@ primers.prider <- function(prider_obj) {
     prider_obj$Primer_candidates %>%
     dplyr::select(Primer_group, Seq_group_size, Primer_group_size, Primers) %>%
     dplyr::group_by(Primer_group) %>%
-    dplyr::mutate(Primers = str_split(Primers, ",")) %>%
+    dplyr::mutate(Primers = stringr::str_split(Primers, ",")) %>%
     dplyr::ungroup(.)
   new_primers(primer_obj)
 }

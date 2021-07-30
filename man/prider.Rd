@@ -14,6 +14,9 @@ prider(
   minimum_seq_group_size = 5,
   cum_cov_decimals = 2,
   GCcheck = FALSE,
+  GCmin = 0.4,
+  GCmax = 0.6,
+  GChalves = FALSE,
   GCsimilarity = 0.1
 )
 
@@ -34,9 +37,15 @@ primer clusters will be discarded.}
 \item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative coverage of primer clusters.
 More decimals corresponds to more clusters.}
 
-\item{GCcheck}{A logical. Are the GC contents of the primer halves checked.}
+\item{GCcheck}{A logical Checks the GC content of the primers.}
 
-\item{GCsimilarity}{A decimal. If GCcheck is performed, this parameter
+\item{GCmin}{A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.}
+
+\item{GCmax}{A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.}
+
+\item{GChalves}{A logical. Checks the GC contents of the primer halves.}
+
+\item{GCsimilarity}{A decimal. If GChalves is performed, this parameter
 determines the maximum proportional GC content
 difference between the primer halves.}
 
@@ -57,14 +66,23 @@ test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 # Runs Prider with the default values:
 primer_designs <- prider(test_fasta)
 
-# Returns all the primers
+# Returns all the primers:
 primers(primer_designs)
-# Returns the primers of a specific primer group
+# Returns the primers of a specific primer group:
 primers(primer_designs)[1]
-# Returns all the sequences 
+# Returns all the sequences:
 sequences(primer_designs)
-# Returns the sequence of a specific Id 
+# Returns the sequence of a specific Id:
 sequences(primer_designs)[1]
+# Plots the primers and target sequence Ids as a heatmap:
+plot(primer_designs)
+
+
+test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+primer_designs <- prider(test_fasta)
+
+# Plots the primers and target sequence Ids as a heatmap:
+plot(primer_designs)
 
 }
 \author{
