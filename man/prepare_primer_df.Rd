@@ -8,6 +8,9 @@ prepare_primer_df(
   input_fasta,
   primer_length = 20,
   GCcheck = FALSE,
+  GCmin = 0.4,
+  GCmax = 0.6,
+  GChalves = FALSE,
   GCsimilarity = 0.1
 )
 }
@@ -16,9 +19,15 @@ prepare_primer_df(
 
 \item{primer_length}{A number specifying length for the designed primers.}
 
-\item{GCcheck}{A logical; check the GC contents of the primer halves.}
+\item{GCcheck}{A logical. Checks the GC content of the primers.}
 
-\item{GCsimilarity}{A number; if GCcheck is performed, this parameter
+\item{GCmin}{A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.}
+
+\item{GCmax}{A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.}
+
+\item{GChalves}{A logical. Checks the GC contents of the primer halves.}
+
+\item{GCsimilarity}{A number. If GChalves is performed, this parameter
 determines the maximum proportional GC content
 difference between the primer halves.}
 }
