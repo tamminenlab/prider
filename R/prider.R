@@ -12,12 +12,12 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 
 #' Prepare a primer table for downstream analyses
 #'
-#' @param input_fasta A string or a DataFrame containing Id and Seq columns.
-#' @param primer_length A number specifying length for the designed primers.
-#' @param GCcheck A logical. Checks the GC content of the primers.
+#' @param input_fasta A string. Name or filepath of the input FASTA file.
+#' @param primer_length A number. Sets the primer length. For applications involving two adjacent probes, the value should be set to two-fold the length of a single probe.
+#' @param GCcheck A logical. If TRUE, checks the GC contents of the primers and filters based on GCmin and GCmax.
 #' @param GCmin A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.
 #' @param GCmax A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.
-#' @param GChalves A logical. Checks the GC contents of the primer halves.
+#' @param GChalves A logical. If TRUE, checks the GC contents separately for both halves of the primers and filters based on GCsimilarity. For example for applications involving two adjacent probes.
 #' @param GCsimilarity A number. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
@@ -102,17 +102,20 @@ new_prider <- function(x = list()) {
 #'
 #' @title prider
 #'
-#' @param fasta_file A string. Name of the input FASTA file.
-#' @param primer_length A number. Sets the primer length.
+#' @param fasta_file A string. Name or filepath of the input FASTA file.
+#' @param primer_length A number. Sets the primer length. For applications involving two adjacent probes, the value should be set to two-fold the length of a single probe.
 #' @param minimum_primer_group_size A number. Sets the minimum number of primers per primer cluster; smaller
 #'                                            primer clusters will be discarded.
-#' @param minimum_seq_group_size A number. Sets the minimum number of target sequences (Ids) each primer cluster has to cover.
+#' @param minimum_seq_group_size A number. Sets the minimum number of sequences each primer cluster has to cover.
 #' @param cum_cov_decimals A number. Sets the number of decimals for cumulative coverage of primer clusters.
-#'                                   More decimals corresponds to more clusters.
-#' @param GCcheck A logical Checks the GC content of the primers.
+#'                                   Generally, lower value corresponds to less clusters and higher value to 
+#'                                   more clusters in the output. If the clusters do not cover the input sequences
+#'                                   sufficiently, increasing this value may increase the coverage. If the clusters
+#'                                   overlap too much, lowering the value may reduce this effect. Recommended range 1-4.
+#' @param GCcheck A logical. If TRUE, checks the GC contents of the primers and filters based on GCmin and GCmax.
 #' @param GCmin A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.
 #' @param GCmax A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.
-#' @param GChalves A logical. Checks the GC contents of the primer halves.
+#' @param GChalves A logical. If TRUE, checks the GC contents separately for both halves of the primers and filters based on GCsimilarity. Used for example for applications involving two adjacent probes.
 #' @param GCsimilarity A decimal. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
@@ -133,7 +136,7 @@ new_prider <- function(x = list()) {
 #' sequences(primer_designs)
 #' # Returns the sequence of a specific Id:
 #' sequences(primer_designs)[1]
-#' # Plots the primers and target sequence Ids as a heatmap:
+#' # Plots the primers groups and the target sequences as a heatmap:
 #' plot(primer_designs)
 #'
 #' @export
@@ -159,7 +162,7 @@ new_prider <- function(x = list()) {
 prider <- function(fasta_file,
                    primer_length = 20,
                    minimum_primer_group_size = 10,
-                   minimum_seq_group_size = 5,
+                   minimum_seq_group_size = 2,
                    cum_cov_decimals = 2,
                    GCcheck = FALSE,
                    GCmin = 0.4,
@@ -298,13 +301,6 @@ print.prider <- function(x, ...) {
 #' @rdname prider
 #' @param x An object from prider function.
 #' @param ... Other arguments.
-#' @examples
-#' 
-#' test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-#' primer_designs <- prider(test_fasta)
-#' 
-#' # Plots the primers and target sequence Ids as a heatmap:
-#' plot(primer_designs)
 #' 
 #' @export
 #' @importFrom gplots heatmap.2

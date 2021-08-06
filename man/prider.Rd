@@ -11,7 +11,7 @@ prider(
   fasta_file,
   primer_length = 20,
   minimum_primer_group_size = 10,
-  minimum_seq_group_size = 5,
+  minimum_seq_group_size = 2,
   cum_cov_decimals = 2,
   GCcheck = FALSE,
   GCmin = 0.4,
@@ -25,25 +25,28 @@ prider(
 \method{plot}{prider}(x, ...)
 }
 \arguments{
-\item{fasta_file}{A string. Name of the input FASTA file.}
+\item{fasta_file}{A string. Name or filepath of the input FASTA file.}
 
-\item{primer_length}{A number. Sets the primer length.}
+\item{primer_length}{A number. Sets the primer length. For applications involving two adjacent probes, the value should be set to two-fold the length of a single probe.}
 
 \item{minimum_primer_group_size}{A number. Sets the minimum number of primers per primer cluster; smaller
 primer clusters will be discarded.}
 
-\item{minimum_seq_group_size}{A number. Sets the minimum number of target sequences (Ids) each primer cluster has to cover.}
+\item{minimum_seq_group_size}{A number. Sets the minimum number of sequences each primer cluster has to cover.}
 
 \item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative coverage of primer clusters.
-More decimals corresponds to more clusters.}
+Generally, lower value corresponds to less clusters and higher value to 
+more clusters in the output. If the clusters do not cover the input sequences
+sufficiently, increasing this value may increase the coverage. If the clusters
+overlap too much, lowering the value may reduce this effect. Recommended range 1-4.}
 
-\item{GCcheck}{A logical Checks the GC content of the primers.}
+\item{GCcheck}{A logical. If TRUE, checks the GC contents of the primers and filters based on GCmin and GCmax.}
 
 \item{GCmin}{A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.}
 
 \item{GCmax}{A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.}
 
-\item{GChalves}{A logical. Checks the GC contents of the primer halves.}
+\item{GChalves}{A logical. If TRUE, checks the GC contents separately for both halves of the primers and filters based on GCsimilarity. Used for example for applications involving two adjacent probes.}
 
 \item{GCsimilarity}{A decimal. If GChalves is performed, this parameter
 determines the maximum proportional GC content
@@ -74,14 +77,7 @@ primers(primer_designs)[1]
 sequences(primer_designs)
 # Returns the sequence of a specific Id:
 sequences(primer_designs)[1]
-# Plots the primers and target sequence Ids as a heatmap:
-plot(primer_designs)
-
-
-test_fasta <- system.file("extdata", "test.fasta", package = "prider")
-primer_designs <- prider(test_fasta)
-
-# Plots the primers and target sequence Ids as a heatmap:
+# Plots the primers groups and the target sequences as a heatmap:
 plot(primer_designs)
 
 }

@@ -15,17 +15,17 @@ prepare_primer_df(
 )
 }
 \arguments{
-\item{input_fasta}{A string or a DataFrame containing Id and Seq columns.}
+\item{input_fasta}{A string. Name or filepath of the input FASTA file.}
 
-\item{primer_length}{A number specifying length for the designed primers.}
+\item{primer_length}{A number. Sets the primer length. For applications involving two adjacent probes, the value should be set to two-fold the length of a single probe.}
 
-\item{GCcheck}{A logical. Checks the GC content of the primers.}
+\item{GCcheck}{A logical. If TRUE, checks the GC contents of the primers and filters based on GCmin and GCmax.}
 
 \item{GCmin}{A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.}
 
 \item{GCmax}{A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.}
 
-\item{GChalves}{A logical. Checks the GC contents of the primer halves.}
+\item{GChalves}{A logical. If TRUE, checks the GC contents separately for both halves of the primers and filters based on GCsimilarity. For example for applications involving two adjacent probes.}
 
 \item{GCsimilarity}{A number. If GChalves is performed, this parameter
 determines the maximum proportional GC content
