@@ -27,26 +27,35 @@ prider(
 \arguments{
 \item{fasta_file}{A string. Name or filepath of the input FASTA file.}
 
-\item{primer_length}{A number. Sets the primer length. For applications involving two adjacent probes, the value should be set to two-fold the length of a single probe.}
+\item{primer_length}{A number. Sets the primer length. For applications
+involving two adjacent probes, the value should be set to two-fold
+the length of a single probe.}
 
-\item{minimum_primer_group_size}{A number. Sets the minimum number of primers per primer cluster; smaller
-primer clusters will be discarded.}
+\item{minimum_primer_group_size}{A number. Sets the minimum number of primers
+per primer cluster; smaller primer clusters will be discarded.}
 
-\item{minimum_seq_group_size}{A number. Sets the minimum number of sequences each primer cluster has to cover.}
+\item{minimum_seq_group_size}{A number. Sets the minimum number of sequences
+each primer cluster has to cover.}
 
-\item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative coverage of primer clusters.
-Generally, lower value corresponds to less clusters and higher value to 
-more clusters in the output. If the clusters do not cover the input sequences
-sufficiently, increasing this value may increase the coverage. If the clusters
-overlap too much, lowering the value may reduce this effect. Recommended range 1-4.}
+\item{cum_cov_decimals}{A number. Sets the number of decimals for cumulative
+coverage of primer clusters. Generally, lower value corresponds to
+less clusters and higher value to more clusters in the output. If
+the clusters do not cover the input sequences sufficiently, increasing
+this value may increase the coverage. If the clusters overlap too
+much, lowering the value may reduce this effect. Recommended range 1-4.}
 
-\item{GCcheck}{A logical. If TRUE, checks the GC contents of the primers and filters based on GCmin and GCmax.}
+\item{GCcheck}{A logical. If TRUE, checks the GC contents of the primers and
+filters based on GCmin and GCmax.}
 
-\item{GCmin}{A decimal. If GCcheck is performed, this parameter determines the minimum proportional GC content.}
+\item{GCmin}{A decimal. If GCcheck is performed, this parameter determines
+the minimum proportional GC content.}
 
-\item{GCmax}{A decimal. If GCcheck is performed, this parameter determines the maximum proportional GC content.}
+\item{GCmax}{A decimal. If GCcheck is performed, this parameter determines
+the maximum proportional GC content.}
 
-\item{GChalves}{A logical. If TRUE, checks the GC contents separately for both halves of the primers and filters based on GCsimilarity. Used for example for applications involving two adjacent probes.}
+\item{GChalves}{A logical. If TRUE, checks the GC contents separately for
+both halves of the primers and filters based on GCsimilarity. Used
+for example for applications involving two adjacent probes.}
 
 \item{GCsimilarity}{A decimal. If GChalves is performed, this parameter
 determines the maximum proportional GC content
@@ -64,7 +73,7 @@ A list containing a sequence conversion table, primer candidates table,
 Prepare a nearly optimal primer coverage for an input FASTA file.
 }
 \examples{
-test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+test_fasta <- system.file('extdata', 'test.fasta', package = 'prider')
 
 # Runs Prider with the default values:
 primer_designs <- prider(test_fasta)

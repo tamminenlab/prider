@@ -7,15 +7,19 @@
 chunker(seq_table, window_size = 20L)
 }
 \arguments{
-\item{seq_table}{A DataFrame containing a column for sequence ids (Id) and sequences (Seq).}
+\item{seq_table}{A DataFrame containing a column for sequence ids (Id) and
+sequences (Seq).}
 
 \item{window_size}{An integer. Set the sliding window width.}
 }
 \value{
-A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
+A DataFrame containing columns for the sequence ids (Id),
+        indexes (Ix), joined ids and indexes (Id_Ix), and the primer
+        sequences (Seq).
 }
 \description{
-Creates all primer candidates for a group of sequences using a sliding window.
+Creates all primer candidates for a group of sequences using a
+             sliding window.
 }
 \details{
 Sliding window to create chunks of DNA sequences

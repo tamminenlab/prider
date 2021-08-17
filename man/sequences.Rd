@@ -37,7 +37,7 @@ Definitions for the S3 methods for the sequences classes
 }
 \examples{
 
-test_fasta <- system.file("extdata", "test.fasta", package = "prider")
+test_fasta <- system.file('extdata', 'test.fasta', package = 'prider')
 
 primer_designs <- prider(test_fasta)
 

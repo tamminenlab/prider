@@ -18,13 +18,17 @@ std::vector< std::string > sliding_window(std::string sequence, int window_size)
 //' Sliding window to create chunks of DNA sequences
 //'
 //' @title chunker
-//' @description Creates all primer candidates for a group of sequences using a sliding window.
-//' @param seq_table A DataFrame containing a column for sequence ids (Id) and sequences (Seq).
+//' @description Creates all primer candidates for a group of sequences using a
+//'              sliding window.
+//' @param seq_table A DataFrame containing a column for sequence ids (Id) and
+//'        sequences (Seq).
 //' @param window_size An integer. Set the sliding window width.
-//' @return A DataFrame containing columns for the sequence ids (Id), indexes (Ix), joined ids and indexes (Id_Ix), and the primer sequences (Seq).
+//' @return A DataFrame containing columns for the sequence ids (Id),
+//'         indexes (Ix), joined ids and indexes (Id_Ix), and the primer
+//'         sequences (Seq).
 //'
 //' @examples
-//' 
+//'
 //' test_csv <- system.file("extdata", "test.csv", package = "prider")
 //'
 //' test_csv <- read.csv(test_csv)
