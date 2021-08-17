@@ -16,7 +16,7 @@ devtools::install_github("manutamminen/prider")
 ```R
 test_fasta <- system.file("extdata", "test.fasta", package = "prider")
 
-# Runs Prider with the default values:
+# Runs Prider with default values:
 primer_designs <- prider(test_fasta)
 
 # Returns all the primers:
