@@ -1,7 +1,9 @@
 # Prider
 
-Prider detects groups of conserved sequence areas across complex, internally 
-diverse DNA sequence sets.
+Prider permits multiplexed oligonucleotide primer and probe design for 
+complex DNA sequence sets by implementing an algorithm for linearly 
+scaling approximation of set coverage. A detailed description available at
+[Smolander and Tamminen, 2021](https://www.biorxiv.org/content/10.1101/2021.09.06.459073v1).
 
 ## Installation
 
