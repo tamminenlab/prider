@@ -1,5 +1,5 @@
 Package: prider
-Title: Prider – Multiplexed Primer Design using Linearly Scaling Approximation of Set Coverage
+Title: Multiplexed Primer Design using Linearly Scaling Approximation of Set Coverage
 Version: 1.0.1
 Date: 2021-08-17
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
