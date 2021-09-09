@@ -172,7 +172,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
     minimum_seq_group_size = 2, cum_cov_decimals = 2, GCcheck = FALSE, GCmin = 0.4,
     GCmax = 0.6, GChalves = FALSE, GCsimilarity = 0.1) {
 
-    cat("Preparing primer candidates...\n")
+    message("Preparing primer candidates...\n")
     ag_data <- prepare_primer_df(fasta_file, primer_length, GCcheck, GCmin, GCmax,
         GChalves, GCsimilarity)
 
@@ -180,7 +180,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
         description <- paste0("Primer candidates for DataFrame ", deparse(substitute(fasta_file)),
             ":\n") else description <- paste0("Primer candidates for file ", fasta_file, ":\n")
 
-    cat("Clustering primers...\n")
+    message("Clustering primers...\n")
     primer_df_summ <- ag_data[[2]] %>%
         dplyr::group_by(Ids) %>%
         dplyr::summarise(Primers = paste0(sort(Seq), collapse = ",")) %>%
@@ -199,7 +199,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
         stop("All sequence group sizes smaller than the minimum_seq_group_size resulting to an empty dataframe.\nPlease make the minimum_seq_group_size parameter smaller or change other parameters.")
     }
 
-    cat("Sampling primers...\n")
+    message("Sampling primers...\n")
     primer_draws <- abund_clusters %>%
         dplyr::mutate(Primer_group = rownames(abund_clusters)) %>%
         dplyr::mutate(Seq_group_size = lengths(strsplit(abund_clusters$Ids, ","))) %>%
@@ -207,7 +207,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
         dplyr::mutate(Sequences = Ids, .keep = "unused")
     primer_draws <- dplyr::arrange(primer_draws, desc(Seq_group_size))
 
-    cat("Eliminating redundancies...\n")
+    message("Eliminating redundancies...\n")
     all_seqs <- sort(unique(unlist(strsplit(primer_draws$Sequences, ","))))
     cum_coverage <- c()
     cum_seqs <- c()
@@ -250,7 +250,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
 
     Primer_candidates <- filter(primer_draws, primer_draws$Primer_group %in% rownames(out_matrix))
 
-    cat("Done!\n")
+    message("Done!\n")
 
     new_prider(list(Description = description, Conversion_table = ag_data[[1]], Primer_candidates = primer_draws,
         Excluded_sequences = excluded_seqs, Primer_matrix = out_matrix))
@@ -297,8 +297,7 @@ plot.prider <- function(x, ...) {
         gplots::heatmap.2(matr, scale = "none", trace = "none", col = c("white",
             "black"), xlab = "Sequence Id", ylab = "Primer cluster")
     } else {
-        cat("Primer_matrix too small to be plotted.")
-        cat("Please view the Primer_matrix to see the Ids and clusters.")
+        stop("Primer_matrix too small to be plotted.")
     }
 }
 
