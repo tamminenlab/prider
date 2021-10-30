@@ -1,5 +1,4 @@
   <!-- badges: start -->
-  [![R-CMD-check](https://github.com/manutamminen/prider/workflows/R-CMD-check/badge.svg)](https://github.com/manutamminen/prider/actions)
   [![CRAN status](https://www.r-pkg.org/badges/version/prider)](https://CRAN.R-project.org/package=prider)
   <!-- badges: end -->
 
