@@ -159,7 +159,7 @@ new_prider <- function(x = list()) {
 #' @importFrom dplyr row_number
 #' @importFrom dplyr left_join
 #' @importFrom dplyr ungroup
-#' @importFrom dplyr slice_max
+#' @importFrom dplyr slice_head
 #' @importFrom dplyr arrange
 #' @importFrom dplyr desc
 #' @importFrom tidyr nest
@@ -223,7 +223,7 @@ prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 1
         dplyr::group_by(Cumulative_coverage) %>%
         dplyr::arrange(Cumulative_coverage, desc(Seq_group_size), desc(Primer_group_size),
             .by_group = TRUE) %>%
-        dplyr::slice_max(1) %>%
+        dplyr::slice_head(n = 1) %>%
         dplyr::select(Primer_group, Primer_group_size, Seq_group_size, Cumulative_coverage,
             Primers, Sequences) %>%
         dplyr::ungroup(.)
