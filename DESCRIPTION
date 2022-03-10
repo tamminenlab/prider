@@ -1,6 +1,6 @@
 Package: prider
 Title: Multiplexed Primer Design by Linear Set Coverage Approximation
-Version: 1.0.3
+Version: 1.0.4
 Date: 2021-08-17
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
       role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")),
@@ -9,7 +9,7 @@ Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
 Maintainer: Manu Tamminen <mavatam@utu.fi>
 Description: Implementation of an oligonucleotide primer and probe design algorithm using a linearly scaling approximation of set coverage. A detailed description available at Smolander and Tamminen, 2021; <doi:10.1101/2021.09.06.459073>.
 License: BSD_3_clause + file LICENSE
-URL: https://github.com/manutamminen/prider
+URL: https://github.com/tamminenlab/prider
 Imports:
   Rcpp (>= 1.0.5),
   dplyr,
