@@ -1,7 +1,7 @@
 Package: prider
 Title: Multiplexed Primer Design by Linear Set Coverage Approximation
 Version: 1.0.4
-Date: 2021-08-17
+Date: 2022-03-10
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
       role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")),
     person("Niina", "Smolander", email = "nijasm@utu.fi",
