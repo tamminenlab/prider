@@ -295,7 +295,7 @@ plot.prider <- function(x, ...) {
     matr <- x$Primer_matrix * 1
     if (ncol(matr) >= 2 && nrow(matr) >= 2) {
         gplots::heatmap.2(matr, scale = "none", trace = "none", col = c("white",
-            "black"), xlab = "Sequence Id", ylab = "Primer cluster")
+            "black"), xlab = "Sequence Id", ylab = "Primer cluster", key = FALSE)
     } else {
         stop("Primer_matrix too small to be plotted.")
     }
