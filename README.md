@@ -7,7 +7,7 @@
 Prider permits multiplexed oligonucleotide primer and probe design for 
 complex DNA sequence sets by implementing an algorithm for linearly 
 scaling approximation of set coverage. A detailed description available at
-[Smolander and Tamminen, 2021](https://www.biorxiv.org/content/10.1101/2021.09.06.459073v1).
+[Smolander et al 2022](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04710-1).
 
 ## Installation
 
