@@ -13,6 +13,7 @@ prider(
   minimum_primer_group_size = 10,
   minimum_seq_group_size = 2,
   cum_cov_decimals = 2,
+  NTkeep = "basic",
   GCcheck = FALSE,
   GCmin = 0.4,
   GCmax = 0.6,
@@ -43,6 +44,12 @@ less clusters and higher value to more clusters in the output. If
 the clusters do not cover the input sequences sufficiently, increasing
 this value may increase the coverage. If the clusters overlap too
 much, lowering the value may reduce this effect. Recommended range 1-4.}
+
+\item{NTkeep}{A string. Filters the primers based on the nucleotides. \cr
+"basic" = keeps only the primers with G, C, T or A. \cr
+"N" = keeps primers with G, C, T, A and N. \cr
+"any" = keeps primers with the IUPAC nucleotide code characters. \cr
+"all" = keeps all primers.}
 
 \item{GCcheck}{A logical. If TRUE, checks the GC contents of the primers and
 filters based on GCmin and GCmax.}

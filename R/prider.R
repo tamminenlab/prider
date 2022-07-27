@@ -30,6 +30,11 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 #' @param GCsimilarity A number. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
+#' @param NTkeep A string. Filters the primers based on the nucleotides. \cr
+#'        "basic" = keeps only the primers with G, C, T or A. \cr
+#'        "N" = keeps primers with G, C, T, A and N. \cr
+#'        "any" = keeps primers with the IUPAC nucleotide code characters. \cr
+#'        "all" = keeps all primers.
 #'
 #' @return A list containing sequence id conversions, primer matrix
 #'         and a list of primers with their target sequences.
@@ -41,10 +46,10 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 #' @importFrom magrittr %>%
 #' @importFrom blaster read_fasta
 #' @importFrom stringr str_count
-prepare_primer_df <- function(input_fasta, primer_length = 20, GCcheck = FALSE, GCmin = 0.4,
+prepare_primer_df <- function(input_fasta, primer_length = 20, NTkeep = "basic", GCcheck = FALSE, GCmin = 0.4,
     GCmax = 0.6, GChalves = FALSE, GCsimilarity = 0.1) {
     if (is.character(input_fasta))
-        input_fasta <- blaster::read_fasta(input_fasta)
+        input_fasta <- blaster::read_fasta(input_fasta, non_standard_chars = "ignore")
 
     if (!(all(names(input_fasta) == c("Id", "Seq"))))
         stop("The input must contain Id and Seq columns")
@@ -63,8 +68,17 @@ prepare_primer_df <- function(input_fasta, primer_length = 20, GCcheck = FALSE, 
         dplyr::as_tibble(.) %>%
         chunker(window_size = primer_length + 1) %>%
         dplyr::as_tibble(.) %>%
-        dplyr::select(Seq, Id) %>%
-        dplyr::filter(stringr::str_count(Seq, "A|G|C|T") == nchar(Seq))
+        dplyr::select(Seq, Id)
+    
+    switch(NTkeep,
+           "basic" = primers <- primers %>% 
+             dplyr::filter(stringr::str_count(Seq, "A|G|C|T") == nchar(Seq)),
+           "N" = primers <- primers %>% 
+             dplyr::filter(stringr::str_count(Seq, "A|G|C|T|N") == nchar(Seq)),
+           "any" = primers <- primers %>% 
+             dplyr::filter(stringr::str_count(Seq, "A|G|C|T|N|R|Y|S|W|K|M|B|D|H|V|U") == nchar(Seq)),
+           "all" = primers <- primers
+    )
 
     if (isTRUE(GCcheck)) {
         content <- stringr::str_count(primers$Seq, "G|C")/nchar(primers$Seq)
@@ -128,6 +142,11 @@ new_prider <- function(x = list()) {
 #' @param GCsimilarity A decimal. If GChalves is performed, this parameter
 #'                     determines the maximum proportional GC content
 #'                     difference between the primer halves.
+#' @param NTkeep A string. Filters the primers based on the nucleotides. \cr
+#'        "basic" = keeps only the primers with G, C, T or A. \cr
+#'        "N" = keeps primers with G, C, T, A and N. \cr
+#'        "any" = keeps primers with the IUPAC nucleotide code characters. \cr
+#'        "all" = keeps all primers.
 #'
 #' @return A list containing a sequence conversion table, primer candidates table,
 #'         excluded sequences table and a primer coverage table.
@@ -169,11 +188,11 @@ new_prider <- function(x = list()) {
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_split
 prider <- function(fasta_file, primer_length = 20, minimum_primer_group_size = 10,
-    minimum_seq_group_size = 2, cum_cov_decimals = 2, GCcheck = FALSE, GCmin = 0.4,
+    minimum_seq_group_size = 2, cum_cov_decimals = 2, NTkeep = "basic", GCcheck = FALSE, GCmin = 0.4,
     GCmax = 0.6, GChalves = FALSE, GCsimilarity = 0.1) {
 
     message("Preparing primer candidates...\n")
-    ag_data <- prepare_primer_df(fasta_file, primer_length, GCcheck, GCmin, GCmax,
+    ag_data <- prepare_primer_df(fasta_file, primer_length, NTkeep, GCcheck, GCmin, GCmax,
         GChalves, GCsimilarity)
 
     if (!is.character(fasta_file))
