@@ -2,6 +2,7 @@
 % Please edit documentation in R/prider.R
 \docType{package}
 \name{prider}
+\alias{prider-package}
 \alias{prider}
 \alias{print.prider}
 \alias{plot.prider}
@@ -77,6 +78,8 @@ A list containing a sequence conversion table, primer candidates table,
         excluded sequences table and a primer coverage table.
 }
 \description{
+Implementation of an oligonucleotide primer and probe design algorithm using a linearly scaling approximation of set coverage. A detailed description available at Smolander and Tamminen, 2021; \doi{10.1101/2021.09.06.459073}.
+
 Prepare a nearly optimal primer coverage for an input FASTA file.
 }
 \examples{
@@ -95,6 +98,13 @@ sequences(primer_designs)
 sequences(primer_designs)[1]
 # Plots the primers groups and the target sequences as a heatmap:
 plot(primer_designs)
+
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/tamminenlab/prider}
+}
 
 }
 \author{

@@ -20,6 +20,5 @@ Imports:
   tibble,
   gplots
 LinkingTo: Rcpp
-SystemRequirements: C++11
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8

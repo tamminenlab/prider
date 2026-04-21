@@ -1,12 +1,11 @@
 #' Prider
 #'
-#' @docType package
 #' @author Manu Tamminen <mavatam@utu.fi>, Niina Smolander <nijasm@utu.fi>
 #' @import Rcpp
 #' @importFrom Rcpp evalCpp
 #' @useDynLib prider
 #' @name prider
-NULL
+"_PACKAGE"
 
 utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", "Ids",
     "Primer_group_size", "Seq_group_size", "Cumulative_coverage", "Sequences", "Original_id",
@@ -25,7 +24,7 @@ read_fasta <- function(path) {
     seqs <- vapply(seq_along(header_idx), function(i) {
         if (starts[i] > ends[i]) "" else paste0(lines[starts[i]:ends[i]], collapse = "")
     }, character(1))
-    data.frame(Id = ids, Seq = seqs, stringsAsFactors = FALSE)
+    data.frame(Id = ids, Seq = toupper(seqs), stringsAsFactors = FALSE)
 }
 
 #' Prepare a primer table for downstream analyses
