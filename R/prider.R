@@ -12,6 +12,22 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
     "Primer_group_size", "Seq_group_size", "Cumulative_coverage", "Sequences", "Original_id",
     "x", "Sequence"))
 
+read_fasta <- function(path) {
+    lines <- readLines(path, warn = FALSE)
+    lines <- gsub("\r", "", lines, fixed = TRUE)
+    lines <- lines[nzchar(lines)]
+    header_idx <- grep("^>", lines)
+    if (length(header_idx) == 0L)
+        stop("No FASTA records found in ", path)
+    ids <- sub("^>", "", lines[header_idx])
+    starts <- header_idx + 1L
+    ends <- c(header_idx[-1L] - 1L, length(lines))
+    seqs <- vapply(seq_along(header_idx), function(i) {
+        if (starts[i] > ends[i]) "" else paste0(lines[starts[i]:ends[i]], collapse = "")
+    }, character(1))
+    data.frame(Id = ids, Seq = seqs, stringsAsFactors = FALSE)
+}
+
 #' Prepare a primer table for downstream analyses
 #'
 #' @param input_fasta A string. Name or filepath of the input FASTA file.
@@ -44,12 +60,11 @@ utils::globalVariables(c("Primer_group", "Primers", ".", "Seq_no", "Id", "Seq", 
 #' @importFrom dplyr summarise
 #' @importFrom dplyr row_number
 #' @importFrom magrittr %>%
-#' @importFrom blaster read_fasta
 #' @importFrom stringr str_count
 prepare_primer_df <- function(input_fasta, primer_length = 20, NTkeep = "basic", GCcheck = FALSE, GCmin = 0.4,
     GCmax = 0.6, GChalves = FALSE, GCsimilarity = 0.1) {
     if (is.character(input_fasta))
-        input_fasta <- blaster::read_fasta(input_fasta, non_standard_chars = "ignore")
+        input_fasta <- read_fasta(input_fasta)
 
     if (!(all(names(input_fasta) == c("Id", "Seq"))))
         stop("The input must contain Id and Seq columns")
