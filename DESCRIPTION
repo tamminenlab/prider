@@ -1,7 +1,7 @@
 Package: prider
 Title: Multiplexed Primer Design by Linear Set Coverage Approximation
-Version: 1.0.5
-Date: 2022-03-10
+Version: 1.0.6
+Date: 2026-04-21
 Authors@R: c(person("Manu", "Tamminen", email = "mavatam@utu.fi",
       role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5891-7653")),
     person("Niina", "Smolander", email = "nijasm@utu.fi",
@@ -18,9 +18,7 @@ Imports:
   stringr,
   magrittr,
   tibble,
-  blaster,
   gplots
 LinkingTo: Rcpp
-SystemRequirements: C++11
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.3
 Encoding: UTF-8

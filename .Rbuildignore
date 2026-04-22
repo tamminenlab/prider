@@ -1,0 +1,9 @@
+^\.git$
+^\.github$
+^\.claude$
+^\.Rbuildignore$
+^\.gitignore$
+^prider\.Rcheck$
+^prider_.*\.tar\.gz$
+^.*\.Rproj$
+^\.Rproj\.user$
